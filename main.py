@@ -1,10 +1,12 @@
 from ffNetwork import *
 from utilities import *
 from tqdm import tqdm
+from cnnff import CNNFF
 import wandb
+DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 config={
     'epochs':100,
-    'lr':0.001,
+    'lr':0.1,
     'batch_size':64,
     'threshold':1.0,
 }
@@ -22,7 +24,7 @@ run = wandb.init(
     # resume = "must" ### You need this to resume previous runs, but comment out reinit = True when using this
     config = config ### Wandb Config for your run
 )
-net = Net([784, 2000, 2000, 2000, 2000], config)
+net = CNNFF([(1, 64, 2, 2),(64, 128, 2, 2),(128, 256, 2, 2),(256, 512, 2, 2)], config).to(DEVICE)
 
 # batch_bar = tqdm(total=config['epochs'], dynamic_ncols=True, leave=False, position=0, desc='Train', ncols=3)
 for epoch in range(config['epochs']):
