@@ -8,21 +8,21 @@ import matplotlib.pyplot as plt
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 def get_loaders(batch_size):
-	transform = Compose(
+    transform = Compose(
         [
             ToTensor(),
             Normalize((0.1307,), (0.3081,)),
             Lambda(lambda x: torch.flatten(x)),
         ]
     )
-	train_loader = DataLoader(
+    train_loader = DataLoader(
     MNIST("./data/", train=True, download=True, transform=transform),
     batch_size=batch_size,
     shuffle=True,
     num_workers=2,
     pin_memory=True)
 
-	test_loader = DataLoader(
+    test_loader = DataLoader(
     MNIST("./data/", train=False, download=True, transform=transform),
     batch_size=batch_size,
     shuffle=False,
@@ -54,12 +54,12 @@ def visualise_positive():
 
     dtl = DataLoader(
     MNIST("./data/", train=True, download=False, transform=Compose([ToTensor(),Lambda(lambda x: torch.flatten(x))])),
-    batch_size=config['batch_size'],
+    batch_size=32,
     shuffle=True,
     num_workers=2,
     pin_memory=True)
 
-    for data in train_loader:
+    for data in dtl:
         x, y = data
     
         for i in range(r):
@@ -82,12 +82,12 @@ def visualise_negative():
 
     dtl = DataLoader(
     MNIST("./data/", train=True, download=False, transform=Compose([ToTensor(),Lambda(lambda x: torch.flatten(x))])),
-    batch_size=config['batch_size'],
+    batch_size=32,
     shuffle=True,
     num_workers=2,
     pin_memory=True)
 
-    for data in train_loader:
+    for data in dtl:
         x, y = data
     
         for i in range(r):

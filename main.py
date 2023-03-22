@@ -1,6 +1,7 @@
-from FFNetwork import *
+from ffNetwork import *
 from utilities import *
-
+from tqdm import tqdm
+import wandb
 config={
     'epochs':100,
     'lr':0.001,
@@ -8,18 +9,20 @@ config={
     'threshold':1.0,
 }
 train_loader, test_loader = get_loaders(config['batch_size'])
-wandb.login(key="95ecc4ba8c0966a365ccf643e67d08226e659d02") #API Key is in your wandb account, under settings (wandb.ai/settings)
+visualise_positive()
+visualise_negative()
+# wandb.login(key="95ecc4ba8c0966a365ccf643e67d08226e659d02") #API Key is in your wandb account, under settings (wandb.ai/settings)
 # Create your wandb run
 run = wandb.init(
     project="project",
     entity  = "automellon",
-    name = "Advaith-FF-MNIST", ## Wandb creates random run names if you skip this field
+    name = "FF-MNIST", ## Wandb creates random run names if you skip this field
     reinit = False, ### Allows reinitalizing runs when you re-run this cell
     # run_id = ### Insert specific run id here if you want to resume a previous run
     # resume = "must" ### You need this to resume previous runs, but comment out reinit = True when using this
     config = config ### Wandb Config for your run
 )
-net = Net([784, 2000, 2000, 2000, 2000])
+net = Net([784, 2000, 2000, 2000, 2000], config)
 
 # batch_bar = tqdm(total=config['epochs'], dynamic_ncols=True, leave=False, position=0, desc='Train', ncols=3)
 for epoch in range(config['epochs']):

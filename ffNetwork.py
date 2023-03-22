@@ -1,11 +1,12 @@
 import torch
 import torch.nn as nn
 from torch.optim import Adam
+from utilities import *
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 
 class Layer(nn.Linear):
-    def __init__(self, in_features, out_features, bias=True, device=None, dtype=None):
+    def __init__(self, in_features, out_features, config, bias=True, device=None, dtype=None):
         super().__init__(in_features, out_features, bias, device, dtype)
         self.relu = torch.nn.ReLU()
         self.opt = Adam(self.parameters(), lr=config['lr'])
@@ -28,12 +29,12 @@ class Layer(nn.Linear):
         return act_pos.detach(), act_neg.detach(),loss.item()
 
 class Net(torch.nn.Module):
-    def __init__(self, dims):
+    def __init__(self, dims, config):
 
         super().__init__()
         self.layers = []
         for d in range(len(dims) - 1):
-            self.layers = self.layers + [Layer(dims[d], dims[d + 1]).to(DEVICE)]
+            self.layers = self.layers + [Layer(dims[d], dims[d + 1], config).to(DEVICE)]
 
     def predict(self, x,num_classes=10):
         goodness_per_label = []
