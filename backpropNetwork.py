@@ -7,7 +7,7 @@ class backpropnetwork(torch.nn.Module):
 
     def __init__(self, input_size, output_size, dropout=0.2):
 
-        super(Network, self).__init__()
+        super(backpropnetwork, self).__init__()
         self.dropout=dropout
 
         self.model = torch.nn.Sequential(
