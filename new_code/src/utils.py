@@ -89,14 +89,14 @@ def get_MNIST_partition(opt, partition):
             # Lambda(lambda x: torch.flatten(x)),
         ]
     )
-    if partition in ["train", "val", "train_val"]:
+    if partition in ["train"]:
         mnist = torchvision.datasets.CIFAR10(
             os.path.join(get_original_cwd(), opt.input.path),
             train=True,
             download=True,
             transform=transform,
         )
-    elif partition in ["test"]:
+    elif partition in ["val", "test"]:
         mnist = torchvision.datasets.CIFAR10(
             os.path.join(get_original_cwd(), opt.input.path),
             train=False,
@@ -106,16 +106,16 @@ def get_MNIST_partition(opt, partition):
     else:
         raise NotImplementedError
 
-    if partition == "train":
-        mnist = torch.utils.data.Subset(mnist, range(40000))
-    elif partition == "val":
-        mnist = torchvision.datasets.CIFAR10(
-            os.path.join(get_original_cwd(), opt.input.path),
-            train=True,
-            download=True,
-            transform=transform,
-        )
-        mnist = torch.utils.data.Subset(mnist, range(40000, 50000))
+    # if partition == "train":
+    #     mnist = torch.utils.data.Subset(mnist, range(40000))
+    # elif partition == "val":
+    #     mnist = torchvision.datasets.CIFAR10(
+    #         os.path.join(get_original_cwd(), opt.input.path),
+    #         train=True,
+    #         download=True,
+    #         transform=transform,
+    #     )
+    #     mnist = torch.utils.data.Subset(mnist, range(40000, 50000))
 
     return mnist
 
