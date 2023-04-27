@@ -22,6 +22,8 @@ def train(opt, model, optimizer):
         for inputs, labels in train_loader:
             inputs, labels = utils.preprocess_inputs(opt, inputs, labels) # push to GPU
 
+            # print("input shape:",inputs['sample'].shape)
+            # print("label shape:",labels['class_labels'].shape)
             optimizer.zero_grad()
 
             scalar_outputs = model(inputs, labels)

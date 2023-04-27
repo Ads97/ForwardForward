@@ -8,6 +8,8 @@ import torchvision
 from hydra.utils import get_original_cwd
 from omegaconf import OmegaConf
 
+import pandas as pd
+
 from torchvision.transforms import Compose, ToTensor, Normalize, Lambda
 
 from src import ff_mnist, ff_model
@@ -57,8 +59,8 @@ def get_model_and_optimizer(opt):
 # 6000, 10 # classification_loss params
 
 def get_data(opt, partition):
-    dataset = ff_mnist.FF_MNIST(opt, partition)
-
+    # dataset = ff_mnist.FF_MNIST(opt, partition)
+    dataset = ff_mnist.FF_senti(opt, partition, num_classes=2)
     # Improve reproducibility in dataloader.
     g = torch.Generator()
     g.manual_seed(opt.seed)
@@ -70,7 +72,7 @@ def get_data(opt, partition):
         shuffle=True,
         worker_init_fn=seed_worker,
         generator=g,
-        num_workers=4,
+        num_workers=1,
         persistent_workers=True,
     )
 
@@ -80,6 +82,35 @@ def seed_worker(worker_id):
     np.random.seed(worker_seed)
     random.seed(worker_seed)
 
+
+def get_senti_partition(opt, partition):
+    # load reviews data
+    # print(os.path.join(get_original_cwd(), opt.input.training_path))
+    train_df = pd.read_csv(os.path.join(get_original_cwd(), opt.input.training_path), names=["filename", "split", "labels", "features"])
+    test_df = pd.read_csv(os.path.join(get_original_cwd(), opt.input.test_path), names=["filename", "split", "labels", "features"])
+    # train_df = pd.read_csv('reviews_train.csv',names=["filename", "split", "labels", "features"])
+    # test_df = pd.read_csv('reviews_test.csv',names=["filename", "split", "labels", "features"])
+    train_df = train_df.drop(columns=["filename", "split"])
+    test_df = test_df.drop(columns=["filename", "split"])
+    train_df['labels'] = train_df['labels'].replace({'pos': 1, 'neg': 0})
+    test_df['labels'] = test_df['labels'].replace({'pos': 1, 'neg': 0})
+
+    train_labels = torch.tensor(train_df['labels'].values, dtype=torch.long)
+    test_labels = torch.tensor(test_df['labels'].values, dtype=torch.long)
+
+    train_data = train_df['features'].apply(lambda x: np.fromstring(x.strip('[]'), sep=' ', dtype=np.float32))
+    train_data = torch.stack([torch.tensor(x) for x in train_data])
+
+    test_data = test_df['features'].apply(lambda x: np.fromstring(x.strip('[]'), sep=' ', dtype=np.float32))
+    test_data = torch.stack([torch.tensor(x) for x in test_data])
+
+    final_train_data = torch.hstack((train_data,torch.unsqueeze(train_labels, 1)))
+    final_test_data = torch.hstack((test_data,torch.unsqueeze(test_labels, 1)))
+
+    if partition in ["train"]:
+        return train_data, train_labels
+    else:
+        return test_data, test_labels
 
 def get_MNIST_partition(opt, partition):
     transform = Compose(
@@ -193,7 +224,7 @@ def print_results(partition, iteration_time, scalar_outputs, epoch=None):
     if scalar_outputs is not None:
         for key, value in scalar_outputs.items():
             partition_scalar_outputs[f"{partition}_{key}"] = value
-    wandb.log(partition_scalar_outputs)
+    wandb.log(partition_scalar_outputs, step=epoch)
 
 # create save_model function
 def save_model(model):

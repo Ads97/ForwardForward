@@ -2,6 +2,8 @@ seed: 42
 device: "cuda"  # cpu or cuda
 
 input:
+  training_path: datasets/reviews_train.csv
+  test_path: datasets/reviews_test.csv
   path: datasets
   batch_size: 256
 
