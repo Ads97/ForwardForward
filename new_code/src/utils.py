@@ -206,7 +206,7 @@ def print_results(partition, iteration_time, scalar_outputs, epoch=None):
     if scalar_outputs is not None:
         for key, value in scalar_outputs.items():
             partition_scalar_outputs[f"{partition}_{key}"] = value
-    wandb.log(partition_scalar_outputs)
+    wandb.log(partition_scalar_outputs, step=epoch)
 
 # create save_model function
 def save_model(model):
