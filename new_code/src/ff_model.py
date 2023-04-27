@@ -9,15 +9,16 @@ from src import utils
 class FF_model(torch.nn.Module):
     """The model trained with Forward-Forward (FF)."""
 
-    def __init__(self, opt):
+    def __init__(self, opt, activations):
         super(FF_model, self).__init__()
 
         self.opt = opt
         self.num_channels = [self.opt.model.hidden_dim] * self.opt.model.num_layers
-        self.act_fn = ReLU_full_grad()
+        self.act_fn = activations
 
         # Initialize the model.
-        self.model = nn.ModuleList([nn.Linear(3*32*32, self.num_channels[0])])
+        initial_layers = 3072 if self.opt.model.dataset == "cifar10" else 784
+        self.model = nn.ModuleList([nn.Linear(initial_layers, self.num_channels[0])])
         for i in range(1, len(self.num_channels)):
             self.model.append(nn.Linear(self.num_channels[i - 1], self.num_channels[i]))
 
@@ -79,20 +80,20 @@ class FF_model(torch.nn.Module):
         return torch.mean(peer_loss)
 
     def _calc_ff_loss(self, z, labels):
-        sum_of_squares = torch.sum(z ** 2, dim=-1) # sum of squares of each activation. bs*2
+        sum_of_squares = -1 * torch.sum(z ** 2, dim=-1) # sum of squares of each activation. bs*2
 
         # print("sum of squares shape: ", sum_of_squares.shape)
         # exit()
         # s - thresh    --> sigmoid --> cross entropy
-
-        logits = sum_of_squares - z.shape[1] # if the average value of each activation is >1, logit is +ve, else -ve.
+        
+        logits = sum_of_squares - (z.shape[1] * -3.5) # if the average value of each activation is >1, logit is +ve, else -ve.
         ff_loss = self.ff_loss(logits, labels.float()) # labels are 0 or 1, so convert to float. logits->sigmoid->normal cross entropy
-
         with torch.no_grad():
             ff_accuracy = (
                 torch.sum((torch.sigmoid(logits) > 0.5) == labels) # threshold is logits=0, so sum of squares = 784 
                 / z.shape[0]
             ).item()
+        breakpoint()
         return ff_loss, ff_accuracy
 
     def forward(self, inputs, labels):
@@ -113,11 +114,12 @@ class FF_model(torch.nn.Module):
 
         z = z.reshape(z.shape[0], -1) # 2*bs, 784
         z = self._layer_norm(z)
-
+        activation_values = []
         for idx, layer in enumerate(self.model):
             z = layer(z)
-            z = self.act_fn.apply(z)
-
+            z = -self.act_fn[idx].log_prob(z)
+            temp=z.clone()
+            activation_values.append(temp)
             if self.opt.model.peer_normalization > 0:
                 peer_loss = self._calc_peer_normalization_loss(idx, z)
                 scalar_outputs["Peer Normalization"] += peer_loss
@@ -130,7 +132,6 @@ class FF_model(torch.nn.Module):
             z = z.detach()
 
             z = self._layer_norm(z)
-
         scalar_outputs = self.forward_downstream_classification_model(
             inputs, labels, scalar_outputs=scalar_outputs
         )
@@ -158,7 +159,7 @@ class FF_model(torch.nn.Module):
         # with torch.no_grad():
         #     for idx, layer in enumerate(self.model):
         #         z_all = layer(z_all)
-        #         z_all = self.act_fn.apply(z_all)
+        #         z_all = -self.act_fn.log_prob.apply(z_all)
         #         z_unnorm = z_all.clone()
         #         z_all = self._layer_norm(z_all)
 
@@ -184,7 +185,7 @@ class FF_model(torch.nn.Module):
             with torch.no_grad():
                 for idx, layer in enumerate(self.model):
                     z = layer(z)
-                    z = self.act_fn.apply(z)
+                    z = -self.act_fn[idx].log_prob(z)
                     z_unnorm = z.clone()
                     z = self._layer_norm(z)
 
@@ -223,7 +224,7 @@ class FF_model(torch.nn.Module):
         with torch.no_grad():
             for idx, layer in enumerate(self.model):
                 z = layer(z)
-                z = self.act_fn.apply(z)
+                z = -self.act_fn[idx].log_prob(z)
                 z = self._layer_norm(z)
 
                 if idx >= 1:

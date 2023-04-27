@@ -1,0 +1,493 @@
+2023-04-27 11:42:01,164 INFO    StreamThr :55058 [internal.py:wandb_internal():86] W&B internal server running at pid: 55058, started at: 2023-04-27 11:42:01.163852
+2023-04-27 11:42:01,165 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status
+2023-04-27 11:42:01,166 INFO    WriterThread:55058 [datastore.py:open_for_write():85] open: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/run-fl1jk01x.wandb
+2023-04-27 11:42:01,166 DEBUG   SenderThread:55058 [sender.py:send():375] send: header
+2023-04-27 11:42:01,175 DEBUG   SenderThread:55058 [sender.py:send():375] send: run
+2023-04-27 11:42:01,424 INFO    SenderThread:55058 [dir_watcher.py:__init__():219] watching files in: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files
+2023-04-27 11:42:01,425 INFO    SenderThread:55058 [sender.py:_start_run_threads():1124] run started: fl1jk01x with start time 1682610121.164183
+2023-04-27 11:42:01,425 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:42:01,425 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:42:01,426 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: check_version
+2023-04-27 11:42:01,426 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: check_version
+2023-04-27 11:42:01,471 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: run_start
+2023-04-27 11:42:01,475 DEBUG   HandlerThread:55058 [system_info.py:__init__():31] System info init
+2023-04-27 11:42:01,475 DEBUG   HandlerThread:55058 [system_info.py:__init__():46] System info init done
+2023-04-27 11:42:01,475 INFO    HandlerThread:55058 [system_monitor.py:start():181] Starting system monitor
+2023-04-27 11:42:01,475 INFO    SystemMonitor:55058 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-04-27 11:42:01,476 INFO    HandlerThread:55058 [system_monitor.py:probe():201] Collecting system info
+2023-04-27 11:42:01,476 INFO    SystemMonitor:55058 [interfaces.py:start():190] Started cpu monitoring
+2023-04-27 11:42:01,476 INFO    SystemMonitor:55058 [interfaces.py:start():190] Started disk monitoring
+2023-04-27 11:42:01,477 INFO    SystemMonitor:55058 [interfaces.py:start():190] Started gpu monitoring
+2023-04-27 11:42:01,477 INFO    SystemMonitor:55058 [interfaces.py:start():190] Started memory monitoring
+2023-04-27 11:42:01,477 INFO    SystemMonitor:55058 [interfaces.py:start():190] Started network monitoring
+2023-04-27 11:42:01,487 DEBUG   HandlerThread:55058 [system_info.py:probe():195] Probing system
+2023-04-27 11:42:01,492 DEBUG   HandlerThread:55058 [system_info.py:_probe_git():180] Probing git
+2023-04-27 11:42:01,500 DEBUG   HandlerThread:55058 [system_info.py:_probe_git():188] Probing git done
+2023-04-27 11:42:01,500 DEBUG   HandlerThread:55058 [system_info.py:probe():240] Probing system done
+2023-04-27 11:42:01,500 DEBUG   HandlerThread:55058 [system_monitor.py:probe():210] {'os': 'Linux-5.19.0-40-generic-x86_64-with-glibc2.17', 'python': '3.8.16', 'heartbeatAt': '2023-04-27T15:42:01.487802', 'startedAt': '2023-04-27T15:42:01.159474', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'main.py', 'codePath': 'new_code/main.py', 'git': {'remote': 'https://github.com/Ads-cmu/ForwardForward.git', 'commit': '95f478b1341cfaf2e1e40de001af87d8fcad9312'}, 'email': 'kornberg.jonah@gmail.com', 'root': '/home/jonah/Documents/school/idl/ForwardForward', 'host': 'jonah-dual', 'username': 'jonah', 'executable': '/home/jonah/anaconda3/envs/FF/bin/python', 'cpu_count': 12, 'cpu_count_logical': 24, 'cpu_freq': {'current': 2834.5354583333333, 'min': 2200.0, 'max': 3700.0}, 'cpu_freq_per_core': [{'current': 2200.0, 'min': 2200.0, 'max': 3700.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3700.0}, {'current': 3754.355, 'min': 2200.0, 'max': 3700.0}, {'current': 3516.756, 'min': 2200.0, 'max': 3700.0}, {'current': 3462.786, 'min': 2200.0, 'max': 3700.0}, {'current': 2878.842, 'min': 2200.0, 'max': 3700.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3700.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3700.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3700.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3700.0}, {'current': 3700.0, 'min': 2200.0, 'max': 3700.0}, {'current': 4695.996, 'min': 2200.0, 'max': 3700.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3700.0}, {'current': 2877.885, 'min': 2200.0, 'max': 3700.0}, {'current': 4372.35, 'min': 2200.0, 'max': 3700.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3700.0}, {'current': 2570.886, 'min': 2200.0, 'max': 3700.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3700.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3700.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3700.0}, {'current': 3407.603, 'min': 2200.0, 'max': 3700.0}, {'current': 3725.843, 'min': 2200.0, 'max': 3700.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3700.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3700.0}], 'disk': {'total': 233.27177810668945, 'used': 198.69003677368164}, 'gpu': 'NVIDIA GeForce RTX 3080', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3080', 'memory_total': 10737418240}], 'memory': {'total': 31.260986328125}}
+2023-04-27 11:42:01,500 INFO    HandlerThread:55058 [system_monitor.py:probe():211] Finished collecting system info
+2023-04-27 11:42:01,500 INFO    HandlerThread:55058 [system_monitor.py:probe():214] Publishing system info
+2023-04-27 11:42:01,500 DEBUG   HandlerThread:55058 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-04-27 11:42:01,500 DEBUG   HandlerThread:55058 [system_info.py:_save_pip():67] Saving pip packages done
+2023-04-27 11:42:01,500 DEBUG   HandlerThread:55058 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-04-27 11:42:02,361 DEBUG   HandlerThread:55058 [system_info.py:_save_conda():86] Saving conda packages done
+2023-04-27 11:42:02,361 INFO    HandlerThread:55058 [system_monitor.py:probe():216] Finished publishing system info
+2023-04-27 11:42:02,363 DEBUG   SenderThread:55058 [sender.py:send():375] send: files
+2023-04-27 11:42:02,363 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-04-27 11:42:02,369 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 11:42:02,369 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 11:42:02,425 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_created():278] file/dir created: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-metadata.json
+2023-04-27 11:42:02,425 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_created():278] file/dir created: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:42:02,426 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_created():278] file/dir created: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/requirements.txt
+2023-04-27 11:42:02,426 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_created():278] file/dir created: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/conda-environment.yaml
+2023-04-27 11:42:02,441 DEBUG   SenderThread:55058 [sender.py:send():375] send: telemetry
+2023-04-27 11:42:02,670 INFO    wandb-upload_0:55058 [upload_job.py:push():137] Uploaded file /tmp/tmp6mfer05wwandb/ut9z3cha-wandb-metadata.json
+2023-04-27 11:42:05,425 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_created():278] file/dir created: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:42:06,688 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:42:07,426 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:42:11,689 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:42:16,689 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:42:17,368 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 11:42:17,369 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 11:42:20,475 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:42:20,477 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:42:20,477 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:42:20,478 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:42:21,429 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:42:21,429 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:42:21,890 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:42:22,715 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:42:22,716 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:42:22,716 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:42:22,716 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:42:23,429 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:42:23,430 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:42:23,856 DEBUG   SenderThread:55058 [sender.py:send():375] send: telemetry
+2023-04-27 11:42:23,856 DEBUG   SenderThread:55058 [sender.py:send():375] send: files
+2023-04-27 11:42:23,856 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file two-classifications-model.pt with policy live
+2023-04-27 11:42:24,430 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_created():278] file/dir created: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/two-classifications-model.pt
+2023-04-27 11:42:25,430 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:42:27,857 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:42:31,735 INFO    wandb-upload_0:55058 [upload_job.py:push():137] Uploaded file /tmp/tmp6mfer05wwandb/0qu03hqu-two-classifications-model.pt
+2023-04-27 11:42:32,368 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 11:42:32,368 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 11:42:33,437 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:42:34,432 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/config.yaml
+2023-04-27 11:42:38,552 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:42:38,893 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:42:38,895 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:42:38,895 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:42:38,896 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:42:39,433 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:42:41,149 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:42:41,150 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:42:41,150 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:42:41,151 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:42:41,434 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:42:41,434 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:42:43,434 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:42:44,152 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:42:47,368 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 11:42:47,369 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 11:42:49,426 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:42:54,426 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:42:56,194 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:42:56,196 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:42:56,196 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:42:56,197 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:42:56,437 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:42:58,445 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:42:58,445 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:42:58,446 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:42:58,447 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:42:59,437 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:42:59,438 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/two-classifications-model.pt
+2023-04-27 11:42:59,438 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:42:59,447 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:42:59,653 DEBUG   SenderThread:55058 [sender.py:send():375] send: files
+2023-04-27 11:42:59,654 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file two-classifications-model.pt with policy live
+2023-04-27 11:43:01,438 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:43:01,478 DEBUG   SystemMonitor:55058 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-04-27 11:43:01,478 DEBUG   SenderThread:55058 [sender.py:send():375] send: stats
+2023-04-27 11:43:02,368 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 11:43:02,369 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 11:43:05,421 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:43:08,545 INFO    wandb-upload_0:55058 [upload_job.py:push():137] Uploaded file /tmp/tmp6mfer05wwandb/4gh1px3f-two-classifications-model.pt
+2023-04-27 11:43:10,421 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:43:14,821 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:43:14,822 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:43:14,822 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:43:14,824 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:43:15,441 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:43:16,258 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:43:17,239 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:43:17,239 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:43:17,239 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:43:17,239 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:43:17,368 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 11:43:17,369 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 11:43:17,441 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:43:17,442 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:43:19,442 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:43:21,422 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:43:26,422 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:43:31,423 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:43:31,479 DEBUG   SenderThread:55058 [sender.py:send():375] send: stats
+2023-04-27 11:43:32,368 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 11:43:32,369 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 11:43:32,898 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:43:32,899 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:43:32,899 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:43:32,899 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:43:33,445 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:43:35,181 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:43:35,182 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:43:35,182 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:43:35,183 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:43:35,445 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:43:35,445 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/two-classifications-model.pt
+2023-04-27 11:43:35,446 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:43:36,425 DEBUG   SenderThread:55058 [sender.py:send():375] send: files
+2023-04-27 11:43:36,426 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file two-classifications-model.pt with policy live
+2023-04-27 11:43:36,426 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:43:36,446 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/two-classifications-model.pt
+2023-04-27 11:43:37,446 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:43:41,426 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:43:45,541 INFO    wandb-upload_0:55058 [upload_job.py:push():137] Uploaded file /tmp/tmp6mfer05wwandb/ryug9mkx-two-classifications-model.pt
+2023-04-27 11:43:46,427 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:43:47,369 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 11:43:47,369 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 11:43:51,434 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:43:51,611 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:43:51,612 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:43:51,612 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:43:51,613 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:43:52,449 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:43:53,449 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:43:53,870 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:43:53,871 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:43:53,871 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:43:53,871 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:43:54,450 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:43:54,450 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/two-classifications-model.pt
+2023-04-27 11:43:55,018 DEBUG   SenderThread:55058 [sender.py:send():375] send: files
+2023-04-27 11:43:55,018 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file two-classifications-model.pt with policy live
+2023-04-27 11:43:55,450 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:43:57,018 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:44:01,479 DEBUG   SenderThread:55058 [sender.py:send():375] send: stats
+2023-04-27 11:44:02,369 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 11:44:02,369 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 11:44:02,425 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:44:06,678 INFO    wandb-upload_0:55058 [upload_job.py:push():137] Uploaded file /tmp/tmp6mfer05wwandb/h727eml6-two-classifications-model.pt
+2023-04-27 11:44:07,425 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:44:10,158 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:44:10,159 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:44:10,160 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:44:10,160 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:44:10,453 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:44:12,424 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:44:12,424 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:44:12,425 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:44:12,426 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:44:12,426 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:44:12,454 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:44:13,454 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:44:15,455 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:44:17,369 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 11:44:17,369 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 11:44:17,427 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:44:22,428 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:44:27,428 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:44:27,605 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:44:27,606 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:44:27,606 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:44:27,606 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:44:28,458 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:44:29,458 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:44:29,843 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:44:29,849 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:44:29,849 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:44:29,849 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:44:30,458 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:44:30,458 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/two-classifications-model.pt
+2023-04-27 11:44:31,094 DEBUG   SenderThread:55058 [sender.py:send():375] send: files
+2023-04-27 11:44:31,095 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file two-classifications-model.pt with policy live
+2023-04-27 11:44:31,458 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:44:31,480 DEBUG   SenderThread:55058 [sender.py:send():375] send: stats
+2023-04-27 11:44:32,369 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 11:44:32,369 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 11:44:33,416 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:44:38,417 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:44:41,827 INFO    wandb-upload_0:55058 [upload_job.py:push():137] Uploaded file /tmp/tmp6mfer05wwandb/brybzkws-two-classifications-model.pt
+2023-04-27 11:44:43,417 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:44:46,165 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:44:46,166 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:44:46,166 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:44:46,167 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:44:46,461 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:44:47,369 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 11:44:47,369 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 11:44:48,426 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:44:48,430 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:44:48,430 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:44:48,430 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:44:48,431 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:44:48,462 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:44:48,462 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/two-classifications-model.pt
+2023-04-27 11:44:49,462 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/two-classifications-model.pt
+2023-04-27 11:44:49,463 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:44:49,766 DEBUG   SenderThread:55058 [sender.py:send():375] send: files
+2023-04-27 11:44:49,767 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file two-classifications-model.pt with policy live
+2023-04-27 11:44:51,463 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:44:53,767 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:44:58,485 INFO    wandb-upload_0:55058 [upload_job.py:push():137] Uploaded file /tmp/tmp6mfer05wwandb/r4voqk52-two-classifications-model.pt
+2023-04-27 11:44:58,768 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:45:01,480 DEBUG   SenderThread:55058 [sender.py:send():375] send: stats
+2023-04-27 11:45:02,369 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 11:45:02,369 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 11:45:04,425 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:45:04,804 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:45:04,805 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:45:04,805 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:45:04,805 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:45:05,466 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:45:07,045 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:45:07,046 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:45:07,046 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:45:07,046 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:45:07,466 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:45:07,467 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/two-classifications-model.pt
+2023-04-27 11:45:07,467 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:45:08,238 DEBUG   SenderThread:55058 [sender.py:send():375] send: files
+2023-04-27 11:45:08,238 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file two-classifications-model.pt with policy live
+2023-04-27 11:45:08,467 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/two-classifications-model.pt
+2023-04-27 11:45:09,467 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:45:10,239 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:45:15,239 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:45:16,321 INFO    wandb-upload_0:55058 [upload_job.py:push():137] Uploaded file /tmp/tmp6mfer05wwandb/t34mgr93-two-classifications-model.pt
+2023-04-27 11:45:17,369 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 11:45:17,369 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 11:45:20,430 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:45:23,335 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:45:23,336 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:45:23,336 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:45:23,337 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:45:23,470 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:45:25,470 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:45:25,582 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:45:25,583 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:45:25,583 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:45:25,583 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:45:25,583 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:45:26,471 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:45:26,471 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/two-classifications-model.pt
+2023-04-27 11:45:26,801 DEBUG   SenderThread:55058 [sender.py:send():375] send: files
+2023-04-27 11:45:26,801 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file two-classifications-model.pt with policy live
+2023-04-27 11:45:27,471 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:45:30,802 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:45:31,481 DEBUG   SenderThread:55058 [sender.py:send():375] send: stats
+2023-04-27 11:45:32,369 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 11:45:32,369 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 11:45:36,427 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:45:36,772 INFO    wandb-upload_0:55058 [upload_job.py:push():137] Uploaded file /tmp/tmp6mfer05wwandb/2nh05b2n-two-classifications-model.pt
+2023-04-27 11:45:41,428 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:45:41,817 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:45:41,817 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:45:41,818 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:45:41,818 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:45:42,474 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:45:43,474 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:45:44,091 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:45:44,091 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:45:44,091 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:45:44,091 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:45:44,475 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:45:45,475 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:45:47,092 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:45:47,369 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 11:45:47,369 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 11:45:52,430 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:45:57,431 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:45:59,216 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:45:59,217 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:45:59,217 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:45:59,217 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:45:59,478 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:46:01,464 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:46:01,465 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:46:01,465 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:46:01,465 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:46:01,479 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:46:01,479 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:46:01,481 DEBUG   SenderThread:55058 [sender.py:send():375] send: stats
+2023-04-27 11:46:02,369 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 11:46:02,369 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 11:46:03,428 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:46:03,479 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:46:08,429 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:46:13,429 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:46:16,608 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:46:16,609 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:46:16,609 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:46:16,609 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:46:17,369 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 11:46:17,370 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 11:46:17,482 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:46:18,856 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:46:18,857 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:46:18,857 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:46:18,857 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:46:18,857 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:46:19,483 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:46:19,483 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:46:21,483 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:46:23,858 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:46:28,859 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:46:31,482 DEBUG   SenderThread:55058 [sender.py:send():375] send: stats
+2023-04-27 11:46:32,369 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 11:46:32,370 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 11:46:34,055 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:46:34,056 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:46:34,056 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:46:34,057 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:46:34,057 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:46:34,486 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:46:35,486 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:46:36,383 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:46:36,384 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:46:36,384 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:46:36,384 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:46:36,487 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:46:36,487 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/two-classifications-model.pt
+2023-04-27 11:46:37,487 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/two-classifications-model.pt
+2023-04-27 11:46:37,487 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:46:37,548 DEBUG   SenderThread:55058 [sender.py:send():375] send: files
+2023-04-27 11:46:37,548 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file two-classifications-model.pt with policy live
+2023-04-27 11:46:39,487 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:46:39,548 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:46:44,549 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:46:46,128 INFO    wandb-upload_0:55058 [upload_job.py:push():137] Uploaded file /tmp/tmp6mfer05wwandb/95o7p7zm-two-classifications-model.pt
+2023-04-27 11:46:47,369 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 11:46:47,370 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 11:46:50,436 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:46:53,201 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:46:53,202 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:46:53,202 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:46:53,202 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:46:53,490 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:46:55,491 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:46:55,556 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:46:55,556 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:46:55,562 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:46:55,562 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:46:55,563 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:46:56,491 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:46:56,491 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/two-classifications-model.pt
+2023-04-27 11:46:56,737 DEBUG   SenderThread:55058 [sender.py:send():375] send: files
+2023-04-27 11:46:56,737 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file two-classifications-model.pt with policy live
+2023-04-27 11:46:57,491 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:47:00,738 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:47:01,482 DEBUG   SenderThread:55058 [sender.py:send():375] send: stats
+2023-04-27 11:47:02,370 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 11:47:02,370 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 11:47:03,148 INFO    wandb-upload_0:55058 [upload_job.py:push():137] Uploaded file /tmp/tmp6mfer05wwandb/q412o1je-two-classifications-model.pt
+2023-04-27 11:47:06,465 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:47:11,465 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:47:12,223 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:47:12,224 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:47:12,225 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:47:12,225 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:47:12,495 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:47:13,495 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:47:14,505 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:47:14,506 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:47:14,506 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:47:14,506 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:47:15,495 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:47:15,495 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:47:16,506 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:47:17,370 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 11:47:17,370 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 11:47:17,496 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:47:22,436 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:47:27,437 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:47:29,797 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:47:29,798 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:47:29,798 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:47:29,799 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:47:30,499 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:47:31,483 DEBUG   SenderThread:55058 [sender.py:send():375] send: stats
+2023-04-27 11:47:31,499 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:47:32,066 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:47:32,067 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:47:32,067 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:47:32,067 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:47:32,401 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 11:47:32,401 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 11:47:32,459 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:47:32,499 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:47:32,499 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/two-classifications-model.pt
+2023-04-27 11:47:33,378 DEBUG   SenderThread:55058 [sender.py:send():375] send: files
+2023-04-27 11:47:33,378 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file two-classifications-model.pt with policy live
+2023-04-27 11:47:33,499 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:47:38,379 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:47:40,869 INFO    wandb-upload_0:55058 [upload_job.py:push():137] Uploaded file /tmp/tmp6mfer05wwandb/ou71hhe3-two-classifications-model.pt
+2023-04-27 11:47:43,379 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:47:47,401 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 11:47:47,401 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 11:47:48,452 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:47:48,540 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:47:48,542 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:47:48,542 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:47:48,542 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:47:49,503 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:47:50,795 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:47:50,796 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:47:50,796 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:47:50,796 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:47:51,503 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:47:51,504 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:47:53,504 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:47:53,796 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:47:58,797 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:48:01,483 DEBUG   SenderThread:55058 [sender.py:send():375] send: stats
+2023-04-27 11:48:02,401 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 11:48:02,401 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 11:48:04,451 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:48:05,999 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:48:06,000 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:48:06,001 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:48:06,001 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:48:06,507 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:48:07,507 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:48:08,307 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:48:08,307 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:48:08,307 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:48:08,308 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:48:08,507 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:48:08,507 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/two-classifications-model.pt
+2023-04-27 11:48:09,508 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/two-classifications-model.pt
+2023-04-27 11:48:09,508 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:48:09,574 DEBUG   SenderThread:55058 [sender.py:send():375] send: files
+2023-04-27 11:48:09,574 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file two-classifications-model.pt with policy live
+2023-04-27 11:48:09,574 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:48:14,575 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:48:17,401 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 11:48:17,401 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 11:48:19,504 INFO    wandb-upload_0:55058 [upload_job.py:push():137] Uploaded file /tmp/tmp6mfer05wwandb/qym9acgb-two-classifications-model.pt
+2023-04-27 11:48:20,485 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:48:24,838 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:48:24,839 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:48:24,839 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:48:24,840 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:48:25,511 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:48:26,265 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 11:48:27,135 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 11:48:27,136 DEBUG   SenderThread:55058 [sender.py:send():375] send: history
+2023-04-27 11:48:27,136 DEBUG   SenderThread:55058 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 11:48:27,137 INFO    SenderThread:55058 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 11:48:27,511 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/wandb-summary.json
+2023-04-27 11:48:27,512 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:48:29,512 INFO    Thread-12 :55058 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/ForwardForward/new_code/wandb/run-20230427_114201-fl1jk01x/files/output.log
+2023-04-27 11:48:31,484 DEBUG   SenderThread:55058 [sender.py:send():375] send: stats
+2023-04-27 11:48:31,485 DEBUG   HandlerThread:55058 [handler.py:handle_request():144] handle_request: status_report

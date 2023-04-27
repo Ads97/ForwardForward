@@ -1,0 +1,54 @@
+FF_model(
+  (model): ModuleList(
+    (0): Linear(in_features=784, out_features=2000, bias=True)
+    (1): Linear(in_features=2000, out_features=2000, bias=True)
+    (2): Linear(in_features=2000, out_features=2000, bias=True)
+    (3): Linear(in_features=2000, out_features=2000, bias=True)
+  )
+  (ff_loss): BCEWithLogitsLoss()
+  (linear_classifier): Sequential(
+    (0): Linear(in_features=6000, out_features=10, bias=False)
+  )
+  (classification_loss): CrossEntropyLoss()
+)
+Epoch 0 	train 	 	Time: 0:00:32.748658 	classification_accuracy: 0.0996 	multi_pass_classification_accuracy: 0.1012 	
+val
+Epoch 0 	val 	 	Time: 0:00:02.643986 	classification_accuracy: 0.0982 	multi_pass_classification_accuracy: 0.1068 	
+saving model
+Epoch 1 	train 	 	Time: 0:00:37.254745 	classification_accuracy: 0.0999 	multi_pass_classification_accuracy: 0.0987 	
+val
+Epoch 1 	val 	 	Time: 0:00:03.478243 	classification_accuracy: 0.0958 	multi_pass_classification_accuracy: 0.1001 	
+Epoch 2 	train 	 	Time: 0:00:33.472825 	classification_accuracy: 0.1014 	multi_pass_classification_accuracy: 0.0995 	
+val
+Epoch 2 	val 	 	Time: 0:00:05.532553 	classification_accuracy: 0.1025 	multi_pass_classification_accuracy: 0.0912 	
+saving model
+Traceback (most recent call last):
+  File "main.py", line 111, in <module>
+    my_main()
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "main.py", line 102, in my_main
+    model = train(opt, model, optimizer)
+  File "main.py", line 29, in train
+    scalar_outputs = model(inputs, labels)
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/jonah/Documents/school/idl/activation_ForwardForward/new_code/src/ff_model.py", line 139, in forward
+    scalar_outputs = self.forward_downstream_multi_pass(
+  File "/home/jonah/Documents/school/idl/activation_ForwardForward/new_code/src/ff_model.py", line 190, in forward_downstream_multi_pass
+    z = self._layer_norm(z)
+  File "/home/jonah/Documents/school/idl/activation_ForwardForward/new_code/src/ff_model.py", line 61, in _layer_norm
+    return z / (torch.sqrt(torch.mean(z ** 2, dim=-1, keepdim=True)) + eps)
+KeyboardInterrupt

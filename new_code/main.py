@@ -7,6 +7,7 @@ from omegaconf import DictConfig
 
 from src import utils
 import wandb
+from torch.nn import ReLU, Tanh, GELU, Sigmoid, SELU, ELU, CELU
 
 
 def train(opt, model, optimizer):
@@ -20,7 +21,8 @@ def train(opt, model, optimizer):
         optimizer = utils.update_learning_rate(optimizer, opt, epoch)
 
         for inputs, labels in train_loader:
-            inputs, labels = utils.preprocess_inputs(opt, inputs, labels) # push to GPU
+            inputs, labels = utils.preprocess_inputs(
+                opt, inputs, labels)  # push to GPU
 
             optimizer.zero_grad()
 
@@ -33,12 +35,14 @@ def train(opt, model, optimizer):
                 train_results, scalar_outputs, num_steps_per_epoch
             )
 
-        utils.print_results("train", time.time() - start_time, train_results, epoch)
+        utils.print_results("train", time.time() -
+                            start_time, train_results, epoch)
         start_time = time.time()
 
         # Validate.
         if epoch % opt.training.val_idx == 0 and opt.training.val_idx != -1:
-            best_val_acc = validate_or_test(opt, model, "val", epoch=epoch, best_val_acc=best_val_acc)
+            best_val_acc = validate_or_test(
+                opt, model, "val", epoch=epoch, best_val_acc=best_val_acc)
             # utils.print_results("val", time.time() - start_time, train_results, epoch)
 
     return model
@@ -67,7 +71,8 @@ def validate_or_test(opt, model, partition, epoch=None, best_val_acc=1.0):
                 test_results, scalar_outputs, num_steps_per_epoch
             )
 
-    utils.print_results(partition, time.time() - test_time, test_results, epoch=epoch)
+    utils.print_results(partition, time.time() - test_time,
+                        test_results, epoch=epoch)
     # save model if classification accuracy is better than previous best
     if test_results["classification_accuracy"] > best_val_acc:
         print("saving model")
@@ -82,15 +87,18 @@ def validate_or_test(opt, model, partition, epoch=None, best_val_acc=1.0):
 def my_main(opt: DictConfig) -> None:
     opt = utils.parse_args(opt)
     run = wandb.init(
-    project="project",
-    entity  = "automellon",
-    name = "two-classifications", # Wandb creates random run names if you skip this field
-    reinit = False, # Allows reinitalizing runs when you re-run this cell
-    # run_id = # Insert specific run id here if you want to resume a previous run
-    # resume = "must" # You need this to resume previous runs, but comment out reinit = True when using this
-    config = dict(opt) ### Wandb Config for your run
+        project="project",
+        entity="automellon",
+        name="two-classifications",  # Wandb creates random run names if you skip this field
+        reinit=False,  # Allows reinitalizing runs when you re-run this cell
+        # run_id = # Insert specific run id here if you want to resume a previous run
+        # resume = "must" # You need this to resume previous runs, but comment out reinit = True when using this
+        config=dict(opt)  # Wandb Config for your run
     )
-    model, optimizer = utils.get_model_and_optimizer(opt)
+    # activations = [ReLU(), Tanh(), GELU(), Sigmoid(), SELU(), ELU(), CELU()]
+    activations =  [torch.distributions.studentT.StudentT(783)] * 4
+    # activations = torch.nn.ReLU()
+    model, optimizer = utils.get_model_and_optimizer(opt, activations)
     model = train(opt, model, optimizer)
     run.finish()
     # validate_or_test(opt, model, "val")

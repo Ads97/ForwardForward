@@ -1,0 +1,90 @@
+FF_model(
+  (model): ModuleList(
+    (0): Linear(in_features=784, out_features=2000, bias=True)
+    (1): Linear(in_features=2000, out_features=2000, bias=True)
+    (2): Linear(in_features=2000, out_features=2000, bias=True)
+    (3): Linear(in_features=2000, out_features=2000, bias=True)
+  )
+  (ff_loss): BCEWithLogitsLoss()
+  (linear_classifier): Sequential(
+    (0): Linear(in_features=6000, out_features=10, bias=False)
+  )
+  (classification_loss): CrossEntropyLoss()
+)
+Epoch 0 	train 	 	Time: 0:00:04.905650 	classification_loss: 2.3277 	classification_accuracy: 0.1041 	multi_pass_classification_accuracy: 0.1014 	
+val
+Epoch 0 	val 	 	Time: 0:00:00.916923 	classification_loss: 2.3268 	classification_accuracy: 0.0982 	multi_pass_classification_accuracy: 0.0726 	
+saving model
+Epoch 1 	train 	 	Time: 0:00:05.563856 	classification_loss: 2.3323 	classification_accuracy: 0.1018 	multi_pass_classification_accuracy: 0.1006 	
+val
+Epoch 1 	val 	 	Time: 0:00:00.945100 	classification_loss: 2.3322 	classification_accuracy: 0.0980 	multi_pass_classification_accuracy: 0.0866 	
+Epoch 2 	train 	 	Time: 0:00:05.578130 	classification_loss: 2.3260 	classification_accuracy: 0.1044 	multi_pass_classification_accuracy: 0.0999 	
+val
+Epoch 2 	val 	 	Time: 0:00:00.925224 	classification_loss: 2.3301 	classification_accuracy: 0.1028 	multi_pass_classification_accuracy: 0.0935 	
+saving model
+Epoch 3 	train 	 	Time: 0:00:05.683625 	classification_loss: 2.3350 	classification_accuracy: 0.0999 	multi_pass_classification_accuracy: 0.0960 	
+val
+Epoch 3 	val 	 	Time: 0:00:00.954355 	classification_loss: 2.3151 	classification_accuracy: 0.1028 	multi_pass_classification_accuracy: 0.0955 	
+Epoch 4 	train 	 	Time: 0:00:05.650998 	classification_loss: 2.3243 	classification_accuracy: 0.1028 	multi_pass_classification_accuracy: 0.0991 	
+val
+Epoch 4 	val 	 	Time: 0:00:00.931757 	classification_loss: 2.3215 	classification_accuracy: 0.0982 	multi_pass_classification_accuracy: 0.1045 	
+Epoch 5 	train 	 	Time: 0:00:05.453268 	classification_loss: 2.3413 	classification_accuracy: 0.1019 	multi_pass_classification_accuracy: 0.1007 	
+val
+Epoch 5 	val 	 	Time: 0:00:00.931741 	classification_loss: 2.3502 	classification_accuracy: 0.1032 	multi_pass_classification_accuracy: 0.0879 	
+saving model
+Epoch 6 	train 	 	Time: 0:00:05.574687 	classification_loss: 2.3372 	classification_accuracy: 0.1041 	multi_pass_classification_accuracy: 0.0974 	
+val
+Epoch 6 	val 	 	Time: 0:00:00.927757 	classification_loss: 2.3533 	classification_accuracy: 0.0892 	multi_pass_classification_accuracy: 0.1101 	
+Epoch 7 	train 	 	Time: 0:00:05.470221 	classification_loss: 2.3303 	classification_accuracy: 0.1035 	multi_pass_classification_accuracy: 0.1018 	
+val
+Epoch 7 	val 	 	Time: 0:00:00.931037 	classification_loss: 2.3489 	classification_accuracy: 0.1008 	multi_pass_classification_accuracy: 0.0958 	
+Epoch 8 	train 	 	Time: 0:00:05.491296 	classification_loss: 2.3290 	classification_accuracy: 0.1016 	multi_pass_classification_accuracy: 0.1018 	
+val
+Epoch 8 	val 	 	Time: 0:00:00.924231 	classification_loss: 2.3310 	classification_accuracy: 0.0979 	multi_pass_classification_accuracy: 0.0995 	
+Epoch 9 	train 	 	Time: 0:00:05.538645 	classification_loss: 2.3299 	classification_accuracy: 0.1023 	multi_pass_classification_accuracy: 0.0982 	
+val
+Epoch 9 	val 	 	Time: 0:00:00.941046 	classification_loss: 2.3425 	classification_accuracy: 0.0982 	multi_pass_classification_accuracy: 0.0823 	
+Epoch 10 	train 	 	Time: 0:00:05.520369 	classification_loss: 2.3279 	classification_accuracy: 0.1004 	multi_pass_classification_accuracy: 0.1010 	
+val
+Traceback (most recent call last):
+  File "main.py", line 111, in <module>
+    my_main()
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "main.py", line 102, in my_main
+    model = train(opt, model, optimizer)
+  File "main.py", line 44, in train
+    best_val_acc = validate_or_test(
+  File "main.py", line 61, in validate_or_test
+    for inputs, labels in data_loader:
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 530, in __next__
+    data = self._next_data()
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1207, in _next_data
+    idx, data = self._get_data()
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1173, in _get_data
+    success, data = self._try_get_data()
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1011, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/multiprocessing/queues.py", line 107, in get
+    if not self._poll(timeout):
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/multiprocessing/connection.py", line 257, in poll
+    return self._poll(timeout)
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/multiprocessing/connection.py", line 424, in _poll
+    r = wait([self], timeout)
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/multiprocessing/connection.py", line 931, in wait
+    ready = selector.select(timeout)
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt

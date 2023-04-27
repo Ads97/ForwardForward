@@ -1,0 +1,83 @@
+FF_model(
+  (act_fn): Sigmoid()
+  (model): ModuleList(
+    (0): Linear(in_features=784, out_features=2000, bias=True)
+    (1): Linear(in_features=2000, out_features=2000, bias=True)
+    (2): Linear(in_features=2000, out_features=2000, bias=True)
+    (3): Linear(in_features=2000, out_features=2000, bias=True)
+  )
+  (ff_loss): BCEWithLogitsLoss()
+  (linear_classifier): Sequential(
+    (0): Linear(in_features=6000, out_features=10, bias=False)
+  )
+  (classification_loss): CrossEntropyLoss()
+)
+Epoch 0 	train 	 	Time: 0:00:11.305877 	classification_accuracy: 0.1546 	multi_pass_classification_accuracy: 0.4637 	
+val
+Epoch 0 	val 	 	Time: 0:00:01.034330 	classification_accuracy: 0.1340 	multi_pass_classification_accuracy: 0.6102 	
+saving model
+Epoch 1 	train 	 	Time: 0:00:13.539039 	classification_accuracy: 0.3219 	multi_pass_classification_accuracy: 0.6380 	
+val
+Epoch 1 	val 	 	Time: 0:00:01.081884 	classification_accuracy: 0.1720 	multi_pass_classification_accuracy: 0.6767 	
+saving model
+Epoch 2 	train 	 	Time: 0:00:12.805110 	classification_accuracy: 0.4806 	multi_pass_classification_accuracy: 0.6866 	
+val
+Epoch 2 	val 	 	Time: 0:00:01.076169 	classification_accuracy: 0.5385 	multi_pass_classification_accuracy: 0.7109 	
+saving model
+Epoch 3 	train 	 	Time: 0:00:13.699582 	classification_accuracy: 0.5885 	multi_pass_classification_accuracy: 0.7189 	
+val
+Epoch 3 	val 	 	Time: 0:00:01.062163 	classification_accuracy: 0.7279 	multi_pass_classification_accuracy: 0.7389 	
+saving model
+Epoch 4 	train 	 	Time: 0:00:11.891637 	classification_accuracy: 0.6885 	multi_pass_classification_accuracy: 0.7521 	
+val
+Epoch 4 	val 	 	Time: 0:00:01.025425 	classification_accuracy: 0.7063 	multi_pass_classification_accuracy: 0.7773 	
+Epoch 5 	train 	 	Time: 0:00:13.357430 	classification_accuracy: 0.7612 	multi_pass_classification_accuracy: 0.7770 	
+val
+Epoch 5 	val 	 	Time: 0:00:01.094273 	classification_accuracy: 0.8470 	multi_pass_classification_accuracy: 0.7960 	
+saving model
+Epoch 6 	train 	 	Time: 0:00:11.757953 	classification_accuracy: 0.8122 	multi_pass_classification_accuracy: 0.7934 	
+val
+Epoch 6 	val 	 	Time: 0:00:01.102002 	classification_accuracy: 0.8430 	multi_pass_classification_accuracy: 0.8199 	
+Epoch 7 	train 	 	Time: 0:00:13.516048 	classification_accuracy: 0.8310 	multi_pass_classification_accuracy: 0.8154 	
+val
+Epoch 7 	val 	 	Time: 0:00:01.095181 	classification_accuracy: 0.8413 	multi_pass_classification_accuracy: 0.8377 	
+Epoch 8 	train 	 	Time: 0:00:12.725708 	classification_accuracy: 0.8461 	multi_pass_classification_accuracy: 0.8300 	
+val
+Epoch 8 	val 	 	Time: 0:00:01.072449 	classification_accuracy: 0.8681 	multi_pass_classification_accuracy: 0.8460 	
+saving model
+Epoch 9 	train 	 	Time: 0:00:13.729879 	classification_accuracy: 0.8601 	multi_pass_classification_accuracy: 0.8479 	
+val
+Epoch 9 	val 	 	Time: 0:00:01.009568 	classification_accuracy: 0.8736 	multi_pass_classification_accuracy: 0.8643 	
+saving model
+Epoch 10 	train 	 	Time: 0:00:12.204973 	classification_accuracy: 0.8703 	multi_pass_classification_accuracy: 0.8575 	
+val
+Epoch 10 	val 	 	Time: 0:00:01.070717 	classification_accuracy: 0.8893 	multi_pass_classification_accuracy: 0.8669 	
+saving model
+Traceback (most recent call last):
+  File "main.py", line 111, in <module>
+    my_main()
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "main.py", line 102, in my_main
+    model = train(opt, model, optimizer)
+  File "main.py", line 29, in train
+    scalar_outputs = model(inputs, labels)
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/jonah/Documents/school/idl/activation_ForwardForward/new_code/src/ff_model.py", line 127, in forward
+    ff_loss, ff_accuracy = self._calc_ff_loss(z, posneg_labels)
+  File "/home/jonah/Documents/school/idl/activation_ForwardForward/new_code/src/ff_model.py", line 93, in _calc_ff_loss
+    ff_accuracy = (
+KeyboardInterrupt

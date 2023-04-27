@@ -1,0 +1,64 @@
+FF_model(
+  (model): ModuleList(
+    (0): Linear(in_features=784, out_features=2000, bias=True)
+    (1): Linear(in_features=2000, out_features=2000, bias=True)
+    (2): Linear(in_features=2000, out_features=2000, bias=True)
+    (3): Linear(in_features=2000, out_features=2000, bias=True)
+  )
+  (ff_loss): BCEWithLogitsLoss()
+  (linear_classifier): Sequential(
+    (0): Linear(in_features=6000, out_features=10, bias=False)
+  )
+  (classification_loss): CrossEntropyLoss()
+)
+Epoch 0 	train 	 	Time: 0:00:04.850046 	classification_accuracy: 0.1034 	multi_pass_classification_accuracy: 0.1060 	
+val
+Epoch 0 	val 	 	Time: 0:00:00.939121 	classification_accuracy: 0.0982 	multi_pass_classification_accuracy: 0.0858 	
+saving model
+Epoch 1 	train 	 	Time: 0:00:05.603848 	classification_accuracy: 0.1021 	multi_pass_classification_accuracy: 0.1000 	
+val
+Epoch 1 	val 	 	Time: 0:00:00.965806 	classification_accuracy: 0.0980 	multi_pass_classification_accuracy: 0.1026 	
+Epoch 2 	train 	 	Time: 0:00:05.558856 	classification_accuracy: 0.1050 	multi_pass_classification_accuracy: 0.1019 	
+val
+Epoch 2 	val 	 	Time: 0:00:00.926709 	classification_accuracy: 0.1028 	multi_pass_classification_accuracy: 0.1094 	
+saving model
+Epoch 3 	train 	 	Time: 0:00:05.598788 	classification_accuracy: 0.1025 	multi_pass_classification_accuracy: 0.1005 	
+val
+Epoch 3 	val 	 	Time: 0:00:00.939437 	classification_accuracy: 0.1028 	multi_pass_classification_accuracy: 0.0936 	
+Epoch 4 	train 	 	Time: 0:00:05.710395 	classification_accuracy: 0.1031 	multi_pass_classification_accuracy: 0.1016 	
+val
+Epoch 4 	val 	 	Time: 0:00:00.925421 	classification_accuracy: 0.0982 	multi_pass_classification_accuracy: 0.1070 	
+Epoch 5 	train 	 	Time: 0:00:05.627580 	classification_accuracy: 0.1006 	multi_pass_classification_accuracy: 0.0993 	
+val
+Epoch 5 	val 	 	Time: 0:00:00.927402 	classification_accuracy: 0.1032 	multi_pass_classification_accuracy: 0.0858 	
+saving model
+Traceback (most recent call last):
+  File "main.py", line 111, in <module>
+    my_main()
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "main.py", line 102, in my_main
+    model = train(opt, model, optimizer)
+  File "main.py", line 29, in train
+    scalar_outputs = model(inputs, labels)
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/jonah/Documents/school/idl/activation_ForwardForward/new_code/src/ff_model.py", line 120, in forward
+    z = -self.act_fn[idx].log_prob(z)
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torch/distributions/studentT.py", line 84, in log_prob
+    return -0.5 * (self.df + 1.) * torch.log1p(y**2. / self.df) - Z
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torch/_tensor.py", line 31, in wrapped
+    return f(*args, **kwargs)
+KeyboardInterrupt

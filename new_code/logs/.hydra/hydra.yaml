@@ -129,18 +129,18 @@ hydra:
   runtime:
     version: 1.3.2
     version_base: '1.3'
-    cwd: /home/saumyassd/hdd/idl/ff_official/Forward-Forward
+    cwd: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code
     config_sources:
     - path: hydra.conf
       schema: pkg
       provider: hydra
-    - path: /home/saumyassd/hdd/idl/ff_official/Forward-Forward
+    - path: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code
       schema: file
       provider: main
     - path: ''
       schema: structured
       provider: schema
-    output_dir: /home/saumyassd/hdd/idl/ff_official/Forward-Forward/logs
+    output_dir: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/logs
     choices:
       hydra/env: default
       hydra/callbacks: null

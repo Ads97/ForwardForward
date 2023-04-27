@@ -1,0 +1,321 @@
+FF_model(
+  (model): ModuleList(
+    (0): Linear(in_features=3072, out_features=2000, bias=True)
+    (1): Linear(in_features=2000, out_features=2000, bias=True)
+    (2): Linear(in_features=2000, out_features=2000, bias=True)
+    (3): Linear(in_features=2000, out_features=2000, bias=True)
+  )
+  (ff_loss): BCEWithLogitsLoss()
+  (linear_classifier): Sequential(
+    (0): Linear(in_features=6000, out_features=10, bias=False)
+  )
+  (classification_loss): CrossEntropyLoss()
+)
+Downloading https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz to /home/jonah/Documents/school/idl/ForwardForward/new_code/datasets/cifar-10-python.tar.gz
+
+
+49.1%
+
+100.0%
+Epoch 0 	train 	 	Time: 0:00:12.802652 	Loss: 2088.9393 	Peer Normalization: 0.7077 	loss_layer_0: 200.9743 	ff_accuracy_layer_0: 0.5013 	loss_layer_1: 273.0681 	ff_accuracy_layer_1: 0.5003 	loss_layer_2: 773.0152 	ff_accuracy_layer_2: 0.4999 	loss_layer_3: 839.5239 	ff_accuracy_layer_3: 0.5001 	classification_loss: 2.3367 	classification_accuracy: 0.1647 	multi_pass_classification_accuracy: 0.1087 	
+Files already downloaded and verified
+val
+Epoch 0 	val 	 	Time: 0:00:01.549613 	Loss: 2.2042 	classification_loss: 2.2042 	classification_accuracy: 0.2159 	multi_pass_classification_accuracy: 0.0947 	
+saving model
+Epoch 1 	train 	 	Time: 0:00:08.523301 	Loss: 1845.8043 	Peer Normalization: 0.8140 	loss_layer_0: 192.4128 	ff_accuracy_layer_0: 0.5038 	loss_layer_1: 237.8046 	ff_accuracy_layer_1: 0.5039 	loss_layer_2: 711.1471 	ff_accuracy_layer_2: 0.5006 	loss_layer_3: 702.0128 	ff_accuracy_layer_3: 0.5005 	classification_loss: 2.4025 	classification_accuracy: 0.1800 	multi_pass_classification_accuracy: 0.1235 	
+Files already downloaded and verified
+val
+Epoch 1 	val 	 	Time: 0:00:01.553699 	Loss: 2.3491 	classification_loss: 2.3491 	classification_accuracy: 0.2085 	multi_pass_classification_accuracy: 0.1189 	
+Epoch 2 	train 	 	Time: 0:00:08.490959 	Loss: 1461.3463 	Peer Normalization: 0.9102 	loss_layer_0: 188.7390 	ff_accuracy_layer_0: 0.5056 	loss_layer_1: 197.2870 	ff_accuracy_layer_1: 0.5084 	loss_layer_2: 523.4094 	ff_accuracy_layer_2: 0.5034 	loss_layer_3: 549.4969 	ff_accuracy_layer_3: 0.5007 	classification_loss: 2.3866 	classification_accuracy: 0.1974 	multi_pass_classification_accuracy: 0.1373 	
+Files already downloaded and verified
+val
+Epoch 2 	val 	 	Time: 0:00:01.572073 	Loss: 2.3041 	classification_loss: 2.3041 	classification_accuracy: 0.2135 	multi_pass_classification_accuracy: 0.1550 	
+Epoch 3 	train 	 	Time: 0:00:08.516713 	Loss: 1311.6456 	Peer Normalization: 0.9354 	loss_layer_0: 179.0517 	ff_accuracy_layer_0: 0.5082 	loss_layer_1: 179.2533 	ff_accuracy_layer_1: 0.5134 	loss_layer_2: 456.6566 	ff_accuracy_layer_2: 0.5050 	loss_layer_3: 494.3233 	ff_accuracy_layer_3: 0.5021 	classification_loss: 2.3327 	classification_accuracy: 0.2121 	multi_pass_classification_accuracy: 0.1493 	
+Files already downloaded and verified
+val
+Epoch 3 	val 	 	Time: 0:00:01.592511 	Loss: 2.6579 	classification_loss: 2.6579 	classification_accuracy: 0.1938 	multi_pass_classification_accuracy: 0.1542 	
+Epoch 4 	train 	 	Time: 0:00:08.596599 	Loss: 1157.0553 	Peer Normalization: 0.9670 	loss_layer_0: 168.4263 	ff_accuracy_layer_0: 0.5127 	loss_layer_1: 166.7540 	ff_accuracy_layer_1: 0.5178 	loss_layer_2: 386.5827 	ff_accuracy_layer_2: 0.5097 	loss_layer_3: 433.0013 	ff_accuracy_layer_3: 0.5038 	classification_loss: 2.2620 	classification_accuracy: 0.2366 	multi_pass_classification_accuracy: 0.1653 	
+Files already downloaded and verified
+val
+Epoch 4 	val 	 	Time: 0:00:01.592616 	Loss: 2.2245 	classification_loss: 2.2245 	classification_accuracy: 0.2385 	multi_pass_classification_accuracy: 0.1859 	
+saving model
+Epoch 5 	train 	 	Time: 0:00:08.760988 	Loss: 1034.2456 	Peer Normalization: 0.9700 	loss_layer_0: 166.6077 	ff_accuracy_layer_0: 0.5164 	loss_layer_1: 159.8444 	ff_accuracy_layer_1: 0.5231 	loss_layer_2: 324.4875 	ff_accuracy_layer_2: 0.5125 	loss_layer_3: 381.0993 	ff_accuracy_layer_3: 0.5064 	classification_loss: 2.1776 	classification_accuracy: 0.2510 	multi_pass_classification_accuracy: 0.1846 	
+Files already downloaded and verified
+val
+Epoch 5 	val 	 	Time: 0:00:01.563463 	Loss: 2.1112 	classification_loss: 2.1112 	classification_accuracy: 0.2530 	multi_pass_classification_accuracy: 0.1927 	
+saving model
+Epoch 6 	train 	 	Time: 0:00:08.677088 	Loss: 979.4395 	Peer Normalization: 1.0015 	loss_layer_0: 169.1253 	ff_accuracy_layer_0: 0.5198 	loss_layer_1: 148.6024 	ff_accuracy_layer_1: 0.5258 	loss_layer_2: 296.6454 	ff_accuracy_layer_2: 0.5157 	loss_layer_3: 362.8796 	ff_accuracy_layer_3: 0.5081 	classification_loss: 2.1568 	classification_accuracy: 0.2536 	multi_pass_classification_accuracy: 0.1931 	
+Files already downloaded and verified
+val
+Epoch 6 	val 	 	Time: 0:00:01.572075 	Loss: 2.2287 	classification_loss: 2.2287 	classification_accuracy: 0.2422 	multi_pass_classification_accuracy: 0.1819 	
+Epoch 7 	train 	 	Time: 0:00:08.558390 	Loss: 932.9388 	Peer Normalization: 0.9749 	loss_layer_0: 152.8759 	ff_accuracy_layer_0: 0.5253 	loss_layer_1: 141.5431 	ff_accuracy_layer_1: 0.5314 	loss_layer_2: 283.5410 	ff_accuracy_layer_2: 0.5196 	loss_layer_3: 352.8306 	ff_accuracy_layer_3: 0.5110 	classification_loss: 2.1190 	classification_accuracy: 0.2695 	multi_pass_classification_accuracy: 0.1999 	
+Files already downloaded and verified
+val
+Epoch 7 	val 	 	Time: 0:00:01.546370 	Loss: 2.1012 	classification_loss: 2.1012 	classification_accuracy: 0.2918 	multi_pass_classification_accuracy: 0.1822 	
+saving model
+Epoch 8 	train 	 	Time: 0:00:08.801590 	Loss: 918.8638 	Peer Normalization: 0.9951 	loss_layer_0: 161.0392 	ff_accuracy_layer_0: 0.5283 	loss_layer_1: 134.0386 	ff_accuracy_layer_1: 0.5366 	loss_layer_2: 274.5646 	ff_accuracy_layer_2: 0.5222 	loss_layer_3: 347.1049 	ff_accuracy_layer_3: 0.5136 	classification_loss: 2.0866 	classification_accuracy: 0.2790 	multi_pass_classification_accuracy: 0.2073 	
+Files already downloaded and verified
+val
+Epoch 8 	val 	 	Time: 0:00:01.585835 	Loss: 2.0036 	classification_loss: 2.0036 	classification_accuracy: 0.2925 	multi_pass_classification_accuracy: 0.1872 	
+saving model
+Epoch 9 	train 	 	Time: 0:00:08.767927 	Loss: 872.6995 	Peer Normalization: 0.9753 	loss_layer_0: 163.0478 	ff_accuracy_layer_0: 0.5316 	loss_layer_1: 134.3431 	ff_accuracy_layer_1: 0.5391 	loss_layer_2: 245.6278 	ff_accuracy_layer_2: 0.5259 	loss_layer_3: 327.5749 	ff_accuracy_layer_3: 0.5139 	classification_loss: 2.0766 	classification_accuracy: 0.2811 	multi_pass_classification_accuracy: 0.2163 	
+Files already downloaded and verified
+val
+Epoch 9 	val 	 	Time: 0:00:01.552074 	Loss: 2.0470 	classification_loss: 2.0470 	classification_accuracy: 0.2938 	multi_pass_classification_accuracy: 0.2429 	
+saving model
+Epoch 10 	train 	 	Time: 0:00:08.846655 	Loss: 809.3169 	Peer Normalization: 0.9791 	loss_layer_0: 145.3831 	ff_accuracy_layer_0: 0.5390 	loss_layer_1: 129.3970 	ff_accuracy_layer_1: 0.5440 	loss_layer_2: 237.1831 	ff_accuracy_layer_2: 0.5311 	loss_layer_3: 295.2769 	ff_accuracy_layer_3: 0.5202 	classification_loss: 2.0475 	classification_accuracy: 0.2909 	multi_pass_classification_accuracy: 0.2328 	
+Files already downloaded and verified
+val
+Epoch 10 	val 	 	Time: 0:00:01.576504 	Loss: 2.1228 	classification_loss: 2.1228 	classification_accuracy: 0.2730 	multi_pass_classification_accuracy: 0.2249 	
+Epoch 11 	train 	 	Time: 0:00:08.550545 	Loss: 778.3037 	Peer Normalization: 0.9914 	loss_layer_0: 147.4118 	ff_accuracy_layer_0: 0.5429 	loss_layer_1: 128.7080 	ff_accuracy_layer_1: 0.5489 	loss_layer_2: 227.6871 	ff_accuracy_layer_2: 0.5343 	loss_layer_3: 272.4405 	ff_accuracy_layer_3: 0.5234 	classification_loss: 2.0266 	classification_accuracy: 0.2947 	multi_pass_classification_accuracy: 0.2425 	
+Files already downloaded and verified
+val
+Epoch 11 	val 	 	Time: 0:00:01.586294 	Loss: 2.0108 	classification_loss: 2.0108 	classification_accuracy: 0.2974 	multi_pass_classification_accuracy: 0.2509 	
+saving model
+Epoch 12 	train 	 	Time: 0:00:08.745115 	Loss: 789.0658 	Peer Normalization: 0.9886 	loss_layer_0: 142.7800 	ff_accuracy_layer_0: 0.5456 	loss_layer_1: 123.4495 	ff_accuracy_layer_1: 0.5531 	loss_layer_2: 234.2013 	ff_accuracy_layer_2: 0.5348 	loss_layer_3: 286.6062 	ff_accuracy_layer_3: 0.5240 	classification_loss: 1.9991 	classification_accuracy: 0.3009 	multi_pass_classification_accuracy: 0.2516 	
+Files already downloaded and verified
+val
+Epoch 12 	val 	 	Time: 0:00:01.587743 	Loss: 2.0455 	classification_loss: 2.0455 	classification_accuracy: 0.2955 	multi_pass_classification_accuracy: 0.2738 	
+Epoch 13 	train 	 	Time: 0:00:08.578976 	Loss: 774.2887 	Peer Normalization: 0.9761 	loss_layer_0: 140.1008 	ff_accuracy_layer_0: 0.5502 	loss_layer_1: 126.6087 	ff_accuracy_layer_1: 0.5565 	loss_layer_2: 221.4537 	ff_accuracy_layer_2: 0.5410 	loss_layer_3: 284.1065 	ff_accuracy_layer_3: 0.5277 	classification_loss: 1.9898 	classification_accuracy: 0.3109 	multi_pass_classification_accuracy: 0.2588 	
+Files already downloaded and verified
+val
+Epoch 13 	val 	 	Time: 0:00:01.704724 	Loss: 1.9344 	classification_loss: 1.9344 	classification_accuracy: 0.3098 	multi_pass_classification_accuracy: 0.2738 	
+saving model
+Epoch 14 	train 	 	Time: 0:00:09.394549 	Loss: 757.0984 	Peer Normalization: 0.9927 	loss_layer_0: 145.4989 	ff_accuracy_layer_0: 0.5519 	loss_layer_1: 120.4252 	ff_accuracy_layer_1: 0.5607 	loss_layer_2: 212.7599 	ff_accuracy_layer_2: 0.5451 	loss_layer_3: 276.4046 	ff_accuracy_layer_3: 0.5328 	classification_loss: 1.9802 	classification_accuracy: 0.3117 	multi_pass_classification_accuracy: 0.2718 	
+Files already downloaded and verified
+val
+Epoch 14 	val 	 	Time: 0:00:01.614089 	Loss: 2.1238 	classification_loss: 2.1238 	classification_accuracy: 0.2726 	multi_pass_classification_accuracy: 0.2680 	
+Epoch 15 	train 	 	Time: 0:00:08.761620 	Loss: 748.2315 	Peer Normalization: 0.9957 	loss_layer_0: 145.4455 	ff_accuracy_layer_0: 0.5545 	loss_layer_1: 118.7512 	ff_accuracy_layer_1: 0.5635 	loss_layer_2: 212.2729 	ff_accuracy_layer_2: 0.5504 	loss_layer_3: 269.7620 	ff_accuracy_layer_3: 0.5353 	classification_loss: 1.9700 	classification_accuracy: 0.3137 	multi_pass_classification_accuracy: 0.2778 	
+Files already downloaded and verified
+val
+Epoch 15 	val 	 	Time: 0:00:01.603046 	Loss: 2.0554 	classification_loss: 2.0554 	classification_accuracy: 0.3019 	multi_pass_classification_accuracy: 0.2805 	
+Epoch 16 	train 	 	Time: 0:00:08.914886 	Loss: 742.2334 	Peer Normalization: 0.9720 	loss_layer_0: 131.8774 	ff_accuracy_layer_0: 0.5631 	loss_layer_1: 120.9669 	ff_accuracy_layer_1: 0.5699 	loss_layer_2: 203.3791 	ff_accuracy_layer_2: 0.5517 	loss_layer_3: 284.0209 	ff_accuracy_layer_3: 0.5361 	classification_loss: 1.9598 	classification_accuracy: 0.3248 	multi_pass_classification_accuracy: 0.2862 	
+Files already downloaded and verified
+val
+Epoch 16 	val 	 	Time: 0:00:01.679213 	Loss: 2.0278 	classification_loss: 2.0278 	classification_accuracy: 0.3014 	multi_pass_classification_accuracy: 0.2664 	
+Epoch 17 	train 	 	Time: 0:00:08.962787 	Loss: 730.5117 	Peer Normalization: 1.0165 	loss_layer_0: 139.5140 	ff_accuracy_layer_0: 0.5609 	loss_layer_1: 114.4492 	ff_accuracy_layer_1: 0.5715 	loss_layer_2: 208.8124 	ff_accuracy_layer_2: 0.5542 	loss_layer_3: 265.7515 	ff_accuracy_layer_3: 0.5438 	classification_loss: 1.9540 	classification_accuracy: 0.3240 	multi_pass_classification_accuracy: 0.2909 	
+Files already downloaded and verified
+val
+Epoch 17 	val 	 	Time: 0:00:01.614747 	Loss: 1.9479 	classification_loss: 1.9479 	classification_accuracy: 0.3155 	multi_pass_classification_accuracy: 0.2879 	
+saving model
+Epoch 18 	train 	 	Time: 0:00:08.974187 	Loss: 714.9013 	Peer Normalization: 1.0050 	loss_layer_0: 135.1001 	ff_accuracy_layer_0: 0.5660 	loss_layer_1: 115.3253 	ff_accuracy_layer_1: 0.5725 	loss_layer_2: 209.1735 	ff_accuracy_layer_2: 0.5578 	loss_layer_3: 253.3258 	ff_accuracy_layer_3: 0.5415 	classification_loss: 1.9465 	classification_accuracy: 0.3249 	multi_pass_classification_accuracy: 0.2933 	
+Files already downloaded and verified
+val
+Epoch 18 	val 	 	Time: 0:00:01.592923 	Loss: 1.9940 	classification_loss: 1.9940 	classification_accuracy: 0.3226 	multi_pass_classification_accuracy: 0.2842 	
+saving model
+Epoch 19 	train 	 	Time: 0:00:08.943581 	Loss: 699.1207 	Peer Normalization: 1.0061 	loss_layer_0: 132.4204 	ff_accuracy_layer_0: 0.5703 	loss_layer_1: 116.3576 	ff_accuracy_layer_1: 0.5738 	loss_layer_2: 203.7069 	ff_accuracy_layer_2: 0.5589 	loss_layer_3: 244.6704 	ff_accuracy_layer_3: 0.5452 	classification_loss: 1.9353 	classification_accuracy: 0.3281 	multi_pass_classification_accuracy: 0.2993 	
+Files already downloaded and verified
+val
+Epoch 19 	val 	 	Time: 0:00:01.607455 	Loss: 1.9630 	classification_loss: 1.9630 	classification_accuracy: 0.3296 	multi_pass_classification_accuracy: 0.3055 	
+saving model
+Epoch 20 	train 	 	Time: 0:00:08.985887 	Loss: 701.5709 	Peer Normalization: 1.0196 	loss_layer_0: 133.1459 	ff_accuracy_layer_0: 0.5730 	loss_layer_1: 114.3755 	ff_accuracy_layer_1: 0.5779 	loss_layer_2: 200.3488 	ff_accuracy_layer_2: 0.5603 	loss_layer_3: 251.7471 	ff_accuracy_layer_3: 0.5456 	classification_loss: 1.9229 	classification_accuracy: 0.3343 	multi_pass_classification_accuracy: 0.3016 	
+Files already downloaded and verified
+val
+Epoch 20 	val 	 	Time: 0:00:01.631269 	Loss: 1.9346 	classification_loss: 1.9346 	classification_accuracy: 0.3287 	multi_pass_classification_accuracy: 0.3156 	
+Epoch 21 	train 	 	Time: 0:00:08.863383 	Loss: 691.4315 	Peer Normalization: 0.9648 	loss_layer_0: 125.2714 	ff_accuracy_layer_0: 0.5782 	loss_layer_1: 119.6872 	ff_accuracy_layer_1: 0.5813 	loss_layer_2: 182.7199 	ff_accuracy_layer_2: 0.5658 	loss_layer_3: 261.8066 	ff_accuracy_layer_3: 0.5503 	classification_loss: 1.9175 	classification_accuracy: 0.3366 	multi_pass_classification_accuracy: 0.3103 	
+Files already downloaded and verified
+val
+Epoch 21 	val 	 	Time: 0:00:01.582901 	Loss: 1.9734 	classification_loss: 1.9734 	classification_accuracy: 0.3228 	multi_pass_classification_accuracy: 0.3049 	
+Epoch 22 	train 	 	Time: 0:00:08.722839 	Loss: 667.0424 	Peer Normalization: 1.0042 	loss_layer_0: 128.4617 	ff_accuracy_layer_0: 0.5797 	loss_layer_1: 115.6876 	ff_accuracy_layer_1: 0.5851 	loss_layer_2: 184.0528 	ff_accuracy_layer_2: 0.5679 	loss_layer_3: 236.8965 	ff_accuracy_layer_3: 0.5539 	classification_loss: 1.9137 	classification_accuracy: 0.3354 	multi_pass_classification_accuracy: 0.3129 	
+Files already downloaded and verified
+val
+Epoch 22 	val 	 	Time: 0:00:01.598238 	Loss: 2.0126 	classification_loss: 2.0126 	classification_accuracy: 0.3152 	multi_pass_classification_accuracy: 0.3131 	
+Epoch 23 	train 	 	Time: 0:00:08.670052 	Loss: 692.4673 	Peer Normalization: 1.0301 	loss_layer_0: 130.4733 	ff_accuracy_layer_0: 0.5805 	loss_layer_1: 111.1254 	ff_accuracy_layer_1: 0.5836 	loss_layer_2: 198.9949 	ff_accuracy_layer_2: 0.5673 	loss_layer_3: 249.9182 	ff_accuracy_layer_3: 0.5531 	classification_loss: 1.9246 	classification_accuracy: 0.3346 	multi_pass_classification_accuracy: 0.3151 	
+Files already downloaded and verified
+val
+Epoch 23 	val 	 	Time: 0:00:01.655100 	Loss: 1.9363 	classification_loss: 1.9363 	classification_accuracy: 0.3372 	multi_pass_classification_accuracy: 0.2953 	
+saving model
+Epoch 24 	train 	 	Time: 0:00:09.277773 	Loss: 663.0663 	Peer Normalization: 1.0097 	loss_layer_0: 122.4307 	ff_accuracy_layer_0: 0.5875 	loss_layer_1: 114.3359 	ff_accuracy_layer_1: 0.5881 	loss_layer_2: 187.4672 	ff_accuracy_layer_2: 0.5734 	loss_layer_3: 236.9114 	ff_accuracy_layer_3: 0.5579 	classification_loss: 1.8909 	classification_accuracy: 0.3437 	multi_pass_classification_accuracy: 0.3239 	
+Files already downloaded and verified
+val
+Epoch 24 	val 	 	Time: 0:00:01.659297 	Loss: 1.9736 	classification_loss: 1.9736 	classification_accuracy: 0.3259 	multi_pass_classification_accuracy: 0.3151 	
+Epoch 25 	train 	 	Time: 0:00:08.839568 	Loss: 653.1566 	Peer Normalization: 1.0486 	loss_layer_0: 121.3813 	ff_accuracy_layer_0: 0.5893 	loss_layer_1: 114.6763 	ff_accuracy_layer_1: 0.5916 	loss_layer_2: 180.4596 	ff_accuracy_layer_2: 0.5779 	loss_layer_3: 234.7304 	ff_accuracy_layer_3: 0.5597 	classification_loss: 1.8775 	classification_accuracy: 0.3462 	multi_pass_classification_accuracy: 0.3282 	
+Files already downloaded and verified
+val
+Epoch 25 	val 	 	Time: 0:00:01.586067 	Loss: 1.9159 	classification_loss: 1.9159 	classification_accuracy: 0.3298 	multi_pass_classification_accuracy: 0.3158 	
+Epoch 26 	train 	 	Time: 0:00:08.831669 	Loss: 653.3130 	Peer Normalization: 1.0094 	loss_layer_0: 120.5527 	ff_accuracy_layer_0: 0.5934 	loss_layer_1: 111.3560 	ff_accuracy_layer_1: 0.5953 	loss_layer_2: 186.1389 	ff_accuracy_layer_2: 0.5758 	loss_layer_3: 233.3583 	ff_accuracy_layer_3: 0.5615 	classification_loss: 1.8767 	classification_accuracy: 0.3510 	multi_pass_classification_accuracy: 0.3300 	
+Files already downloaded and verified
+val
+Epoch 26 	val 	 	Time: 0:00:01.576122 	Loss: 1.9455 	classification_loss: 1.9455 	classification_accuracy: 0.3268 	multi_pass_classification_accuracy: 0.3157 	
+Epoch 27 	train 	 	Time: 0:00:08.693904 	Loss: 650.6945 	Peer Normalization: 1.0320 	loss_layer_0: 118.9286 	ff_accuracy_layer_0: 0.5938 	loss_layer_1: 110.2858 	ff_accuracy_layer_1: 0.5947 	loss_layer_2: 194.6173 	ff_accuracy_layer_2: 0.5763 	loss_layer_3: 224.9433 	ff_accuracy_layer_3: 0.5619 	classification_loss: 1.8886 	classification_accuracy: 0.3470 	multi_pass_classification_accuracy: 0.3341 	
+Files already downloaded and verified
+val
+Epoch 27 	val 	 	Time: 0:00:01.582441 	Loss: 1.9230 	classification_loss: 1.9230 	classification_accuracy: 0.3429 	multi_pass_classification_accuracy: 0.3110 	
+saving model
+Epoch 28 	train 	 	Time: 0:00:08.994934 	Loss: 647.4477 	Peer Normalization: 1.0069 	loss_layer_0: 118.4935 	ff_accuracy_layer_0: 0.5983 	loss_layer_1: 111.1007 	ff_accuracy_layer_1: 0.5996 	loss_layer_2: 188.2524 	ff_accuracy_layer_2: 0.5773 	loss_layer_3: 227.7002 	ff_accuracy_layer_3: 0.5682 	classification_loss: 1.8706 	classification_accuracy: 0.3526 	multi_pass_classification_accuracy: 0.3363 	
+Files already downloaded and verified
+val
+Epoch 28 	val 	 	Time: 0:00:01.602530 	Loss: 1.9553 	classification_loss: 1.9553 	classification_accuracy: 0.3250 	multi_pass_classification_accuracy: 0.3254 	
+Epoch 29 	train 	 	Time: 0:00:08.911507 	Loss: 646.3928 	Peer Normalization: 1.0628 	loss_layer_0: 118.6208 	ff_accuracy_layer_0: 0.5986 	loss_layer_1: 108.7708 	ff_accuracy_layer_1: 0.5995 	loss_layer_2: 197.8636 	ff_accuracy_layer_2: 0.5813 	loss_layer_3: 219.2250 	ff_accuracy_layer_3: 0.5647 	classification_loss: 1.8807 	classification_accuracy: 0.3499 	multi_pass_classification_accuracy: 0.3333 	
+Files already downloaded and verified
+val
+Epoch 29 	val 	 	Time: 0:00:01.591991 	Loss: 1.9780 	classification_loss: 1.9780 	classification_accuracy: 0.3264 	multi_pass_classification_accuracy: 0.3011 	
+Epoch 30 	train 	 	Time: 0:00:08.823155 	Loss: 647.0850 	Peer Normalization: 1.0163 	loss_layer_0: 117.2206 	ff_accuracy_layer_0: 0.6011 	loss_layer_1: 114.3236 	ff_accuracy_layer_1: 0.6000 	loss_layer_2: 180.0652 	ff_accuracy_layer_2: 0.5828 	loss_layer_3: 233.5658 	ff_accuracy_layer_3: 0.5660 	classification_loss: 1.8793 	classification_accuracy: 0.3520 	multi_pass_classification_accuracy: 0.3361 	
+Files already downloaded and verified
+val
+Epoch 30 	val 	 	Time: 0:00:01.595752 	Loss: 1.9427 	classification_loss: 1.9427 	classification_accuracy: 0.3435 	multi_pass_classification_accuracy: 0.3370 	
+saving model
+Epoch 31 	train 	 	Time: 0:00:08.962436 	Loss: 641.6679 	Peer Normalization: 1.0208 	loss_layer_0: 118.0156 	ff_accuracy_layer_0: 0.6024 	loss_layer_1: 111.9862 	ff_accuracy_layer_1: 0.6019 	loss_layer_2: 183.5339 	ff_accuracy_layer_2: 0.5829 	loss_layer_3: 226.2316 	ff_accuracy_layer_3: 0.5669 	classification_loss: 1.8700 	classification_accuracy: 0.3550 	multi_pass_classification_accuracy: 0.3437 	
+Files already downloaded and verified
+val
+Epoch 31 	val 	 	Time: 0:00:01.593050 	Loss: 1.9521 	classification_loss: 1.9521 	classification_accuracy: 0.3349 	multi_pass_classification_accuracy: 0.3298 	
+Epoch 32 	train 	 	Time: 0:00:08.799687 	Loss: 642.2704 	Peer Normalization: 1.0287 	loss_layer_0: 119.7056 	ff_accuracy_layer_0: 0.6054 	loss_layer_1: 111.0815 	ff_accuracy_layer_1: 0.6050 	loss_layer_2: 176.1991 	ff_accuracy_layer_2: 0.5859 	loss_layer_3: 233.3889 	ff_accuracy_layer_3: 0.5681 	classification_loss: 1.8645 	classification_accuracy: 0.3569 	multi_pass_classification_accuracy: 0.3428 	
+Files already downloaded and verified
+val
+Epoch 32 	val 	 	Time: 0:00:01.590685 	Loss: 2.0037 	classification_loss: 2.0037 	classification_accuracy: 0.3053 	multi_pass_classification_accuracy: 0.2983 	
+Epoch 33 	train 	 	Time: 0:00:08.801808 	Loss: 652.9615 	Peer Normalization: 1.0607 	loss_layer_0: 114.1453 	ff_accuracy_layer_0: 0.6092 	loss_layer_1: 112.1852 	ff_accuracy_layer_1: 0.6075 	loss_layer_2: 188.8566 	ff_accuracy_layer_2: 0.5887 	loss_layer_3: 235.8821 	ff_accuracy_layer_3: 0.5702 	classification_loss: 1.8606 	classification_accuracy: 0.3571 	multi_pass_classification_accuracy: 0.3387 	
+Files already downloaded and verified
+val
+Epoch 33 	val 	 	Time: 0:00:01.606894 	Loss: 1.9465 	classification_loss: 1.9465 	classification_accuracy: 0.3434 	multi_pass_classification_accuracy: 0.3334 	
+Epoch 34 	train 	 	Time: 0:00:08.832314 	Loss: 638.7191 	Peer Normalization: 1.0240 	loss_layer_0: 114.2698 	ff_accuracy_layer_0: 0.6088 	loss_layer_1: 110.8536 	ff_accuracy_layer_1: 0.6071 	loss_layer_2: 183.5534 	ff_accuracy_layer_2: 0.5870 	loss_layer_3: 228.1619 	ff_accuracy_layer_3: 0.5727 	classification_loss: 1.8496 	classification_accuracy: 0.3618 	multi_pass_classification_accuracy: 0.3429 	
+Files already downloaded and verified
+val
+Epoch 34 	val 	 	Time: 0:00:01.639475 	Loss: 1.8796 	classification_loss: 1.8796 	classification_accuracy: 0.3377 	multi_pass_classification_accuracy: 0.3315 	
+Epoch 35 	train 	 	Time: 0:00:08.959332 	Loss: 634.9626 	Peer Normalization: 1.0672 	loss_layer_0: 114.8241 	ff_accuracy_layer_0: 0.6122 	loss_layer_1: 110.3525 	ff_accuracy_layer_1: 0.6083 	loss_layer_2: 185.5877 	ff_accuracy_layer_2: 0.5912 	loss_layer_3: 222.3392 	ff_accuracy_layer_3: 0.5719 	classification_loss: 1.8271 	classification_accuracy: 0.3674 	multi_pass_classification_accuracy: 0.3481 	
+Files already downloaded and verified
+val
+Epoch 35 	val 	 	Time: 0:00:01.578707 	Loss: 1.8514 	classification_loss: 1.8514 	classification_accuracy: 0.3573 	multi_pass_classification_accuracy: 0.3451 	
+saving model
+Epoch 36 	train 	 	Time: 0:00:08.929445 	Loss: 626.1206 	Peer Normalization: 1.0317 	loss_layer_0: 114.8109 	ff_accuracy_layer_0: 0.6137 	loss_layer_1: 110.9647 	ff_accuracy_layer_1: 0.6137 	loss_layer_2: 175.7747 	ff_accuracy_layer_2: 0.5945 	loss_layer_3: 222.7067 	ff_accuracy_layer_3: 0.5758 	classification_loss: 1.8326 	classification_accuracy: 0.3693 	multi_pass_classification_accuracy: 0.3527 	
+Files already downloaded and verified
+val
+Epoch 36 	val 	 	Time: 0:00:01.579558 	Loss: 1.9889 	classification_loss: 1.9889 	classification_accuracy: 0.3160 	multi_pass_classification_accuracy: 0.3229 	
+Epoch 37 	train 	 	Time: 0:00:08.749424 	Loss: 660.6043 	Peer Normalization: 1.0811 	loss_layer_0: 114.1599 	ff_accuracy_layer_0: 0.6140 	loss_layer_1: 107.9159 	ff_accuracy_layer_1: 0.6136 	loss_layer_2: 197.7960 	ff_accuracy_layer_2: 0.5932 	loss_layer_3: 238.8630 	ff_accuracy_layer_3: 0.5727 	classification_loss: 1.8371 	classification_accuracy: 0.3652 	multi_pass_classification_accuracy: 0.3499 	
+Files already downloaded and verified
+val
+Epoch 37 	val 	 	Time: 0:00:01.569700 	Loss: 1.9444 	classification_loss: 1.9444 	classification_accuracy: 0.3445 	multi_pass_classification_accuracy: 0.3370 	
+Epoch 38 	train 	 	Time: 0:00:08.706569 	Loss: 636.4199 	Peer Normalization: 1.0546 	loss_layer_0: 112.4545 	ff_accuracy_layer_0: 0.6179 	loss_layer_1: 108.8367 	ff_accuracy_layer_1: 0.6142 	loss_layer_2: 188.7281 	ff_accuracy_layer_2: 0.5937 	loss_layer_3: 224.5282 	ff_accuracy_layer_3: 0.5747 	classification_loss: 1.8407 	classification_accuracy: 0.3659 	multi_pass_classification_accuracy: 0.3508 	
+Files already downloaded and verified
+val
+Epoch 38 	val 	 	Time: 0:00:01.587043 	Loss: 1.9312 	classification_loss: 1.9312 	classification_accuracy: 0.3375 	multi_pass_classification_accuracy: 0.3216 	
+Epoch 39 	train 	 	Time: 0:00:08.845753 	Loss: 635.9560 	Peer Normalization: 1.0362 	loss_layer_0: 110.8457 	ff_accuracy_layer_0: 0.6203 	loss_layer_1: 110.0354 	ff_accuracy_layer_1: 0.6168 	loss_layer_2: 179.2155 	ff_accuracy_layer_2: 0.5950 	loss_layer_3: 233.9999 	ff_accuracy_layer_3: 0.5751 	classification_loss: 1.8284 	classification_accuracy: 0.3712 	multi_pass_classification_accuracy: 0.3545 	
+Files already downloaded and verified
+val
+Epoch 39 	val 	 	Time: 0:00:01.603287 	Loss: 1.9215 	classification_loss: 1.9215 	classification_accuracy: 0.3412 	multi_pass_classification_accuracy: 0.3128 	
+Epoch 40 	train 	 	Time: 0:00:08.870072 	Loss: 656.5641 	Peer Normalization: 1.0626 	loss_layer_0: 112.8248 	ff_accuracy_layer_0: 0.6188 	loss_layer_1: 107.0355 	ff_accuracy_layer_1: 0.6165 	loss_layer_2: 196.7762 	ff_accuracy_layer_2: 0.5909 	loss_layer_3: 238.0482 	ff_accuracy_layer_3: 0.5718 	classification_loss: 1.8476 	classification_accuracy: 0.3662 	multi_pass_classification_accuracy: 0.3497 	
+Files already downloaded and verified
+val
+Epoch 40 	val 	 	Time: 0:00:01.595567 	Loss: 1.9787 	classification_loss: 1.9787 	classification_accuracy: 0.3311 	multi_pass_classification_accuracy: 0.3463 	
+Epoch 41 	train 	 	Time: 0:00:08.850328 	Loss: 639.8542 	Peer Normalization: 1.0752 	loss_layer_0: 111.7154 	ff_accuracy_layer_0: 0.6222 	loss_layer_1: 106.5645 	ff_accuracy_layer_1: 0.6181 	loss_layer_2: 192.2839 	ff_accuracy_layer_2: 0.5950 	loss_layer_3: 227.4260 	ff_accuracy_layer_3: 0.5764 	classification_loss: 1.8320 	classification_accuracy: 0.3701 	multi_pass_classification_accuracy: 0.3575 	
+Files already downloaded and verified
+val
+Epoch 41 	val 	 	Time: 0:00:01.586285 	Loss: 1.9318 	classification_loss: 1.9318 	classification_accuracy: 0.3526 	multi_pass_classification_accuracy: 0.3554 	
+Epoch 42 	train 	 	Time: 0:00:08.876605 	Loss: 629.3877 	Peer Normalization: 1.0587 	loss_layer_0: 109.5129 	ff_accuracy_layer_0: 0.6231 	loss_layer_1: 109.3537 	ff_accuracy_layer_1: 0.6191 	loss_layer_2: 179.4728 	ff_accuracy_layer_2: 0.5947 	loss_layer_3: 229.1817 	ff_accuracy_layer_3: 0.5756 	classification_loss: 1.8348 	classification_accuracy: 0.3685 	multi_pass_classification_accuracy: 0.3539 	
+Files already downloaded and verified
+val
+Epoch 42 	val 	 	Time: 0:00:01.599507 	Loss: 1.9016 	classification_loss: 1.9016 	classification_accuracy: 0.3504 	multi_pass_classification_accuracy: 0.3371 	
+Epoch 43 	train 	 	Time: 0:00:08.900650 	Loss: 618.3608 	Peer Normalization: 1.0635 	loss_layer_0: 107.6578 	ff_accuracy_layer_0: 0.6245 	loss_layer_1: 108.5719 	ff_accuracy_layer_1: 0.6199 	loss_layer_2: 183.0425 	ff_accuracy_layer_2: 0.5972 	loss_layer_3: 217.2552 	ff_accuracy_layer_3: 0.5805 	classification_loss: 1.8014 	classification_accuracy: 0.3780 	multi_pass_classification_accuracy: 0.3612 	
+Files already downloaded and verified
+val
+Epoch 43 	val 	 	Time: 0:00:01.598970 	Loss: 2.0757 	classification_loss: 2.0757 	classification_accuracy: 0.3128 	multi_pass_classification_accuracy: 0.3318 	
+Epoch 44 	train 	 	Time: 0:00:08.851298 	Loss: 622.3559 	Peer Normalization: 1.0647 	loss_layer_0: 111.2823 	ff_accuracy_layer_0: 0.6274 	loss_layer_1: 106.9811 	ff_accuracy_layer_1: 0.6212 	loss_layer_2: 178.5904 	ff_accuracy_layer_2: 0.5993 	loss_layer_3: 223.6460 	ff_accuracy_layer_3: 0.5777 	classification_loss: 1.8242 	classification_accuracy: 0.3743 	multi_pass_classification_accuracy: 0.3563 	
+Files already downloaded and verified
+val
+Epoch 44 	val 	 	Time: 0:00:01.614746 	Loss: 1.9277 	classification_loss: 1.9277 	classification_accuracy: 0.3611 	multi_pass_classification_accuracy: 0.3595 	
+saving model
+Epoch 45 	train 	 	Time: 0:00:08.944895 	Loss: 627.2605 	Peer Normalization: 1.0701 	loss_layer_0: 106.7560 	ff_accuracy_layer_0: 0.6278 	loss_layer_1: 107.5118 	ff_accuracy_layer_1: 0.6226 	loss_layer_2: 177.6308 	ff_accuracy_layer_2: 0.6009 	loss_layer_3: 233.5271 	ff_accuracy_layer_3: 0.5814 	classification_loss: 1.8027 	classification_accuracy: 0.3799 	multi_pass_classification_accuracy: 0.3639 	
+Files already downloaded and verified
+val
+Epoch 45 	val 	 	Time: 0:00:01.576867 	Loss: 1.9128 	classification_loss: 1.9128 	classification_accuracy: 0.3498 	multi_pass_classification_accuracy: 0.3407 	
+Epoch 46 	train 	 	Time: 0:00:08.670182 	Loss: 646.7882 	Peer Normalization: 1.0773 	loss_layer_0: 108.2264 	ff_accuracy_layer_0: 0.6281 	loss_layer_1: 107.0361 	ff_accuracy_layer_1: 0.6214 	loss_layer_2: 195.0083 	ff_accuracy_layer_2: 0.5969 	loss_layer_3: 234.6706 	ff_accuracy_layer_3: 0.5766 	classification_loss: 1.8145 	classification_accuracy: 0.3751 	multi_pass_classification_accuracy: 0.3603 	
+Files already downloaded and verified
+val
+Epoch 46 	val 	 	Time: 0:00:01.596170 	Loss: 1.8796 	classification_loss: 1.8796 	classification_accuracy: 0.3543 	multi_pass_classification_accuracy: 0.3427 	
+Epoch 47 	train 	 	Time: 0:00:08.789975 	Loss: 620.2177 	Peer Normalization: 1.0868 	loss_layer_0: 109.6874 	ff_accuracy_layer_0: 0.6310 	loss_layer_1: 108.7269 	ff_accuracy_layer_1: 0.6243 	loss_layer_2: 182.3886 	ff_accuracy_layer_2: 0.6029 	loss_layer_3: 217.5854 	ff_accuracy_layer_3: 0.5842 	classification_loss: 1.7967 	classification_accuracy: 0.3836 	multi_pass_classification_accuracy: 0.3684 	
+Files already downloaded and verified
+val
+Epoch 47 	val 	 	Time: 0:00:01.593335 	Loss: 1.8981 	classification_loss: 1.8981 	classification_accuracy: 0.3387 	multi_pass_classification_accuracy: 0.3193 	
+Epoch 48 	train 	 	Time: 0:00:08.826173 	Loss: 626.6645 	Peer Normalization: 1.0644 	loss_layer_0: 107.7365 	ff_accuracy_layer_0: 0.6328 	loss_layer_1: 108.1275 	ff_accuracy_layer_1: 0.6268 	loss_layer_2: 179.1006 	ff_accuracy_layer_2: 0.6027 	loss_layer_3: 229.8641 	ff_accuracy_layer_3: 0.5814 	classification_loss: 1.8039 	classification_accuracy: 0.3801 	multi_pass_classification_accuracy: 0.3631 	
+Files already downloaded and verified
+val
+Epoch 48 	val 	 	Time: 0:00:01.612787 	Loss: 1.9362 	classification_loss: 1.9362 	classification_accuracy: 0.3399 	multi_pass_classification_accuracy: 0.3290 	
+Epoch 49 	train 	 	Time: 0:00:08.784646 	Loss: 621.1183 	Peer Normalization: 1.0420 	loss_layer_0: 105.6667 	ff_accuracy_layer_0: 0.6352 	loss_layer_1: 108.8321 	ff_accuracy_layer_1: 0.6273 	loss_layer_2: 168.3896 	ff_accuracy_layer_2: 0.6014 	loss_layer_3: 236.4110 	ff_accuracy_layer_3: 0.5824 	classification_loss: 1.7875 	classification_accuracy: 0.3865 	multi_pass_classification_accuracy: 0.3637 	
+Files already downloaded and verified
+val
+Epoch 49 	val 	 	Time: 0:00:01.612782 	Loss: 1.8839 	classification_loss: 1.8839 	classification_accuracy: 0.3600 	multi_pass_classification_accuracy: 0.3322 	
+Epoch 50 	train 	 	Time: 0:00:08.834375 	Loss: 631.2514 	Peer Normalization: 1.0257 	loss_layer_0: 106.7551 	ff_accuracy_layer_0: 0.6334 	loss_layer_1: 110.1454 	ff_accuracy_layer_1: 0.6246 	loss_layer_2: 187.0461 	ff_accuracy_layer_2: 0.6011 	loss_layer_3: 225.4586 	ff_accuracy_layer_3: 0.5827 	classification_loss: 1.8154 	classification_accuracy: 0.3779 	multi_pass_classification_accuracy: 0.3668 	
+Files already downloaded and verified
+val
+Epoch 50 	val 	 	Time: 0:00:01.599714 	Loss: 1.8856 	classification_loss: 1.8856 	classification_accuracy: 0.3465 	multi_pass_classification_accuracy: 0.3265 	
+Epoch 51 	train 	 	Time: 0:00:08.792987 	Loss: 617.8681 	Peer Normalization: 1.0611 	loss_layer_0: 104.0295 	ff_accuracy_layer_0: 0.6361 	loss_layer_1: 110.0729 	ff_accuracy_layer_1: 0.6261 	loss_layer_2: 182.2651 	ff_accuracy_layer_2: 0.6033 	loss_layer_3: 219.6829 	ff_accuracy_layer_3: 0.5845 	classification_loss: 1.7859 	classification_accuracy: 0.3839 	multi_pass_classification_accuracy: 0.3678 	
+Files already downloaded and verified
+val
+Epoch 51 	val 	 	Time: 0:00:01.609413 	Loss: 1.9677 	classification_loss: 1.9677 	classification_accuracy: 0.3448 	multi_pass_classification_accuracy: 0.3393 	
+Epoch 52 	train 	 	Time: 0:00:09.016763 	Loss: 635.5195 	Peer Normalization: 1.0703 	loss_layer_0: 109.9140 	ff_accuracy_layer_0: 0.6366 	loss_layer_1: 107.7917 	ff_accuracy_layer_1: 0.6281 	loss_layer_2: 185.6978 	ff_accuracy_layer_2: 0.6037 	loss_layer_3: 230.3022 	ff_accuracy_layer_3: 0.5828 	classification_loss: 1.7818 	classification_accuracy: 0.3889 	multi_pass_classification_accuracy: 0.3723 	
+Files already downloaded and verified
+val
+Epoch 52 	val 	 	Time: 0:00:01.616472 	Loss: 1.8996 	classification_loss: 1.8996 	classification_accuracy: 0.3521 	multi_pass_classification_accuracy: 0.3476 	
+Epoch 53 	train 	 	Time: 0:00:08.968519 	Loss: 611.8442 	Peer Normalization: 1.1302 	loss_layer_0: 104.1387 	ff_accuracy_layer_0: 0.6388 	loss_layer_1: 106.7301 	ff_accuracy_layer_1: 0.6311 	loss_layer_2: 181.9145 	ff_accuracy_layer_2: 0.6067 	loss_layer_3: 217.2558 	ff_accuracy_layer_3: 0.5857 	classification_loss: 1.7711 	classification_accuracy: 0.3913 	multi_pass_classification_accuracy: 0.3791 	
+Files already downloaded and verified
+val
+Epoch 53 	val 	 	Time: 0:00:01.644742 	Loss: 1.8728 	classification_loss: 1.8728 	classification_accuracy: 0.3534 	multi_pass_classification_accuracy: 0.3433 	
+Epoch 54 	train 	 	Time: 0:00:09.101971 	Loss: 610.2953 	Peer Normalization: 1.1150 	loss_layer_0: 100.6632 	ff_accuracy_layer_0: 0.6435 	loss_layer_1: 105.0161 	ff_accuracy_layer_1: 0.6348 	loss_layer_2: 175.7667 	ff_accuracy_layer_2: 0.6096 	loss_layer_3: 227.0763 	ff_accuracy_layer_3: 0.5893 	classification_loss: 1.7395 	classification_accuracy: 0.3975 	multi_pass_classification_accuracy: 0.3828 	
+Files already downloaded and verified
+val
+Epoch 54 	val 	 	Time: 0:00:01.647518 	Loss: 1.8577 	classification_loss: 1.8577 	classification_accuracy: 0.3656 	multi_pass_classification_accuracy: 0.3281 	
+saving model
+Epoch 55 	train 	 	Time: 0:00:08.951722 	Loss: 590.0552 	Peer Normalization: 1.1603 	loss_layer_0: 95.8470 	ff_accuracy_layer_0: 0.6489 	loss_layer_1: 99.1563 	ff_accuracy_layer_1: 0.6376 	loss_layer_2: 184.0685 	ff_accuracy_layer_2: 0.6108 	loss_layer_3: 209.2045 	ff_accuracy_layer_3: 0.5924 	classification_loss: 1.7441 	classification_accuracy: 0.3972 	multi_pass_classification_accuracy: 0.3867 	
+Files already downloaded and verified
+val
+Epoch 55 	val 	 	Time: 0:00:01.587312 	Loss: 1.9300 	classification_loss: 1.9300 	classification_accuracy: 0.3544 	multi_pass_classification_accuracy: 0.3465 	
+Epoch 56 	train 	 	Time: 0:00:08.718798 	Loss: 575.9217 	Peer Normalization: 1.1333 	loss_layer_0: 97.6236 	ff_accuracy_layer_0: 0.6497 	loss_layer_1: 101.7180 	ff_accuracy_layer_1: 0.6403 	loss_layer_2: 168.1724 	ff_accuracy_layer_2: 0.6150 	loss_layer_3: 206.6605 	ff_accuracy_layer_3: 0.5929 	classification_loss: 1.7132 	classification_accuracy: 0.4098 	multi_pass_classification_accuracy: 0.3912 	
+Files already downloaded and verified
+val
+Epoch 56 	val 	 	Time: 0:00:01.595144 	Loss: 1.8880 	classification_loss: 1.8880 	classification_accuracy: 0.3691 	multi_pass_classification_accuracy: 0.3328 	
+saving model
+Epoch 57 	train 	 	Time: 0:00:08.844110 	Loss: 574.3605 	Peer Normalization: 1.1474 	loss_layer_0: 94.7480 	ff_accuracy_layer_0: 0.6528 	loss_layer_1: 97.8935 	ff_accuracy_layer_1: 0.6413 	loss_layer_2: 172.1381 	ff_accuracy_layer_2: 0.6132 	loss_layer_3: 207.8427 	ff_accuracy_layer_3: 0.5967 	classification_loss: 1.7038 	classification_accuracy: 0.4094 	multi_pass_classification_accuracy: 0.3907 	
+Files already downloaded and verified
+val
+Epoch 57 	val 	 	Time: 0:00:01.590059 	Loss: 1.8679 	classification_loss: 1.8679 	classification_accuracy: 0.3745 	multi_pass_classification_accuracy: 0.3663 	
+saving model
+Epoch 58 	train 	 	Time: 0:00:08.944617 	Loss: 564.9659 	Peer Normalization: 1.1275 	loss_layer_0: 92.1723 	ff_accuracy_layer_0: 0.6552 	loss_layer_1: 95.0379 	ff_accuracy_layer_1: 0.6446 	loss_layer_2: 170.2482 	ff_accuracy_layer_2: 0.6154 	loss_layer_3: 205.7845 	ff_accuracy_layer_3: 0.5974 	classification_loss: 1.6892 	classification_accuracy: 0.4143 	multi_pass_classification_accuracy: 0.3978 	
+Files already downloaded and verified
+val
+Epoch 58 	val 	 	Time: 0:00:01.600604 	Loss: 1.8788 	classification_loss: 1.8788 	classification_accuracy: 0.3662 	multi_pass_classification_accuracy: 0.3652 	
+Epoch 59 	train 	 	Time: 0:00:08.588449 	Loss: 552.7898 	Peer Normalization: 1.1867 	loss_layer_0: 92.3537 	ff_accuracy_layer_0: 0.6587 	loss_layer_1: 93.4360 	ff_accuracy_layer_1: 0.6465 	loss_layer_2: 170.7393 	ff_accuracy_layer_2: 0.6189 	loss_layer_3: 194.5477 	ff_accuracy_layer_3: 0.5989 	classification_loss: 1.6775 	classification_accuracy: 0.4232 	multi_pass_classification_accuracy: 0.4040 	
+Files already downloaded and verified
+val
+Epoch 59 	val 	 	Time: 0:00:01.589170 	Loss: 1.8637 	classification_loss: 1.8637 	classification_accuracy: 0.3915 	multi_pass_classification_accuracy: 0.3760 	
+saving model
+Epoch 60 	train 	 	Time: 0:00:08.879608 	Loss: 552.1582 	Peer Normalization: 1.2211 	loss_layer_0: 91.0313 	ff_accuracy_layer_0: 0.6606 	loss_layer_1: 93.6282 	ff_accuracy_layer_1: 0.6485 	loss_layer_2: 165.3492 	ff_accuracy_layer_2: 0.6206 	loss_layer_3: 200.4474 	ff_accuracy_layer_3: 0.6005 	classification_loss: 1.6654 	classification_accuracy: 0.4207 	multi_pass_classification_accuracy: 0.4034 	
+Files already downloaded and verified
+val
+Epoch 60 	val 	 	Time: 0:00:01.608871 	Loss: 1.8038 	classification_loss: 1.8038 	classification_accuracy: 0.3821 	multi_pass_classification_accuracy: 0.3689 	
+Epoch 61 	train 	 	Time: 0:00:08.710488 	Loss: 541.8315 	Peer Normalization: 1.1899 	loss_layer_0: 86.7551 	ff_accuracy_layer_0: 0.6643 	loss_layer_1: 91.3917 	ff_accuracy_layer_1: 0.6534 	loss_layer_2: 158.1130 	ff_accuracy_layer_2: 0.6249 	loss_layer_3: 203.8882 	ff_accuracy_layer_3: 0.6035 	classification_loss: 1.6478 	classification_accuracy: 0.4299 	multi_pass_classification_accuracy: 0.4128 	
+Files already downloaded and verified
+val
+Epoch 61 	val 	 	Time: 0:00:01.612623 	Loss: 1.8413 	classification_loss: 1.8413 	classification_accuracy: 0.3866 	multi_pass_classification_accuracy: 0.3736 	
+Epoch 62 	train 	 	Time: 0:00:08.884580 	Loss: 528.8774 	Peer Normalization: 1.2189 	loss_layer_0: 84.1900 	ff_accuracy_layer_0: 0.6679 	loss_layer_1: 86.1708 	ff_accuracy_layer_1: 0.6560 	loss_layer_2: 153.0912 	ff_accuracy_layer_2: 0.6276 	loss_layer_3: 203.7661 	ff_accuracy_layer_3: 0.6061 	classification_loss: 1.6226 	classification_accuracy: 0.4387 	multi_pass_classification_accuracy: 0.4154 	
+Files already downloaded and verified
+val
+Epoch 62 	val 	 	Time: 0:00:01.635772 	Loss: 1.8241 	classification_loss: 1.8241 	classification_accuracy: 0.3744 	multi_pass_classification_accuracy: 0.3717 	
+Traceback (most recent call last):
+  File "main.py", line 104, in <module>
+    my_main()
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "main.py", line 95, in my_main
+    model = train(opt, model, optimizer)
+  File "main.py", line 27, in train
+    scalar_outputs = model(inputs, labels)
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/jonah/Documents/school/idl/ForwardForward/new_code/src/ff_model.py", line 138, in forward
+    scalar_outputs = self.forward_downstream_multi_pass(
+  File "/home/jonah/Documents/school/idl/ForwardForward/new_code/src/ff_model.py", line 189, in forward_downstream_multi_pass
+    z = self._layer_norm(z)
+  File "/home/jonah/Documents/school/idl/ForwardForward/new_code/src/ff_model.py", line 60, in _layer_norm
+    return z / (torch.sqrt(torch.mean(z ** 2, dim=-1, keepdim=True)) + eps)
+KeyboardInterrupt

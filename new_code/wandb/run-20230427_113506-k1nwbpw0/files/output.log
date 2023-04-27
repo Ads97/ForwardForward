@@ -1,0 +1,108 @@
+FF_model(
+  (model): ModuleList(
+    (0): Linear(in_features=3072, out_features=2000, bias=True)
+    (1): Linear(in_features=2000, out_features=2000, bias=True)
+    (2): Linear(in_features=2000, out_features=2000, bias=True)
+    (3): Linear(in_features=2000, out_features=2000, bias=True)
+    (4): Linear(in_features=2000, out_features=2000, bias=True)
+    (5): Linear(in_features=2000, out_features=2000, bias=True)
+  )
+  (ff_loss): BCEWithLogitsLoss()
+  (linear_classifier): Sequential(
+    (0): Linear(in_features=10000, out_features=10, bias=False)
+  )
+  (classification_loss): CrossEntropyLoss()
+)
+Files already downloaded and verified
+Epoch 0 	train 	 	Time: 0:00:09.737980 	classification_accuracy: 0.1029 	multi_pass_classification_accuracy: 0.0986 	
+Files already downloaded and verified
+val
+Epoch 0 	val 	 	Time: 0:00:01.641938 	classification_accuracy: 0.1098 	multi_pass_classification_accuracy: 0.1002 	
+saving model
+Epoch 1 	train 	 	Time: 0:00:10.860149 	classification_accuracy: 0.1012 	multi_pass_classification_accuracy: 0.0984 	
+Files already downloaded and verified
+val
+Epoch 1 	val 	 	Time: 0:00:01.671974 	classification_accuracy: 0.1015 	multi_pass_classification_accuracy: 0.1014 	
+Epoch 2 	train 	 	Time: 0:00:10.559684 	classification_accuracy: 0.1016 	multi_pass_classification_accuracy: 0.1001 	
+Files already downloaded and verified
+val
+Epoch 2 	val 	 	Time: 0:00:01.652299 	classification_accuracy: 0.1211 	multi_pass_classification_accuracy: 0.1015 	
+saving model
+Epoch 3 	train 	 	Time: 0:00:10.723588 	classification_accuracy: 0.1062 	multi_pass_classification_accuracy: 0.1027 	
+Files already downloaded and verified
+val
+Epoch 3 	val 	 	Time: 0:00:01.709774 	classification_accuracy: 0.1153 	multi_pass_classification_accuracy: 0.1057 	
+Epoch 4 	train 	 	Time: 0:00:10.543011 	classification_accuracy: 0.1129 	multi_pass_classification_accuracy: 0.1046 	
+Files already downloaded and verified
+val
+Epoch 4 	val 	 	Time: 0:00:01.681578 	classification_accuracy: 0.1151 	multi_pass_classification_accuracy: 0.0972 	
+Epoch 5 	train 	 	Time: 0:00:10.475310 	classification_accuracy: 0.1180 	multi_pass_classification_accuracy: 0.1037 	
+Files already downloaded and verified
+val
+Epoch 5 	val 	 	Time: 0:00:01.690993 	classification_accuracy: 0.1263 	multi_pass_classification_accuracy: 0.1048 	
+saving model
+Epoch 6 	train 	 	Time: 0:00:10.749782 	classification_accuracy: 0.1227 	multi_pass_classification_accuracy: 0.1078 	
+Files already downloaded and verified
+val
+Epoch 6 	val 	 	Time: 0:00:01.709220 	classification_accuracy: 0.1268 	multi_pass_classification_accuracy: 0.1056 	
+saving model
+Epoch 7 	train 	 	Time: 0:00:10.844487 	classification_accuracy: 0.1284 	multi_pass_classification_accuracy: 0.1091 	
+Files already downloaded and verified
+val
+Epoch 7 	val 	 	Time: 0:00:01.655069 	classification_accuracy: 0.1197 	multi_pass_classification_accuracy: 0.1204 	
+Epoch 8 	train 	 	Time: 0:00:10.374228 	classification_accuracy: 0.1321 	multi_pass_classification_accuracy: 0.1116 	
+Files already downloaded and verified
+val
+Epoch 8 	val 	 	Time: 0:00:01.653110 	classification_accuracy: 0.1442 	multi_pass_classification_accuracy: 0.1103 	
+saving model
+Epoch 9 	train 	 	Time: 0:00:10.713431 	classification_accuracy: 0.1376 	multi_pass_classification_accuracy: 0.1145 	
+Files already downloaded and verified
+val
+Epoch 9 	val 	 	Time: 0:00:01.653129 	classification_accuracy: 0.1577 	multi_pass_classification_accuracy: 0.1204 	
+saving model
+Epoch 10 	train 	 	Time: 0:00:10.661330 	classification_accuracy: 0.1390 	multi_pass_classification_accuracy: 0.1145 	
+Files already downloaded and verified
+val
+Epoch 10 	val 	 	Time: 0:00:01.649863 	classification_accuracy: 0.1558 	multi_pass_classification_accuracy: 0.1144 	
+Epoch 11 	train 	 	Time: 0:00:10.450539 	classification_accuracy: 0.1422 	multi_pass_classification_accuracy: 0.1157 	
+Files already downloaded and verified
+val
+Epoch 11 	val 	 	Time: 0:00:01.662025 	classification_accuracy: 0.1514 	multi_pass_classification_accuracy: 0.1164 	
+Epoch 12 	train 	 	Time: 0:00:10.416423 	classification_accuracy: 0.1437 	multi_pass_classification_accuracy: 0.1189 	
+Files already downloaded and verified
+val
+Epoch 12 	val 	 	Time: 0:00:01.647583 	classification_accuracy: 0.1512 	multi_pass_classification_accuracy: 0.1118 	
+Epoch 13 	train 	 	Time: 0:00:10.391959 	classification_accuracy: 0.1476 	multi_pass_classification_accuracy: 0.1197 	
+Files already downloaded and verified
+val
+Epoch 13 	val 	 	Time: 0:00:01.662029 	classification_accuracy: 0.1562 	multi_pass_classification_accuracy: 0.1141 	
+Epoch 14 	train 	 	Time: 0:00:10.464353 	classification_accuracy: 0.1466 	multi_pass_classification_accuracy: 0.1224 	
+Files already downloaded and verified
+val
+Epoch 14 	val 	 	Time: 0:00:01.669803 	classification_accuracy: 0.1243 	multi_pass_classification_accuracy: 0.1207 	
+Traceback (most recent call last):
+  File "main.py", line 104, in <module>
+    my_main()
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "main.py", line 95, in my_main
+    model = train(opt, model, optimizer)
+  File "main.py", line 28, in train
+    scalar_outputs["Loss"].backward()
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torch/_tensor.py", line 363, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torch/autograd/__init__.py", line 173, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

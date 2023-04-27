@@ -1,0 +1,80 @@
+FF_model(
+  (model): ModuleList(
+    (0): Linear(in_features=784, out_features=2000, bias=True)
+    (1): Linear(in_features=2000, out_features=2000, bias=True)
+    (2): Linear(in_features=2000, out_features=2000, bias=True)
+    (3): Linear(in_features=2000, out_features=2000, bias=True)
+    (4): Linear(in_features=2000, out_features=2000, bias=True)
+    (5): Linear(in_features=2000, out_features=2000, bias=True)
+  )
+  (ff_loss): BCEWithLogitsLoss()
+  (linear_classifier): Sequential(
+    (0): Linear(in_features=10000, out_features=10, bias=False)
+  )
+  (classification_loss): CrossEntropyLoss()
+)
+Epoch 0 	train 	 	Time: 0:00:09.224200 	classification_accuracy: 0.6141 	multi_pass_classification_accuracy: 0.5900 	
+val
+Epoch 0 	val 	 	Time: 0:00:00.963543 	classification_accuracy: 0.7721 	multi_pass_classification_accuracy: 0.8178 	
+saving model
+Epoch 1 	train 	 	Time: 0:00:09.864278 	classification_accuracy: 0.7373 	multi_pass_classification_accuracy: 0.7132 	
+val
+Epoch 1 	val 	 	Time: 0:00:01.008212 	classification_accuracy: 0.8102 	multi_pass_classification_accuracy: 0.6675 	
+saving model
+Epoch 2 	train 	 	Time: 0:00:10.041411 	classification_accuracy: 0.8078 	multi_pass_classification_accuracy: 0.7530 	
+val
+Epoch 2 	val 	 	Time: 0:00:01.026686 	classification_accuracy: 0.8228 	multi_pass_classification_accuracy: 0.7693 	
+saving model
+Epoch 3 	train 	 	Time: 0:00:10.047434 	classification_accuracy: 0.8399 	multi_pass_classification_accuracy: 0.7865 	
+val
+Epoch 3 	val 	 	Time: 0:00:00.988630 	classification_accuracy: 0.8376 	multi_pass_classification_accuracy: 0.8467 	
+saving model
+Epoch 4 	train 	 	Time: 0:00:10.247025 	classification_accuracy: 0.8563 	multi_pass_classification_accuracy: 0.7240 	
+val
+Exception ignored in: <function _releaseLock at 0x7f05962f5700>
+Traceback (most recent call last):
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/logging/__init__.py", line 227, in _releaseLock
+    def _releaseLock():
+KeyboardInterrupt:
+Traceback (most recent call last):
+  File "main.py", line 104, in <module>
+    my_main()
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "main.py", line 95, in my_main
+    model = train(opt, model, optimizer)
+  File "main.py", line 41, in train
+    best_val_acc = validate_or_test(opt, model, "val", epoch=epoch, best_val_acc=best_val_acc)
+  File "main.py", line 57, in validate_or_test
+    for inputs, labels in data_loader:
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 530, in __next__
+    data = self._next_data()
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1207, in _next_data
+    idx, data = self._get_data()
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1173, in _get_data
+    success, data = self._try_get_data()
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1011, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/multiprocessing/queues.py", line 107, in get
+    if not self._poll(timeout):
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/multiprocessing/connection.py", line 257, in poll
+    return self._poll(timeout)
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/multiprocessing/connection.py", line 424, in _poll
+    r = wait([self], timeout)
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/multiprocessing/connection.py", line 931, in wait
+    ready = selector.select(timeout)
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt

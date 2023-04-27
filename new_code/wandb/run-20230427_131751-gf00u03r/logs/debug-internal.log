@@ -1,0 +1,247 @@
+2023-04-27 13:17:51,354 INFO    StreamThr :106738 [internal.py:wandb_internal():86] W&B internal server running at pid: 106738, started at: 2023-04-27 13:17:51.353944
+2023-04-27 13:17:51,355 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status
+2023-04-27 13:17:51,357 INFO    WriterThread:106738 [datastore.py:open_for_write():85] open: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/run-gf00u03r.wandb
+2023-04-27 13:17:51,357 DEBUG   SenderThread:106738 [sender.py:send():375] send: header
+2023-04-27 13:17:51,366 DEBUG   SenderThread:106738 [sender.py:send():375] send: run
+2023-04-27 13:17:53,232 INFO    SenderThread:106738 [dir_watcher.py:__init__():219] watching files in: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files
+2023-04-27 13:17:53,232 INFO    SenderThread:106738 [sender.py:_start_run_threads():1124] run started: gf00u03r with start time 1682615871.354282
+2023-04-27 13:17:53,232 DEBUG   SenderThread:106738 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 13:17:53,233 INFO    SenderThread:106738 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 13:17:53,235 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: check_version
+2023-04-27 13:17:53,235 DEBUG   SenderThread:106738 [sender.py:send_request():402] send_request: check_version
+2023-04-27 13:17:53,280 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: run_start
+2023-04-27 13:17:53,284 DEBUG   HandlerThread:106738 [system_info.py:__init__():31] System info init
+2023-04-27 13:17:53,285 DEBUG   HandlerThread:106738 [system_info.py:__init__():46] System info init done
+2023-04-27 13:17:53,285 INFO    HandlerThread:106738 [system_monitor.py:start():181] Starting system monitor
+2023-04-27 13:17:53,285 INFO    SystemMonitor:106738 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-04-27 13:17:53,285 INFO    HandlerThread:106738 [system_monitor.py:probe():201] Collecting system info
+2023-04-27 13:17:53,285 INFO    SystemMonitor:106738 [interfaces.py:start():190] Started cpu monitoring
+2023-04-27 13:17:53,285 INFO    SystemMonitor:106738 [interfaces.py:start():190] Started disk monitoring
+2023-04-27 13:17:53,286 INFO    SystemMonitor:106738 [interfaces.py:start():190] Started gpu monitoring
+2023-04-27 13:17:53,286 INFO    SystemMonitor:106738 [interfaces.py:start():190] Started memory monitoring
+2023-04-27 13:17:53,286 INFO    SystemMonitor:106738 [interfaces.py:start():190] Started network monitoring
+2023-04-27 13:17:53,295 DEBUG   HandlerThread:106738 [system_info.py:probe():195] Probing system
+2023-04-27 13:17:53,298 DEBUG   HandlerThread:106738 [system_info.py:_probe_git():180] Probing git
+2023-04-27 13:17:53,304 DEBUG   HandlerThread:106738 [system_info.py:_probe_git():188] Probing git done
+2023-04-27 13:17:53,304 DEBUG   HandlerThread:106738 [system_info.py:probe():240] Probing system done
+2023-04-27 13:17:53,304 DEBUG   HandlerThread:106738 [system_monitor.py:probe():210] {'os': 'Linux-5.19.0-40-generic-x86_64-with-glibc2.17', 'python': '3.8.16', 'heartbeatAt': '2023-04-27T17:17:53.295809', 'startedAt': '2023-04-27T17:17:51.347128', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'main.py', 'codePath': 'new_code/main.py', 'git': {'remote': 'https://github.com/Ads-cmu/ForwardForward.git', 'commit': '95f478b1341cfaf2e1e40de001af87d8fcad9312'}, 'email': 'kornberg.jonah@gmail.com', 'root': '/home/jonah/Documents/school/idl/activation_ForwardForward', 'host': 'jonah-dual', 'username': 'jonah', 'executable': '/home/jonah/anaconda3/envs/FF/bin/python', 'cpu_count': 12, 'cpu_count_logical': 24, 'cpu_freq': {'current': 3536.827625, 'min': 2200.0, 'max': 3700.0}, 'cpu_freq_per_core': [{'current': 3621.027, 'min': 2200.0, 'max': 3700.0}, {'current': 4524.852, 'min': 2200.0, 'max': 3700.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3700.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3700.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3700.0}, {'current': 4543.483, 'min': 2200.0, 'max': 3700.0}, {'current': 4523.041, 'min': 2200.0, 'max': 3700.0}, {'current': 4120.68, 'min': 2200.0, 'max': 3700.0}, {'current': 4134.6, 'min': 2200.0, 'max': 3700.0}, {'current': 4480.458, 'min': 2200.0, 'max': 3700.0}, {'current': 3924.78, 'min': 2200.0, 'max': 3700.0}, {'current': 4527.754, 'min': 2200.0, 'max': 3700.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3700.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3700.0}, {'current': 4524.851, 'min': 2200.0, 'max': 3700.0}, {'current': 3612.837, 'min': 2200.0, 'max': 3700.0}, {'current': 3629.824, 'min': 2200.0, 'max': 3700.0}, {'current': 3620.447, 'min': 2200.0, 'max': 3700.0}, {'current': 4524.862, 'min': 2200.0, 'max': 3700.0}, {'current': 3633.629, 'min': 2200.0, 'max': 3700.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3700.0}, {'current': 3596.192, 'min': 2200.0, 'max': 3700.0}, {'current': 4292.388, 'min': 2200.0, 'max': 3700.0}, {'current': 4523.929, 'min': 2200.0, 'max': 3700.0}], 'disk': {'total': 233.27177810668945, 'used': 200.3767433166504}, 'gpu': 'NVIDIA GeForce RTX 3080', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3080', 'memory_total': 10737418240}], 'memory': {'total': 31.260986328125}}
+2023-04-27 13:17:53,304 INFO    HandlerThread:106738 [system_monitor.py:probe():211] Finished collecting system info
+2023-04-27 13:17:53,304 INFO    HandlerThread:106738 [system_monitor.py:probe():214] Publishing system info
+2023-04-27 13:17:53,304 DEBUG   HandlerThread:106738 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-04-27 13:17:53,304 DEBUG   HandlerThread:106738 [system_info.py:_save_pip():67] Saving pip packages done
+2023-04-27 13:17:53,304 DEBUG   HandlerThread:106738 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-04-27 13:17:54,234 INFO    Thread-12 :106738 [dir_watcher.py:_on_file_created():278] file/dir created: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/conda-environment.yaml
+2023-04-27 13:17:54,234 INFO    Thread-12 :106738 [dir_watcher.py:_on_file_created():278] file/dir created: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/wandb-summary.json
+2023-04-27 13:17:54,234 INFO    Thread-12 :106738 [dir_watcher.py:_on_file_created():278] file/dir created: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/requirements.txt
+2023-04-27 13:17:54,235 DEBUG   HandlerThread:106738 [system_info.py:_save_conda():86] Saving conda packages done
+2023-04-27 13:17:54,236 INFO    HandlerThread:106738 [system_monitor.py:probe():216] Finished publishing system info
+2023-04-27 13:17:54,238 DEBUG   SenderThread:106738 [sender.py:send():375] send: files
+2023-04-27 13:17:54,238 INFO    SenderThread:106738 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-04-27 13:17:54,244 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 13:17:54,244 DEBUG   SenderThread:106738 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 13:17:54,541 DEBUG   SenderThread:106738 [sender.py:send():375] send: telemetry
+2023-04-27 13:17:54,736 INFO    wandb-upload_0:106738 [upload_job.py:push():137] Uploaded file /tmp/tmpnq2xi2zjwandb/ewnwc82u-wandb-metadata.json
+2023-04-27 13:17:55,233 INFO    Thread-12 :106738 [dir_watcher.py:_on_file_created():278] file/dir created: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/wandb-metadata.json
+2023-04-27 13:17:56,436 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:17:57,234 INFO    Thread-12 :106738 [dir_watcher.py:_on_file_created():278] file/dir created: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/output.log
+2023-04-27 13:17:59,234 INFO    Thread-12 :106738 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/output.log
+2023-04-27 13:18:02,122 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:18:05,235 INFO    Thread-12 :106738 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/output.log
+2023-04-27 13:18:07,122 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:18:09,244 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 13:18:09,244 DEBUG   SenderThread:106738 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 13:18:11,237 INFO    Thread-12 :106738 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/output.log
+2023-04-27 13:18:12,336 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:18:17,337 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:18:22,358 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:18:23,239 INFO    Thread-12 :106738 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/output.log
+2023-04-27 13:18:23,239 INFO    Thread-12 :106738 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/config.yaml
+2023-04-27 13:18:24,244 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 13:18:24,244 DEBUG   SenderThread:106738 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 13:18:28,347 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:18:31,241 INFO    Thread-12 :106738 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/output.log
+2023-04-27 13:18:33,241 INFO    Thread-12 :106738 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/output.log
+2023-04-27 13:18:33,449 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:18:37,242 INFO    Thread-12 :106738 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/output.log
+2023-04-27 13:18:39,225 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:18:39,244 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 13:18:39,244 DEBUG   SenderThread:106738 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 13:18:43,244 INFO    Thread-12 :106738 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/output.log
+2023-04-27 13:18:44,681 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:18:49,681 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:18:53,287 DEBUG   SystemMonitor:106738 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-04-27 13:18:53,288 DEBUG   SenderThread:106738 [sender.py:send():375] send: stats
+2023-04-27 13:18:54,244 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 13:18:54,244 DEBUG   SenderThread:106738 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 13:18:55,309 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:19:00,309 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:19:05,310 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:19:07,249 INFO    Thread-12 :106738 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/output.log
+2023-04-27 13:19:09,244 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 13:19:09,244 DEBUG   SenderThread:106738 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 13:19:11,300 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:19:16,301 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:19:17,251 INFO    Thread-12 :106738 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/output.log
+2023-04-27 13:19:21,511 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:19:23,288 DEBUG   SenderThread:106738 [sender.py:send():375] send: stats
+2023-04-27 13:19:24,244 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 13:19:24,245 DEBUG   SenderThread:106738 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 13:19:27,302 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:19:32,303 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:19:37,303 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:19:39,244 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 13:19:39,245 DEBUG   SenderThread:106738 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 13:19:41,257 INFO    Thread-12 :106738 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/output.log
+2023-04-27 13:19:43,298 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:19:48,299 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:19:53,289 DEBUG   SenderThread:106738 [sender.py:send():375] send: stats
+2023-04-27 13:19:54,244 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 13:19:54,245 DEBUG   SenderThread:106738 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 13:19:54,329 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:19:59,330 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:20:04,330 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:20:09,245 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 13:20:09,245 DEBUG   SenderThread:106738 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 13:20:09,370 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:20:14,370 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:20:19,265 INFO    Thread-12 :106738 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/output.log
+2023-04-27 13:20:19,668 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:20:23,266 INFO    Thread-12 :106738 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/output.log
+2023-04-27 13:20:23,289 DEBUG   SenderThread:106738 [sender.py:send():375] send: stats
+2023-04-27 13:20:24,245 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 13:20:24,245 DEBUG   SenderThread:106738 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 13:20:25,313 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:20:30,314 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:20:35,269 INFO    Thread-12 :106738 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/output.log
+2023-04-27 13:20:35,513 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:20:39,245 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 13:20:39,245 DEBUG   SenderThread:106738 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 13:20:41,310 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:20:46,311 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:20:49,272 INFO    Thread-12 :106738 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/output.log
+2023-04-27 13:20:51,642 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:20:53,290 DEBUG   SenderThread:106738 [sender.py:send():375] send: stats
+2023-04-27 13:20:54,245 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 13:20:54,245 DEBUG   SenderThread:106738 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 13:20:57,364 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:21:02,365 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:21:07,365 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:21:09,245 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 13:21:09,245 DEBUG   SenderThread:106738 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 13:21:12,856 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:21:13,277 INFO    Thread-12 :106738 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/output.log
+2023-04-27 13:21:17,857 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:21:23,279 INFO    Thread-12 :106738 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/output.log
+2023-04-27 13:21:23,290 DEBUG   SenderThread:106738 [sender.py:send():375] send: stats
+2023-04-27 13:21:23,291 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:21:24,245 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 13:21:24,245 DEBUG   SenderThread:106738 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 13:21:28,356 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:21:33,282 INFO    Thread-12 :106738 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/output.log
+2023-04-27 13:21:34,018 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:21:39,019 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:21:39,245 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 13:21:39,245 DEBUG   SenderThread:106738 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 13:21:44,348 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:21:49,349 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:21:53,291 DEBUG   SenderThread:106738 [sender.py:send():375] send: stats
+2023-04-27 13:21:54,245 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 13:21:54,246 DEBUG   SenderThread:106738 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 13:21:55,297 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:22:00,297 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:22:05,298 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:22:09,245 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 13:22:09,246 DEBUG   SenderThread:106738 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 13:22:10,307 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:22:15,307 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:22:20,241 DEBUG   SenderThread:106738 [sender.py:send():375] send: exit
+2023-04-27 13:22:20,241 INFO    SenderThread:106738 [sender.py:send_exit():598] handling exit code: 1
+2023-04-27 13:22:20,241 INFO    SenderThread:106738 [sender.py:send_exit():600] handling runtime: 266
+2023-04-27 13:22:20,242 INFO    SenderThread:106738 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 13:22:20,242 INFO    SenderThread:106738 [sender.py:send_exit():606] send defer
+2023-04-27 13:22:20,242 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 13:22:20,242 INFO    HandlerThread:106738 [handler.py:handle_request_defer():170] handle defer: 0
+2023-04-27 13:22:20,243 DEBUG   SenderThread:106738 [sender.py:send_request():402] send_request: defer
+2023-04-27 13:22:20,243 INFO    SenderThread:106738 [sender.py:send_request_defer():622] handle sender defer: 0
+2023-04-27 13:22:20,243 INFO    SenderThread:106738 [sender.py:transition_state():626] send defer: 1
+2023-04-27 13:22:20,243 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 13:22:20,243 INFO    HandlerThread:106738 [handler.py:handle_request_defer():170] handle defer: 1
+2023-04-27 13:22:20,243 DEBUG   SenderThread:106738 [sender.py:send_request():402] send_request: defer
+2023-04-27 13:22:20,243 INFO    SenderThread:106738 [sender.py:send_request_defer():622] handle sender defer: 1
+2023-04-27 13:22:20,243 INFO    SenderThread:106738 [sender.py:transition_state():626] send defer: 2
+2023-04-27 13:22:20,243 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 13:22:20,243 INFO    HandlerThread:106738 [handler.py:handle_request_defer():170] handle defer: 2
+2023-04-27 13:22:20,243 INFO    HandlerThread:106738 [system_monitor.py:finish():190] Stopping system monitor
+2023-04-27 13:22:20,243 INFO    HandlerThread:106738 [interfaces.py:finish():202] Joined cpu monitor
+2023-04-27 13:22:20,243 INFO    HandlerThread:106738 [interfaces.py:finish():202] Joined disk monitor
+2023-04-27 13:22:20,243 DEBUG   SystemMonitor:106738 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-04-27 13:22:20,243 DEBUG   SystemMonitor:106738 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-04-27 13:22:20,289 INFO    HandlerThread:106738 [interfaces.py:finish():202] Joined gpu monitor
+2023-04-27 13:22:20,289 INFO    HandlerThread:106738 [interfaces.py:finish():202] Joined memory monitor
+2023-04-27 13:22:20,290 INFO    HandlerThread:106738 [interfaces.py:finish():202] Joined network monitor
+2023-04-27 13:22:20,290 DEBUG   SenderThread:106738 [sender.py:send_request():402] send_request: defer
+2023-04-27 13:22:20,290 INFO    SenderThread:106738 [sender.py:send_request_defer():622] handle sender defer: 2
+2023-04-27 13:22:20,290 INFO    SenderThread:106738 [sender.py:transition_state():626] send defer: 3
+2023-04-27 13:22:20,290 DEBUG   SenderThread:106738 [sender.py:send():375] send: stats
+2023-04-27 13:22:20,290 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 13:22:20,291 INFO    HandlerThread:106738 [handler.py:handle_request_defer():170] handle defer: 3
+2023-04-27 13:22:20,291 DEBUG   SenderThread:106738 [sender.py:send_request():402] send_request: defer
+2023-04-27 13:22:20,291 INFO    SenderThread:106738 [sender.py:send_request_defer():622] handle sender defer: 3
+2023-04-27 13:22:20,291 INFO    SenderThread:106738 [sender.py:transition_state():626] send defer: 4
+2023-04-27 13:22:20,291 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 13:22:20,291 INFO    HandlerThread:106738 [handler.py:handle_request_defer():170] handle defer: 4
+2023-04-27 13:22:20,291 DEBUG   SenderThread:106738 [sender.py:send_request():402] send_request: defer
+2023-04-27 13:22:20,291 INFO    SenderThread:106738 [sender.py:send_request_defer():622] handle sender defer: 4
+2023-04-27 13:22:20,291 INFO    SenderThread:106738 [sender.py:transition_state():626] send defer: 5
+2023-04-27 13:22:20,291 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 13:22:20,291 INFO    HandlerThread:106738 [handler.py:handle_request_defer():170] handle defer: 5
+2023-04-27 13:22:20,291 DEBUG   SenderThread:106738 [sender.py:send():375] send: summary
+2023-04-27 13:22:20,292 INFO    Thread-12 :106738 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/wandb-summary.json
+2023-04-27 13:22:20,292 INFO    SenderThread:106738 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 13:22:20,292 DEBUG   SenderThread:106738 [sender.py:send_request():402] send_request: defer
+2023-04-27 13:22:20,292 INFO    SenderThread:106738 [sender.py:send_request_defer():622] handle sender defer: 5
+2023-04-27 13:22:20,292 INFO    SenderThread:106738 [sender.py:transition_state():626] send defer: 6
+2023-04-27 13:22:20,292 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 13:22:20,292 INFO    HandlerThread:106738 [handler.py:handle_request_defer():170] handle defer: 6
+2023-04-27 13:22:20,292 DEBUG   SenderThread:106738 [sender.py:send_request():402] send_request: defer
+2023-04-27 13:22:20,292 INFO    SenderThread:106738 [sender.py:send_request_defer():622] handle sender defer: 6
+2023-04-27 13:22:20,292 INFO    SenderThread:106738 [sender.py:transition_state():626] send defer: 7
+2023-04-27 13:22:20,292 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 13:22:20,292 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 13:22:20,292 INFO    HandlerThread:106738 [handler.py:handle_request_defer():170] handle defer: 7
+2023-04-27 13:22:20,292 DEBUG   SenderThread:106738 [sender.py:send_request():402] send_request: defer
+2023-04-27 13:22:20,293 INFO    SenderThread:106738 [sender.py:send_request_defer():622] handle sender defer: 7
+2023-04-27 13:22:21,241 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: poll_exit
+2023-04-27 13:22:22,159 INFO    SenderThread:106738 [sender.py:transition_state():626] send defer: 8
+2023-04-27 13:22:22,159 DEBUG   SenderThread:106738 [sender.py:send_request():402] send_request: poll_exit
+2023-04-27 13:22:22,159 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 13:22:22,159 INFO    HandlerThread:106738 [handler.py:handle_request_defer():170] handle defer: 8
+2023-04-27 13:22:22,159 DEBUG   SenderThread:106738 [sender.py:send_request():402] send_request: defer
+2023-04-27 13:22:22,159 INFO    SenderThread:106738 [sender.py:send_request_defer():622] handle sender defer: 8
+2023-04-27 13:22:22,167 INFO    SenderThread:106738 [sender.py:transition_state():626] send defer: 9
+2023-04-27 13:22:22,167 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 13:22:22,167 DEBUG   SenderThread:106738 [sender.py:send():375] send: artifact
+2023-04-27 13:22:22,167 INFO    HandlerThread:106738 [handler.py:handle_request_defer():170] handle defer: 9
+2023-04-27 13:22:22,241 DEBUG   HandlerThread:106738 [handler.py:handle_request():144] handle_request: poll_exit
+2023-04-27 13:22:22,292 INFO    Thread-12 :106738 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/output.log
+2023-04-27 13:22:24,620 WARNING StreamThr :106738 [internal.py:is_dead():414] Internal process exiting, parent pid 106731 disappeared
+2023-04-27 13:22:24,620 ERROR   StreamThr :106738 [internal.py:wandb_internal():152] Internal process shutdown.
+2023-04-27 13:22:25,242 INFO    WriterThread:106738 [datastore.py:close():298] close: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/run-gf00u03r.wandb
+2023-04-27 13:22:25,242 INFO    HandlerThread:106738 [handler.py:finish():845] shutting down handler
+2023-04-27 13:22:25,475 INFO    SenderThread:106738 [sender.py:send_artifact():1474] sent artifact job-https___github.com_Ads-cmu_ForwardForward.git_new_code_main.py - {'id': 'QXJ0aWZhY3Q6NDM0OTE3NjI1', 'digest': '6c38ce2f6851bcb53cf81425420b40fb', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-https___github.com_Ads-cmu_ForwardForward.git_new_code_main.py', 'alias': 'latest'}, {'artifactCollectionName': 'job-https___github.com_Ads-cmu_ForwardForward.git_new_code_main.py', 'alias': 'v4'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjY0ODkxMTI1', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NDM0OTg3NTYy', 'versionIndex': 9}}, 'version': 'v4'}
+2023-04-27 13:22:25,475 INFO    SenderThread:106738 [sender.py:finish():1550] shutting down sender
+2023-04-27 13:22:25,475 INFO    SenderThread:106738 [dir_watcher.py:finish():365] shutting down directory watcher
+2023-04-27 13:22:26,293 INFO    SenderThread:106738 [dir_watcher.py:finish():395] scan: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files
+2023-04-27 13:22:26,293 INFO    SenderThread:106738 [dir_watcher.py:finish():409] scan save: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/requirements.txt requirements.txt
+2023-04-27 13:22:26,293 INFO    SenderThread:106738 [dir_watcher.py:finish():409] scan save: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/wandb-metadata.json wandb-metadata.json
+2023-04-27 13:22:26,293 INFO    SenderThread:106738 [dir_watcher.py:finish():409] scan save: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/conda-environment.yaml conda-environment.yaml
+2023-04-27 13:22:26,295 INFO    SenderThread:106738 [dir_watcher.py:finish():409] scan save: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/config.yaml config.yaml
+2023-04-27 13:22:26,295 INFO    SenderThread:106738 [dir_watcher.py:finish():409] scan save: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/output.log output.log
+2023-04-27 13:22:26,295 INFO    SenderThread:106738 [dir_watcher.py:finish():409] scan save: /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/wandb-summary.json wandb-summary.json
+2023-04-27 13:22:26,298 INFO    SenderThread:106738 [file_pusher.py:finish():168] shutting down file pusher
+2023-04-27 13:22:26,298 INFO    SenderThread:106738 [file_pusher.py:join():173] waiting for file pusher
+2023-04-27 13:22:26,662 INFO    wandb-upload_2:106738 [upload_job.py:push():137] Uploaded file /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/config.yaml
+2023-04-27 13:22:26,738 INFO    wandb-upload_4:106738 [upload_job.py:push():137] Uploaded file /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/wandb-summary.json
+2023-04-27 13:22:26,741 INFO    wandb-upload_0:106738 [upload_job.py:push():137] Uploaded file /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/requirements.txt
+2023-04-27 13:22:26,778 INFO    wandb-upload_1:106738 [upload_job.py:push():137] Uploaded file /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/conda-environment.yaml
+2023-04-27 13:22:26,904 INFO    wandb-upload_3:106738 [upload_job.py:push():137] Uploaded file /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/wandb/run-20230427_131751-gf00u03r/files/output.log

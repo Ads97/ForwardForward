@@ -23,8 +23,8 @@ def parse_args(opt):
     return opt
 
 
-def get_model_and_optimizer(opt):
-    model = ff_model.FF_model(opt)
+def get_model_and_optimizer(opt, activations):
+    model = ff_model.FF_model(opt, activations)
     if "cuda" in opt.device:
         model = model.cuda()
     print(model, "\n")
@@ -91,19 +91,35 @@ def get_MNIST_partition(opt, partition):
         ]
     )
     if partition in ["train"]:
-        mnist = torchvision.datasets.CIFAR10(
-            os.path.join(get_original_cwd(), opt.input.path),
-            train=True,
-            download=True,
-            transform=transform,
-        )
+        if opt.model.dataset == 'cifar10':
+            mnist = torchvision.datasets.CIFAR10(
+                os.path.join(get_original_cwd(), opt.input.path),
+                train=True,
+                download=True,
+                transform=transform,
+            )
+        else: 
+            mnist = torchvision.datasets.MNIST(
+                os.path.join(get_original_cwd(), opt.input.path),
+                train=True,
+                download=True,
+                transform=ToTensor(),
+            )
     elif partition in ["val", "test"]:
-        mnist = torchvision.datasets.CIFAR10(
-            os.path.join(get_original_cwd(), opt.input.path),
-            train=False,
-            download=True,
-            transform=transform,
-        )
+        if opt.model.dataset == 'cifar10':
+            mnist = torchvision.datasets.CIFAR10(
+                os.path.join(get_original_cwd(), opt.input.path),
+                train=False,
+                download=True,
+                transform=transform,
+            )
+        else:
+            mnist = torchvision.datasets.MNIST(
+                os.path.join(get_original_cwd(), opt.input.path),
+                train=False,
+                download=True,
+                transform=ToTensor(),
+            )
     else:
         raise NotImplementedError
 
@@ -169,7 +185,9 @@ def print_results(partition, iteration_time, scalar_outputs, epoch=None):
     )
     if scalar_outputs is not None:
         for key, value in scalar_outputs.items():
-            print(f"{key}: {value:.4f} \t", end="")
+            if key in ['classification_accuracy', 'multi_pass_classification_accuracy', 'classification_loss', 'multi_pass_classification_loss']:
+                value = scalar_outputs[key]
+                print(f"{key}: {value:.4f} \t", end="")
     print()
     partition_scalar_outputs = {}
     if scalar_outputs is not None:

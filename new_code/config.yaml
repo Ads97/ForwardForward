@@ -3,7 +3,7 @@ device: "cuda"  # cpu or cuda
 
 input:
   path: datasets
-  batch_size: 100
+  batch_size: 500
 
 
 model:
@@ -12,6 +12,7 @@ model:
 
   hidden_dim: 2000
   num_layers: 4
+  dataset : "mnist" # mnist or cifar10
 
 
 training:

@@ -1,0 +1,66 @@
+FF_model(
+  (model): ModuleList(
+    (0): Linear(in_features=784, out_features=2000, bias=True)
+    (1): Linear(in_features=2000, out_features=2000, bias=True)
+    (2): Linear(in_features=2000, out_features=2000, bias=True)
+    (3): Linear(in_features=2000, out_features=2000, bias=True)
+  )
+  (ff_loss): BCEWithLogitsLoss()
+  (linear_classifier): Sequential(
+    (0): Linear(in_features=6000, out_features=10, bias=False)
+  )
+  (classification_loss): CrossEntropyLoss()
+)
+> /home/jonah/Documents/school/idl/activation_ForwardForward/new_code/src/ff_model.py(136)forward()
+-> scalar_outputs = self.forward_downstream_classification_model(
+[tensor([[1.1509, 1.0159, 1.3610,  ..., 1.0445, 0.9969, 0.9755],
+        [1.3934, 1.5008, 0.9243,  ..., 2.1351, 1.3299, 0.9229],
+        [1.0828, 0.9253, 2.3082,  ..., 1.2858, 0.9219, 0.9237],
+        ...,
+        [0.9604, 0.9635, 2.2678,  ..., 1.4339, 1.3788, 0.9252],
+        [0.9892, 0.9238, 1.0809,  ..., 1.5715, 1.0370, 0.9607],
+        [1.0111, 1.3230, 1.0817,  ..., 1.1467, 0.9548, 0.9415]],
+       device='cuda:0', grad_fn=<CloneBackward0>), tensor([[1.4892, 2.0309, 0.9692,  ..., 0.9304, 1.0036, 1.6830],
+        [1.3575, 1.7671, 1.0341,  ..., 0.9999, 0.9258, 3.2183],
+        [1.3645, 1.7580, 0.9368,  ..., 0.9493, 0.9278, 1.7645],
+        ...,
+        [1.9370, 1.9784, 0.9421,  ..., 0.9237, 0.9288, 1.8877],
+        [1.5745, 1.7984, 1.0861,  ..., 0.9656, 0.9926, 1.6950],
+        [1.9582, 1.7386, 0.9635,  ..., 0.9841, 0.9525, 1.6761]],
+       device='cuda:0', grad_fn=<CloneBackward0>), tensor([[1.0973, 1.2072, 1.2841,  ..., 1.1083, 0.9730, 0.9220],
+        [1.0422, 1.1702, 1.4616,  ..., 1.2639, 0.9220, 0.9579],
+        [1.0405, 1.0892, 1.2177,  ..., 1.1552, 0.9263, 1.0144],
+        ...,
+        [1.1902, 1.0875, 1.3261,  ..., 1.0640, 0.9230, 0.9560],
+        [1.0364, 1.2043, 1.4600,  ..., 1.0360, 0.9749, 0.9377],
+        [1.0266, 1.1036, 1.4334,  ..., 1.0303, 0.9365, 0.9461]],
+       device='cuda:0', grad_fn=<CloneBackward0>), tensor([[0.9603, 0.9232, 0.9416,  ..., 1.2898, 1.5853, 0.9688],
+        [0.9431, 0.9379, 0.9348,  ..., 1.4405, 1.4682, 0.9875],
+        [0.9252, 0.9219, 0.9426,  ..., 1.2166, 1.5543, 1.0014],
+        ...,
+        [0.9300, 0.9220, 0.9446,  ..., 1.3590, 1.4772, 0.9930],
+        [0.9402, 0.9263, 0.9889,  ..., 1.3478, 1.4475, 0.9653],
+        [0.9346, 0.9224, 0.9637,  ..., 1.2970, 1.5170, 1.0023]],
+       device='cuda:0', grad_fn=<CloneBackward0>)]
+torch.Size([200, 2000])
+torch.Size([200, 2000])
+tensor([1.4892, 2.0309, 0.9692,  ..., 0.9304, 1.0036, 1.6830], device='cuda:0',
+       grad_fn=<SelectBackward0>)
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "main.py", line 102, in my_main
+    model = train(opt, model, optimizer)
+  File "main.py", line 29, in train
+    scalar_outputs = model(inputs, labels)
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/jonah/Documents/school/idl/activation_ForwardForward/new_code/src/ff_model.py", line 136, in forward
+    scalar_outputs = self.forward_downstream_classification_model(
+  File "/home/jonah/Documents/school/idl/activation_ForwardForward/new_code/src/ff_model.py", line 136, in forward
+    scalar_outputs = self.forward_downstream_classification_model(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

@@ -1,0 +1,6 @@
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "main.py", line 93, in my_main
+    activations = [ReLU(), LeakyReLU(), Tanh(), SiLU(), GELU(), Sigmoid(), SELU(), ELU(), CELU()]
+NameError: name 'LeakyReLU' is not defined
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
