@@ -11,6 +11,7 @@ from omegaconf import OmegaConf
 from torchvision.transforms import Compose, ToTensor, Normalize, Lambda
 
 from src import ff_mnist, ff_model
+import wandb
 
 
 def parse_args(opt):
@@ -170,6 +171,17 @@ def print_results(partition, iteration_time, scalar_outputs, epoch=None):
         for key, value in scalar_outputs.items():
             print(f"{key}: {value:.4f} \t", end="")
     print()
+    partition_scalar_outputs = {}
+    if scalar_outputs is not None:
+        for key, value in scalar_outputs.items():
+            partition_scalar_outputs[f"{partition}_{key}"] = value
+    wandb.log(partition_scalar_outputs)
+
+# create save_model function
+def save_model(model):
+    torch.save(model.state_dict(), f"{wandb.run.name}-model.pt")
+    # log model to wandb
+    wandb.save(f"{wandb.run.name}-model.pt")
 
 
 def log_results(result_dict, scalar_outputs, num_steps):
