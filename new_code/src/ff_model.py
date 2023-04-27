@@ -135,6 +135,73 @@ class FF_model(torch.nn.Module):
             inputs, labels, scalar_outputs=scalar_outputs
         )
 
+        scalar_outputs = self.forward_downstream_multi_pass(
+            inputs, labels, scalar_outputs=scalar_outputs
+        )
+
+        return scalar_outputs
+    
+    def forward_downstream_multi_pass(
+        self, inputs, labels, scalar_outputs=None,
+    ):
+        if scalar_outputs is None:
+            scalar_outputs = {
+                "Loss": torch.zeros(1, device=self.opt.device),
+            }
+
+        # z_all = inputs["all_sample"] # bs, num_classes, C, H, W
+        # z_all = z_all.reshape(z_all.shape[0], z_all.shape[1], -1) # bs, num_classes, C*H*W
+
+        # z_all = self._layer_norm(z_all)
+        # input_classification_model = []
+
+        # with torch.no_grad():
+        #     for idx, layer in enumerate(self.model):
+        #         z_all = layer(z_all)
+        #         z_all = self.act_fn.apply(z_all)
+        #         z_unnorm = z_all.clone()
+        #         z_all = self._layer_norm(z_all)
+
+        #         if idx >= 1:
+        #             # print(z.shape)
+        #             input_classification_model.append(z_unnorm)
+
+        # input_classification_model = torch.concat(input_classification_model, dim=-1) # bs x 6000 # concat all activations from all layers
+        # ssq_all = torch.sum(input_classification_model ** 2, dim=-1)
+
+
+
+        z_all = inputs["all_sample"] # bs, num_classes, C, H, W
+        z_all = z_all.reshape(z_all.shape[0], z_all.shape[1], -1) # bs, num_classes, C*H*W
+        ssq_all = []
+        for class_num in range(z_all.shape[1]):
+            z = z_all[:, class_num, :] # bs, C*H*W
+            z = self._layer_norm(z)
+            input_classification_model = []
+
+            # 784, 2000, 2000, 2000
+
+            with torch.no_grad():
+                for idx, layer in enumerate(self.model):
+                    z = layer(z)
+                    z = self.act_fn.apply(z)
+                    z_unnorm = z.clone()
+                    z = self._layer_norm(z)
+
+                    if idx >= 1:
+                        # print(z.shape)
+                        input_classification_model.append(z_unnorm)
+
+            input_classification_model = torch.concat(input_classification_model, dim=-1) # bs x 6000 # concat all activations from all layers
+            ssq = torch.sum(input_classification_model ** 2, dim=-1) # bs # sum of squares of each activation
+            ssq_all.append(ssq)
+        ssq_all = torch.stack(ssq_all, dim=-1) # bs x num_classes # sum of squares of each activation for each class
+        
+        classification_accuracy = utils.get_accuracy(
+            self.opt, ssq_all.data, labels["class_labels"]
+        )
+
+        scalar_outputs["multi_pass_classification_accuracy"] = classification_accuracy
         return scalar_outputs
 
     def forward_downstream_classification_model(
