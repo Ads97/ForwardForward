@@ -7,7 +7,7 @@ from omegaconf import DictConfig
 
 from src import utils
 import wandb
-
+from torch.nn import ReLU, Tanh, GELU, Sigmoid, SELU, ELU, CELU
 
 def train(opt, model, optimizer):
     start_time = time.time()
@@ -84,12 +84,13 @@ def my_main(opt: DictConfig) -> None:
     run = wandb.init(
     project="project",
     entity  = "automellon",
-    name = "two-classifications", # Wandb creates random run names if you skip this field
+    name = "mnist 2000 threshhold", # Wandb creates random run names if you skip this field
     reinit = False, # Allows reinitalizing runs when you re-run this cell
     # run_id = # Insert specific run id here if you want to resume a previous run
     # resume = "must" # You need this to resume previous runs, but comment out reinit = True when using this
     config = dict(opt) ### Wandb Config for your run
     )
+    activations = [ReLU(), Tanh(), GELU(), Sigmoid(), SELU(), ELU(), CELU()]
     model, optimizer = utils.get_model_and_optimizer(opt)
     model = train(opt, model, optimizer)
     run.finish()

@@ -1,0 +1,51 @@
+FF_model(
+  (model): ModuleList(
+    (0): Linear(in_features=784, out_features=2000, bias=True)
+    (1): Linear(in_features=2000, out_features=2000, bias=True)
+    (2): Linear(in_features=2000, out_features=2000, bias=True)
+    (3): Linear(in_features=2000, out_features=2000, bias=True)
+  )
+  (ff_loss): BCEWithLogitsLoss()
+  (linear_classifier): Sequential(
+    (0): Linear(in_features=6000, out_features=10, bias=False)
+  )
+  (classification_loss): CrossEntropyLoss()
+)
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "main.py", line 95, in my_main
+    model = train(opt, model, optimizer)
+  File "main.py", line 22, in train
+    for inputs, labels in train_loader:
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 530, in __next__
+    data = self._next_data()
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1224, in _next_data
+    return self._process_data(data)
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1250, in _process_data
+    data.reraise()
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torch/_utils.py", line 457, in reraise
+    raise exception
+RuntimeError: Caught RuntimeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 287, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/jonah/Documents/school/idl/ForwardForward/new_code/src/ff_mnist.py", line 15, in __getitem__
+    pos_sample, neg_sample, neutral_sample, all_sample, class_label = self._generate_sample(
+  File "/home/jonah/Documents/school/idl/ForwardForward/new_code/src/ff_mnist.py", line 66, in _generate_sample
+    sample, class_label = self.mnist[index]
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torchvision/datasets/mnist.py", line 145, in __getitem__
+    img = self.transform(img)
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torchvision/transforms/transforms.py", line 95, in __call__
+    img = t(img)
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torchvision/transforms/transforms.py", line 270, in forward
+    return F.normalize(tensor, self.mean, self.std, self.inplace)
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torchvision/transforms/functional.py", line 363, in normalize
+    tensor.sub_(mean).div_(std)
+RuntimeError: output with shape [1, 28, 28] doesn't match the broadcast shape [3, 28, 28]
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

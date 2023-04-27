@@ -15,9 +15,10 @@ class FF_model(torch.nn.Module):
         self.opt = opt
         self.num_channels = [self.opt.model.hidden_dim] * self.opt.model.num_layers
         self.act_fn = ReLU_full_grad()
-
+        #self.dropouts = [nn.Dropout(p=.3)] * self.opt.model.num_layers
         # Initialize the model.
-        self.model = nn.ModuleList([nn.Linear(3*32*32, self.num_channels[0])])
+        initial_layers = 3072 if self.opt.model.dataset == "cifar10" else 784
+        self.model = nn.ModuleList([nn.Linear(initial_layers, self.num_channels[0])])
         for i in range(1, len(self.num_channels)):
             self.model.append(nn.Linear(self.num_channels[i - 1], self.num_channels[i]))
 
@@ -117,7 +118,7 @@ class FF_model(torch.nn.Module):
         for idx, layer in enumerate(self.model):
             z = layer(z)
             z = self.act_fn.apply(z)
-
+            #z = self.dropouts[idx](z)
             if self.opt.model.peer_normalization > 0:
                 peer_loss = self._calc_peer_normalization_loss(idx, z)
                 scalar_outputs["Peer Normalization"] += peer_loss
@@ -185,6 +186,7 @@ class FF_model(torch.nn.Module):
                 for idx, layer in enumerate(self.model):
                     z = layer(z)
                     z = self.act_fn.apply(z)
+                    #z = self.dropouts[idx](z)
                     z_unnorm = z.clone()
                     z = self._layer_norm(z)
 
@@ -224,6 +226,7 @@ class FF_model(torch.nn.Module):
             for idx, layer in enumerate(self.model):
                 z = layer(z)
                 z = self.act_fn.apply(z)
+                #z = self.dropouts[idx](z)
                 z = self._layer_norm(z)
 
                 if idx >= 1:

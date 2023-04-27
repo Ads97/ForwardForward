@@ -1,0 +1,165 @@
+{
+    "os": "Linux-5.19.0-41-generic-x86_64-with-glibc2.17",
+    "python": "3.8.16",
+    "heartbeatAt": "2023-04-27T20:13:37.243860",
+    "startedAt": "2023-04-27T20:13:36.956141",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "main.py",
+    "codePath": "new_code/main.py",
+    "git": {
+        "remote": "https://github.com/Ads-cmu/ForwardForward.git",
+        "commit": "95f478b1341cfaf2e1e40de001af87d8fcad9312"
+    },
+    "email": "kornberg.jonah@gmail.com",
+    "root": "/home/jonah/Documents/school/idl/ForwardForward",
+    "host": "jonah-dual",
+    "username": "jonah",
+    "executable": "/home/jonah/anaconda3/envs/FF/bin/python",
+    "cpu_count": 12,
+    "cpu_count_logical": 24,
+    "cpu_freq": {
+        "current": 2862.6213750000006,
+        "min": 2200.0,
+        "max": 3700.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2612.101,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2878.801,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3700.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3664.37,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3603.595,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3577.7,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2877.014,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3700.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3287.537,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3587.82,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2880.095,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3636.571,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3683.439,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3628.862,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2999.209,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3700.0
+        },
+        {
+            "current": 3326.674,
+            "min": 2200.0,
+            "max": 3700.0
+        }
+    ],
+    "disk": {
+        "total": 233.27177810668945,
+        "used": 199.64062118530273
+    },
+    "gpu": "NVIDIA GeForce RTX 3080",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3080",
+            "memory_total": 10737418240
+        }
+    ],
+    "memory": {
+        "total": 31.260986328125
+    }
+}

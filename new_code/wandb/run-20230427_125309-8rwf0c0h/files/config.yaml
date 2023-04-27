@@ -1,0 +1,49 @@
+wandb_version: 1
+
+seed:
+  desc: null
+  value: 42
+device:
+  desc: null
+  value: cuda
+input:
+  desc: null
+  value: '{''path'': ''datasets'', ''batch_size'': 512}'
+model:
+  desc: null
+  value: '{''peer_normalization'': 0.03, ''momentum'': 0.9, ''hidden_dim'': 4000,
+    ''num_layers'': 6, ''dataset'': ''cifar10''}'
+training:
+  desc: null
+  value: '{''epochs'': 150, ''learning_rate'': 0.001, ''weight_decay'': 0.0003, ''momentum'':
+    0.9, ''downstream_learning_rate'': 0.01, ''downstream_weight_decay'': 0.003, ''val_idx'':
+    1, ''final_test'': True}'
+_wandb:
+  desc: null
+  value:
+    python_version: 3.8.16
+    cli_version: 0.15.0
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: true
+    start_time: 1682614389.536926
+    t:
+      1:
+      - 1
+      - 41
+      - 50
+      - 55
+      2:
+      - 1
+      - 41
+      - 50
+      - 55
+      3:
+      - 13
+      - 16
+      - 23
+      4: 3.8.16
+      5: 0.15.0
+      8:
+      - 2
+      - 5

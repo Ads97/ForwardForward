@@ -1,0 +1,55 @@
+Traceback (most recent call last):
+  File "main.py", line 104, in <module>
+    my_main()
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "main.py", line 95, in my_main
+    model = train(opt, model, optimizer)
+  File "main.py", line 14, in train
+    train_loader = utils.get_data(opt, "train")
+  File "/home/jonah/Documents/school/idl/ForwardForward/new_code/src/utils.py", line 60, in get_data
+    dataset = ff_mnist.FF_MNIST(opt, partition)
+  File "/home/jonah/Documents/school/idl/ForwardForward/new_code/src/ff_mnist.py", line 10, in __init__
+    self.mnist = utils.get_MNIST_partition(opt, partition)
+  File "/home/jonah/Documents/school/idl/ForwardForward/new_code/src/utils.py", line 95, in get_MNIST_partition
+    mnist = torchvision.datasets.CIFAR10(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 65, in __init__
+    self.download()
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 138, in download
+    if self._check_integrity():
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 133, in _check_integrity
+    if not check_integrity(fpath, md5):
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 71, in check_integrity
+    return check_md5(fpath, md5)
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 63, in check_md5
+    return md5 == calculate_md5(fpath, **kwargs)
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 58, in calculate_md5
+    md5.update(chunk)
+KeyboardInterrupt
+FF_model(
+  (model): ModuleList(
+    (0): Linear(in_features=3072, out_features=4000, bias=True)
+    (1): Linear(in_features=4000, out_features=4000, bias=True)
+    (2): Linear(in_features=4000, out_features=4000, bias=True)
+    (3): Linear(in_features=4000, out_features=4000, bias=True)
+    (4): Linear(in_features=4000, out_features=4000, bias=True)
+    (5): Linear(in_features=4000, out_features=4000, bias=True)
+  )
+  (ff_loss): BCEWithLogitsLoss()
+  (linear_classifier): Sequential(
+    (0): Linear(in_features=20000, out_features=10, bias=False)
+  )
+  (classification_loss): CrossEntropyLoss()
+)

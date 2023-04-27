@@ -1,0 +1,12 @@
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "main.py", line 94, in my_main
+    model, optimizer = utils.get_model_and_optimizer(opt)
+  File "/home/jonah/Documents/school/idl/ForwardForward/new_code/src/utils.py", line 27, in get_model_and_optimizer
+    model = ff_model.FF_model(opt)
+  File "/home/jonah/Documents/school/idl/ForwardForward/new_code/src/ff_model.py", line 20, in __init__
+    initial_layers = 3072 if self.opt.dataset == "cifar10" else 784
+omegaconf.errors.ConfigAttributeError: Key 'dataset' is not in struct
+    full_key: dataset
+    object_type=dict
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

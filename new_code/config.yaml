@@ -3,7 +3,7 @@ device: "cuda"  # cpu or cuda
 
 input:
   path: datasets
-  batch_size: 100
+  batch_size: 256
 
 
 model:
@@ -11,11 +11,12 @@ model:
   momentum: 0.9  # Momentum to use for the running mean in peer normalization loss.
 
   hidden_dim: 2000
-  num_layers: 4
+  num_layers: 6
+  dataset : "mnist" # mnist or cifar10
 
 
 training:
-  epochs: 100
+  epochs: 150
 
   learning_rate: 1e-3
   weight_decay: 3e-4
