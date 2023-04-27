@@ -37,6 +37,7 @@ def train(opt, model, optimizer):
         # Validate.
         if epoch % opt.training.val_idx == 0 and opt.training.val_idx != -1:
             validate_or_test(opt, model, "val", epoch=epoch)
+            # utils.print_results("val", time.time() - start_time, train_results, epoch)
 
     return model
 

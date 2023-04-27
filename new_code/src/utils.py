@@ -8,6 +8,8 @@ import torchvision
 from hydra.utils import get_original_cwd
 from omegaconf import OmegaConf
 
+from torchvision.transforms import Compose, ToTensor, Normalize, Lambda
+
 from src import ff_mnist, ff_model
 
 
@@ -79,33 +81,41 @@ def seed_worker(worker_id):
 
 
 def get_MNIST_partition(opt, partition):
+    transform = Compose(
+        [
+            ToTensor(),
+            Normalize((0.4914, 0.4822, 0.4465), (0.247, 0.243, 0.261)),
+            # Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
+            # Lambda(lambda x: torch.flatten(x)),
+        ]
+    )
     if partition in ["train", "val", "train_val"]:
-        mnist = torchvision.datasets.MNIST(
+        mnist = torchvision.datasets.CIFAR10(
             os.path.join(get_original_cwd(), opt.input.path),
             train=True,
             download=True,
-            transform=torchvision.transforms.ToTensor(),
+            transform=transform,
         )
     elif partition in ["test"]:
-        mnist = torchvision.datasets.MNIST(
+        mnist = torchvision.datasets.CIFAR10(
             os.path.join(get_original_cwd(), opt.input.path),
             train=False,
             download=True,
-            transform=torchvision.transforms.ToTensor(),
+            transform=transform,
         )
     else:
         raise NotImplementedError
 
     if partition == "train":
-        mnist = torch.utils.data.Subset(mnist, range(50000))
+        mnist = torch.utils.data.Subset(mnist, range(40000))
     elif partition == "val":
-        mnist = torchvision.datasets.MNIST(
+        mnist = torchvision.datasets.CIFAR10(
             os.path.join(get_original_cwd(), opt.input.path),
             train=True,
             download=True,
-            transform=torchvision.transforms.ToTensor(),
+            transform=transform,
         )
-        mnist = torch.utils.data.Subset(mnist, range(50000, 60000))
+        mnist = torch.utils.data.Subset(mnist, range(40000, 50000))
 
     return mnist
 

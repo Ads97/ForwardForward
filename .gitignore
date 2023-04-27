@@ -1,3 +1,8 @@
 __pycache__/*
 wandb/*
 data/*
+datasets/*
+new_code/datasets/*
+new_code/logs/*
+new_code/src/__pycache__/*
+*.pyc
