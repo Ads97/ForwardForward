@@ -6,6 +6,8 @@ import torch.nn as nn
 from src import utils
 
 
+
+
 class FF_model(torch.nn.Module):
     """The model trained with Forward-Forward (FF)."""
 
@@ -24,7 +26,6 @@ class FF_model(torch.nn.Module):
 
         # Initialize forward-forward loss.
         self.ff_loss = nn.BCEWithLogitsLoss()
-
         # Initialize peer normalization loss.
         self.running_means = [
             torch.zeros(self.num_channels[i], device=self.opt.device) + 0.5
@@ -32,7 +33,8 @@ class FF_model(torch.nn.Module):
         ]
 
         # [784,2000,2000,2000]
-
+        self.layer_thresholds = [.3] * self.opt.model.num_layers
+        print("Layer thresholds: ", self.layer_thresholds)
         # Initialize downstream classification loss.
         channels_for_classification_loss = sum(
             self.num_channels[-i] for i in range(self.opt.model.num_layers - 1)
@@ -79,14 +81,17 @@ class FF_model(torch.nn.Module):
         peer_loss = (torch.mean(self.running_means[idx]) - self.running_means[idx]) ** 2
         return torch.mean(peer_loss)
 
-    def _calc_ff_loss(self, z, labels):
+    def _calc_ff_loss(self, z, labels, threshold_multiplier=None):
         sum_of_squares = torch.sum(z ** 2, dim=-1) # sum of squares of each activation. bs*2
 
         # print("sum of squares shape: ", sum_of_squares.shape)
         # exit()
         # s - thresh    --> sigmoid --> cross entropy
-
-        logits = sum_of_squares - z.shape[1] # if the average value of each activation is >1, logit is +ve, else -ve.
+        if threshold_multiplier is None:
+            multiplier = 1
+        else:
+            multiplier = threshold_multiplier.multiplier
+        logits = sum_of_squares - multiplier * z.shape[1] # if the average value of each activation is >1, logit is +ve, else -ve.
         ff_loss = self.ff_loss(logits, labels.float()) # labels are 0 or 1, so convert to float. logits->sigmoid->normal cross entropy
 
         with torch.no_grad():
@@ -96,7 +101,7 @@ class FF_model(torch.nn.Module):
             ).item()
         return ff_loss, ff_accuracy
 
-    def forward(self, inputs, labels):
+    def forward(self, inputs, labels, threshold_multiplier=1.0):
         scalar_outputs = {
             "Loss": torch.zeros(1, device=self.opt.device),
             "Peer Normalization": torch.zeros(1, device=self.opt.device),
@@ -124,7 +129,7 @@ class FF_model(torch.nn.Module):
                 scalar_outputs["Peer Normalization"] += peer_loss
                 scalar_outputs["Loss"] += self.opt.model.peer_normalization * peer_loss
 
-            ff_loss, ff_accuracy = self._calc_ff_loss(z, posneg_labels)
+            ff_loss, ff_accuracy = self._calc_ff_loss(z, posneg_labels, threshold_multiplier=threshold_multiplier)
             scalar_outputs[f"loss_layer_{idx}"] = ff_loss
             scalar_outputs[f"ff_accuracy_layer_{idx}"] = ff_accuracy
             scalar_outputs["Loss"] += ff_loss

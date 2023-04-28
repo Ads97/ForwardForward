@@ -1,0 +1,1403 @@
+2023-04-27 19:24:45,659 INFO    StreamThr :63344 [internal.py:wandb_internal():86] W&B internal server running at pid: 63344, started at: 2023-04-27 19:24:45.659155
+2023-04-27 19:24:45,660 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status
+2023-04-27 19:24:45,663 INFO    WriterThread:63344 [datastore.py:open_for_write():85] open: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/run-x2622758.wandb
+2023-04-27 19:24:45,663 DEBUG   SenderThread:63344 [sender.py:send():375] send: header
+2023-04-27 19:24:45,672 DEBUG   SenderThread:63344 [sender.py:send():375] send: run
+2023-04-27 19:24:45,868 INFO    SenderThread:63344 [dir_watcher.py:__init__():219] watching files in: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files
+2023-04-27 19:24:45,868 INFO    SenderThread:63344 [sender.py:_start_run_threads():1124] run started: x2622758 with start time 1682637885.660177
+2023-04-27 19:24:45,868 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:24:45,868 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:24:45,870 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: check_version
+2023-04-27 19:24:45,870 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: check_version
+2023-04-27 19:24:45,959 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: run_start
+2023-04-27 19:24:45,964 DEBUG   HandlerThread:63344 [system_info.py:__init__():31] System info init
+2023-04-27 19:24:45,964 DEBUG   HandlerThread:63344 [system_info.py:__init__():46] System info init done
+2023-04-27 19:24:45,964 INFO    HandlerThread:63344 [system_monitor.py:start():181] Starting system monitor
+2023-04-27 19:24:45,964 INFO    SystemMonitor:63344 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-04-27 19:24:45,964 INFO    HandlerThread:63344 [system_monitor.py:probe():201] Collecting system info
+2023-04-27 19:24:45,964 INFO    SystemMonitor:63344 [interfaces.py:start():190] Started cpu monitoring
+2023-04-27 19:24:45,964 INFO    SystemMonitor:63344 [interfaces.py:start():190] Started disk monitoring
+2023-04-27 19:24:45,965 INFO    SystemMonitor:63344 [interfaces.py:start():190] Started gpu monitoring
+2023-04-27 19:24:45,965 INFO    SystemMonitor:63344 [interfaces.py:start():190] Started memory monitoring
+2023-04-27 19:24:45,965 INFO    SystemMonitor:63344 [interfaces.py:start():190] Started network monitoring
+2023-04-27 19:24:45,974 DEBUG   HandlerThread:63344 [system_info.py:probe():195] Probing system
+2023-04-27 19:24:45,977 DEBUG   HandlerThread:63344 [system_info.py:_probe_git():180] Probing git
+2023-04-27 19:24:45,983 DEBUG   HandlerThread:63344 [system_info.py:_probe_git():188] Probing git done
+2023-04-27 19:24:45,983 DEBUG   HandlerThread:63344 [system_info.py:probe():240] Probing system done
+2023-04-27 19:24:45,983 DEBUG   HandlerThread:63344 [system_monitor.py:probe():210] {'os': 'Linux-5.19.0-41-generic-x86_64-with-glibc2.17', 'python': '3.8.16', 'heartbeatAt': '2023-04-27T23:24:45.974806', 'startedAt': '2023-04-27T23:24:45.653104', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'main.py', 'codePath': 'new_code/main.py', 'git': {'remote': 'https://github.com/Ads-cmu/ForwardForward.git', 'commit': '3f22f926dee0ec64f52f85d0b4a2234030412114'}, 'email': 'kornberg.jonah@gmail.com', 'root': '/home/jonah/Documents/school/idl/threshold_forwardforward', 'host': 'jonah-dual', 'username': 'jonah', 'executable': '/home/jonah/anaconda3/envs/FF/bin/python', 'cpu_count': 12, 'cpu_count_logical': 24, 'cpu_freq': {'current': 3671.2389583333334, 'min': 2200.0, 'max': 3700.0}, 'cpu_freq_per_core': [{'current': 4648.788, 'min': 2200.0, 'max': 3700.0}, {'current': 3746.362, 'min': 2200.0, 'max': 3700.0}, {'current': 3719.715, 'min': 2200.0, 'max': 3700.0}, {'current': 3747.823, 'min': 2200.0, 'max': 3700.0}, {'current': 3719.029, 'min': 2200.0, 'max': 3700.0}, {'current': 3718.652, 'min': 2200.0, 'max': 3700.0}, {'current': 3448.68, 'min': 2200.0, 'max': 3700.0}, {'current': 3716.869, 'min': 2200.0, 'max': 3700.0}, {'current': 3712.016, 'min': 2200.0, 'max': 3700.0}, {'current': 3726.848, 'min': 2200.0, 'max': 3700.0}, {'current': 4631.142, 'min': 2200.0, 'max': 3700.0}, {'current': 3718.438, 'min': 2200.0, 'max': 3700.0}, {'current': 4642.763, 'min': 2200.0, 'max': 3700.0}, {'current': 3719.453, 'min': 2200.0, 'max': 3700.0}, {'current': 3720.755, 'min': 2200.0, 'max': 3700.0}, {'current': 3758.288, 'min': 2200.0, 'max': 3700.0}, {'current': 3727.874, 'min': 2200.0, 'max': 3700.0}, {'current': 3707.382, 'min': 2200.0, 'max': 3700.0}, {'current': 3725.417, 'min': 2200.0, 'max': 3700.0}, {'current': 3712.963, 'min': 2200.0, 'max': 3700.0}, {'current': 3725.4, 'min': 2200.0, 'max': 3700.0}, {'current': 4175.817, 'min': 2200.0, 'max': 3700.0}, {'current': 4639.249, 'min': 2200.0, 'max': 3700.0}, {'current': 3714.491, 'min': 2200.0, 'max': 3700.0}], 'disk': {'total': 233.27177810668945, 'used': 202.52450942993164}, 'gpu': 'NVIDIA GeForce RTX 3080', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3080', 'memory_total': 10737418240}], 'memory': {'total': 31.260986328125}}
+2023-04-27 19:24:45,983 INFO    HandlerThread:63344 [system_monitor.py:probe():211] Finished collecting system info
+2023-04-27 19:24:45,983 INFO    HandlerThread:63344 [system_monitor.py:probe():214] Publishing system info
+2023-04-27 19:24:45,983 DEBUG   HandlerThread:63344 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-04-27 19:24:45,983 DEBUG   HandlerThread:63344 [system_info.py:_save_pip():67] Saving pip packages done
+2023-04-27 19:24:45,983 DEBUG   HandlerThread:63344 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-04-27 19:24:46,869 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_created():278] file/dir created: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/conda-environment.yaml
+2023-04-27 19:24:46,869 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_created():278] file/dir created: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/requirements.txt
+2023-04-27 19:24:46,869 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_created():278] file/dir created: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:24:46,973 DEBUG   HandlerThread:63344 [system_info.py:_save_conda():86] Saving conda packages done
+2023-04-27 19:24:46,974 INFO    HandlerThread:63344 [system_monitor.py:probe():216] Finished publishing system info
+2023-04-27 19:24:46,975 DEBUG   SenderThread:63344 [sender.py:send():375] send: files
+2023-04-27 19:24:46,975 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-04-27 19:24:46,979 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:24:46,979 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:24:47,059 DEBUG   SenderThread:63344 [sender.py:send():375] send: telemetry
+2023-04-27 19:24:47,337 INFO    wandb-upload_0:63344 [upload_job.py:push():137] Uploaded file /tmp/tmp_12l9bk7wandb/gii2lf4i-wandb-metadata.json
+2023-04-27 19:24:47,868 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/conda-environment.yaml
+2023-04-27 19:24:47,869 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_created():278] file/dir created: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-metadata.json
+2023-04-27 19:24:48,869 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_created():278] file/dir created: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:24:50,869 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:24:50,903 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:24:55,903 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:25:00,904 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:25:01,979 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:25:01,979 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:25:06,039 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:25:07,464 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:25:08,873 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:25:10,525 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:25:10,772 DEBUG   SenderThread:63344 [sender.py:send():375] send: telemetry
+2023-04-27 19:25:10,772 DEBUG   SenderThread:63344 [sender.py:send():375] send: files
+2023-04-27 19:25:10,772 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file mnist 600 threshold-model.pt with policy live
+2023-04-27 19:25:10,873 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_created():278] file/dir created: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/mnist 600 threshold-model.pt
+2023-04-27 19:25:11,772 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:25:12,874 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:25:13,522 INFO    wandb-upload_0:63344 [upload_job.py:push():137] Uploaded file /tmp/tmp_12l9bk7wandb/tdzeia7y-mnist 600 threshold-model.pt
+2023-04-27 19:25:16,775 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:25:16,979 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:25:16,979 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:25:17,875 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/config.yaml
+2023-04-27 19:25:22,032 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:25:27,033 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:25:28,864 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:25:28,866 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:25:28,866 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:25:28,867 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:25:28,877 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:25:30,877 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:25:31,855 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:25:31,878 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/mnist 600 threshold-model.pt
+2023-04-27 19:25:31,979 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:25:31,979 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:25:32,033 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:25:32,090 DEBUG   SenderThread:63344 [sender.py:send():375] send: files
+2023-04-27 19:25:32,090 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file mnist 600 threshold-model.pt with policy live
+2023-04-27 19:25:32,878 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:25:32,878 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/mnist 600 threshold-model.pt
+2023-04-27 19:25:34,264 INFO    wandb-upload_0:63344 [upload_job.py:push():137] Uploaded file /tmp/tmp_12l9bk7wandb/q6f7hq5c-mnist 600 threshold-model.pt
+2023-04-27 19:25:37,091 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:25:42,091 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:25:45,966 DEBUG   SystemMonitor:63344 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-04-27 19:25:45,966 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:25:46,979 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:25:46,979 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:25:48,036 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:25:50,642 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:25:50,643 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:25:50,643 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:25:50,645 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:25:50,882 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:25:52,882 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:25:53,648 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:25:53,660 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:25:53,883 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/mnist 600 threshold-model.pt
+2023-04-27 19:25:53,969 DEBUG   SenderThread:63344 [sender.py:send():375] send: files
+2023-04-27 19:25:53,969 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file mnist 600 threshold-model.pt with policy live
+2023-04-27 19:25:54,883 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:25:56,111 INFO    wandb-upload_0:63344 [upload_job.py:push():137] Uploaded file /tmp/tmp_12l9bk7wandb/tfj385my-mnist 600 threshold-model.pt
+2023-04-27 19:25:58,970 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:26:01,884 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/mnist 600 threshold-model.pt
+2023-04-27 19:26:01,979 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:26:01,979 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:26:04,033 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:26:09,033 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:26:12,055 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:26:12,056 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:26:12,056 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:26:12,056 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:26:12,887 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:26:13,887 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:26:14,059 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:26:15,203 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:26:15,435 DEBUG   SenderThread:63344 [sender.py:send():375] send: files
+2023-04-27 19:26:15,435 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file mnist 600 threshold-model.pt with policy live
+2023-04-27 19:26:15,887 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/mnist 600 threshold-model.pt
+2023-04-27 19:26:15,967 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:26:16,979 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:26:16,979 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:26:17,789 INFO    wandb-upload_0:63344 [upload_job.py:push():137] Uploaded file /tmp/tmp_12l9bk7wandb/0oqeu15n-mnist 600 threshold-model.pt
+2023-04-27 19:26:17,888 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:26:20,032 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:26:23,889 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/mnist 600 threshold-model.pt
+2023-04-27 19:26:25,033 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:26:30,033 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:26:31,979 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:26:31,979 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:26:33,557 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:26:33,558 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:26:33,558 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:26:33,559 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:26:33,891 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:26:35,562 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:26:35,892 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:26:36,880 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:26:36,892 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/mnist 600 threshold-model.pt
+2023-04-27 19:26:37,123 DEBUG   SenderThread:63344 [sender.py:send():375] send: files
+2023-04-27 19:26:37,124 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file mnist 600 threshold-model.pt with policy live
+2023-04-27 19:26:37,892 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/mnist 600 threshold-model.pt
+2023-04-27 19:26:39,511 INFO    wandb-upload_0:63344 [upload_job.py:push():137] Uploaded file /tmp/tmp_12l9bk7wandb/ta2w7pft-mnist 600 threshold-model.pt
+2023-04-27 19:26:39,893 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:26:41,124 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:26:45,967 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:26:46,968 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:26:46,979 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:26:46,979 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:26:52,036 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:26:55,332 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:26:55,333 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:26:55,334 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:26:55,334 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:26:55,896 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:26:57,338 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:26:57,896 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:26:58,436 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:26:58,667 DEBUG   SenderThread:63344 [sender.py:send():375] send: files
+2023-04-27 19:26:58,667 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file mnist 600 threshold-model.pt with policy live
+2023-04-27 19:26:58,897 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/mnist 600 threshold-model.pt
+2023-04-27 19:26:59,897 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:27:00,828 INFO    wandb-upload_0:63344 [upload_job.py:push():137] Uploaded file /tmp/tmp_12l9bk7wandb/w2xcxahi-mnist 600 threshold-model.pt
+2023-04-27 19:27:01,979 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:27:01,980 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:27:03,036 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:27:08,037 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:27:13,037 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:27:15,968 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:27:16,798 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:27:16,799 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:27:16,799 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:27:16,799 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:27:16,901 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:27:16,979 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:27:16,980 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:27:19,035 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:27:19,901 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:27:20,054 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:27:20,354 DEBUG   SenderThread:63344 [sender.py:send():375] send: files
+2023-04-27 19:27:20,354 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file mnist 600 threshold-model.pt with policy live
+2023-04-27 19:27:20,902 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/mnist 600 threshold-model.pt
+2023-04-27 19:27:21,902 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:27:22,401 INFO    wandb-upload_0:63344 [upload_job.py:push():137] Uploaded file /tmp/tmp_12l9bk7wandb/wuyatwn1-mnist 600 threshold-model.pt
+2023-04-27 19:27:24,354 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:27:29,355 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:27:31,979 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:27:31,980 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:27:35,034 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:27:38,598 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:27:38,605 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:27:38,605 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:27:38,607 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:27:38,905 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:27:40,608 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:27:41,651 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:27:41,906 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:27:41,906 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/mnist 600 threshold-model.pt
+2023-04-27 19:27:42,061 DEBUG   SenderThread:63344 [sender.py:send():375] send: files
+2023-04-27 19:27:42,061 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file mnist 600 threshold-model.pt with policy live
+2023-04-27 19:27:43,907 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:27:43,966 INFO    wandb-upload_0:63344 [upload_job.py:push():137] Uploaded file /tmp/tmp_12l9bk7wandb/yrsz81h0-mnist 600 threshold-model.pt
+2023-04-27 19:27:45,968 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:27:45,969 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:27:46,979 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:27:46,980 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:27:51,027 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:27:56,028 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:28:00,755 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:28:00,756 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:28:00,756 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:28:00,756 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:28:00,910 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:28:01,760 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:28:01,980 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:28:01,980 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:28:03,847 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:28:03,911 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:28:05,911 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:28:06,847 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:28:11,848 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:28:15,969 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:28:16,969 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:28:16,979 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:28:16,980 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:28:22,008 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:28:22,008 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:28:22,009 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:28:22,009 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:28:22,009 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:28:22,915 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:28:23,915 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:28:25,104 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:28:25,341 DEBUG   SenderThread:63344 [sender.py:send():375] send: files
+2023-04-27 19:28:25,342 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file mnist 600 threshold-model.pt with policy live
+2023-04-27 19:28:25,916 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/mnist 600 threshold-model.pt
+2023-04-27 19:28:27,342 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:28:27,479 INFO    wandb-upload_0:63344 [upload_job.py:push():137] Uploaded file /tmp/tmp_12l9bk7wandb/91xrhb3e-mnist 600 threshold-model.pt
+2023-04-27 19:28:27,916 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:28:31,980 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:28:31,980 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:28:33,025 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:28:38,026 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:28:43,026 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:28:43,846 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:28:43,847 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:28:43,847 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:28:43,849 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:28:43,920 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:28:45,920 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:28:45,969 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:28:46,931 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:28:46,980 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:28:46,980 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:28:47,233 DEBUG   SenderThread:63344 [sender.py:send():375] send: files
+2023-04-27 19:28:47,233 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file mnist 600 threshold-model.pt with policy live
+2023-04-27 19:28:47,921 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/mnist 600 threshold-model.pt
+2023-04-27 19:28:48,233 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:28:49,921 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:28:50,035 INFO    wandb-upload_0:63344 [upload_job.py:push():137] Uploaded file /tmp/tmp_12l9bk7wandb/h63vgcpb-mnist 600 threshold-model.pt
+2023-04-27 19:28:53,234 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:28:58,234 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:29:01,980 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:29:01,980 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:29:04,036 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:29:05,862 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:29:05,863 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:29:05,863 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:29:05,863 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:29:05,924 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:29:07,925 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:29:08,924 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:29:09,924 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:29:11,926 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:29:14,925 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:29:15,970 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:29:16,927 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/mnist 600 threshold-model.pt
+2023-04-27 19:29:16,980 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:29:16,980 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:29:20,028 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:29:25,028 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:29:27,234 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:29:27,235 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:29:27,235 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:29:27,235 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:29:27,929 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:29:29,930 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:29:30,239 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:29:30,426 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:29:31,930 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:29:31,980 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:29:31,980 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:29:36,035 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:29:38,932 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/mnist 600 threshold-model.pt
+2023-04-27 19:29:41,035 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:29:45,970 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:29:46,971 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:29:46,980 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:29:46,980 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:29:49,108 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:29:49,109 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:29:49,109 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:29:49,110 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:29:49,934 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:29:51,934 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:29:52,113 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:29:52,258 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:29:53,935 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:29:57,259 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:30:01,980 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:30:01,981 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:30:03,039 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:30:08,040 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:30:10,512 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:30:10,513 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:30:10,513 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:30:10,514 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:30:10,938 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:30:11,939 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:30:13,517 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:30:13,548 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:30:13,783 DEBUG   SenderThread:63344 [sender.py:send():375] send: files
+2023-04-27 19:30:13,783 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file mnist 600 threshold-model.pt with policy live
+2023-04-27 19:30:13,939 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/mnist 600 threshold-model.pt
+2023-04-27 19:30:15,940 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:30:15,976 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:30:16,980 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:30:16,981 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:30:17,249 INFO    wandb-upload_0:63344 [upload_job.py:push():137] Uploaded file /tmp/tmp_12l9bk7wandb/xgb2b11r-mnist 600 threshold-model.pt
+2023-04-27 19:30:19,036 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:30:24,037 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:30:29,037 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:30:31,980 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:30:31,981 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:30:32,220 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:30:32,221 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:30:32,221 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:30:32,221 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:30:32,943 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:30:33,944 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:30:34,226 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:30:35,329 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:30:37,944 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:30:39,329 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:30:44,330 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:30:45,971 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:30:46,980 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:30:46,981 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:30:50,035 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:30:53,396 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:30:53,397 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:30:53,397 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:30:53,397 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:30:53,948 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:30:55,401 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:30:55,948 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:30:56,475 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:30:57,949 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:31:00,476 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:31:01,981 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:31:01,981 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:31:04,951 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/mnist 600 threshold-model.pt
+2023-04-27 19:31:06,036 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:31:11,036 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:31:14,901 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:31:14,902 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:31:14,902 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:31:14,902 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:31:14,953 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:31:15,972 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:31:16,972 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:31:16,981 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:31:16,981 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:31:17,953 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:31:17,977 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:31:19,954 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:31:21,978 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:31:26,978 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:31:31,979 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:31:31,981 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:31:31,981 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:31:36,087 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:31:36,088 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:31:36,088 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:31:36,088 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:31:36,958 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:31:37,091 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:31:37,958 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:31:39,148 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:31:41,959 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:31:42,148 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:31:45,972 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:31:46,981 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:31:46,981 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:31:48,049 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:31:53,049 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:31:57,221 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:31:57,222 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:31:57,223 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:31:57,223 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:31:57,963 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:31:58,226 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:31:59,963 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:32:00,340 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:32:01,964 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:32:01,981 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:32:01,981 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:32:04,036 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:32:09,037 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:32:09,966 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/mnist 600 threshold-model.pt
+2023-04-27 19:32:14,037 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:32:15,972 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:32:16,981 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:32:16,981 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:32:18,519 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:32:18,520 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:32:18,520 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:32:18,520 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:32:18,968 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:32:19,524 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:32:19,968 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:32:21,765 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:32:21,968 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/mnist 600 threshold-model.pt
+2023-04-27 19:32:22,072 DEBUG   SenderThread:63344 [sender.py:send():375] send: files
+2023-04-27 19:32:22,072 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file mnist 600 threshold-model.pt with policy live
+2023-04-27 19:32:23,969 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:32:24,749 INFO    wandb-upload_0:63344 [upload_job.py:push():137] Uploaded file /tmp/tmp_12l9bk7wandb/h284ykmv-mnist 600 threshold-model.pt
+2023-04-27 19:32:25,072 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:32:30,073 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:32:31,981 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:32:31,982 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:32:36,036 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:32:40,561 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:32:40,562 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:32:40,562 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:32:40,562 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:32:40,972 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:32:41,571 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:32:41,973 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:32:43,604 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:32:43,836 DEBUG   SenderThread:63344 [sender.py:send():375] send: files
+2023-04-27 19:32:43,836 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file mnist 600 threshold-model.pt with policy live
+2023-04-27 19:32:43,975 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/mnist 600 threshold-model.pt
+2023-04-27 19:32:45,973 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:32:45,975 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:32:46,974 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:32:46,981 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:32:46,982 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:32:48,062 INFO    wandb-upload_0:63344 [upload_job.py:push():137] Uploaded file /tmp/tmp_12l9bk7wandb/at56rcgu-mnist 600 threshold-model.pt
+2023-04-27 19:32:52,043 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:32:57,043 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:33:01,981 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:33:01,982 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:33:02,648 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:33:02,649 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:33:02,656 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:33:02,656 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:33:02,656 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:33:02,979 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:33:03,979 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:33:05,665 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:33:07,666 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:33:07,980 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:33:12,666 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:33:15,974 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:33:16,982 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:33:16,982 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:33:18,037 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:33:23,037 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:33:23,649 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:33:23,650 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:33:23,650 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:33:23,650 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:33:23,985 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:33:25,985 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:33:26,772 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:33:27,986 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:33:28,773 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:33:31,982 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:33:31,983 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:33:34,039 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:33:39,040 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:33:44,040 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:33:44,884 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:33:44,885 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:33:44,885 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:33:44,885 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:33:44,989 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:33:45,974 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:33:46,982 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:33:46,983 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:33:47,940 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:33:47,990 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:33:49,941 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:33:49,990 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:33:54,941 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:33:59,942 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:34:01,982 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:34:01,983 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:34:05,040 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:34:06,090 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:34:06,091 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:34:06,091 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:34:06,091 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:34:06,994 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:34:07,994 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:34:09,217 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:34:10,217 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:34:11,995 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:34:15,218 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:34:15,975 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:34:16,982 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:34:16,983 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:34:21,037 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:34:26,037 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:34:27,671 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:34:27,672 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:34:27,672 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:34:27,672 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:34:27,999 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:34:29,999 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:34:30,865 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:34:31,866 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:34:31,983 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:34:31,983 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:34:32,000 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:34:37,045 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:34:42,045 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:34:45,975 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:34:46,983 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:34:46,983 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:34:48,028 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:34:48,772 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:34:48,774 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:34:48,774 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:34:48,774 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:34:49,003 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:34:50,004 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:34:51,793 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:34:53,794 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:34:54,005 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:34:58,794 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:35:01,983 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:35:01,983 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:35:04,027 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:35:09,028 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:35:09,986 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:35:09,987 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:35:09,987 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:35:09,987 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:35:10,008 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:35:12,009 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:35:13,004 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:35:13,267 DEBUG   SenderThread:63344 [sender.py:send():375] send: files
+2023-04-27 19:35:13,267 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file mnist 600 threshold-model.pt with policy live
+2023-04-27 19:35:14,009 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/mnist 600 threshold-model.pt
+2023-04-27 19:35:14,268 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:35:15,975 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:35:16,010 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:35:16,072 INFO    wandb-upload_0:63344 [upload_job.py:push():137] Uploaded file /tmp/tmp_12l9bk7wandb/r0mvwxxo-mnist 600 threshold-model.pt
+2023-04-27 19:35:16,983 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:35:16,983 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:35:20,029 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:35:25,029 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:35:30,030 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:35:31,115 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:35:31,115 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:35:31,116 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:35:31,116 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:35:31,983 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:35:31,983 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:35:32,013 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:35:34,013 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:35:34,204 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:35:35,205 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:35:36,014 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:35:40,205 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:35:45,206 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:35:45,976 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:35:46,983 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:35:46,983 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:35:51,040 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:35:51,551 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:35:51,557 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:35:51,557 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:35:51,557 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:35:52,017 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:35:54,018 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:35:54,593 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:35:56,018 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:35:56,593 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:36:01,594 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:36:01,983 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:36:01,983 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:36:07,035 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:36:11,788 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:36:11,789 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:36:11,789 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:36:11,789 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:36:12,021 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:36:12,793 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:36:14,022 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:36:14,963 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:36:15,976 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:36:16,022 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:36:16,983 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:36:16,983 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:36:18,039 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:36:23,039 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:36:28,039 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:36:31,983 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:36:31,983 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:36:32,854 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:36:32,855 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:36:32,855 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:36:32,855 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:36:33,026 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:36:33,860 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:36:34,026 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:36:35,909 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:36:36,026 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/mnist 600 threshold-model.pt
+2023-04-27 19:36:36,297 DEBUG   SenderThread:63344 [sender.py:send():375] send: files
+2023-04-27 19:36:36,297 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file mnist 600 threshold-model.pt with policy live
+2023-04-27 19:36:38,027 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:36:38,854 INFO    wandb-upload_0:63344 [upload_job.py:push():137] Uploaded file /tmp/tmp_12l9bk7wandb/o0lnnzgx-mnist 600 threshold-model.pt
+2023-04-27 19:36:39,297 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:36:44,298 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:36:45,977 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:36:46,983 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:36:46,984 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:36:50,030 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:36:54,138 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:36:54,140 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:36:54,140 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:36:54,140 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:36:55,031 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:36:55,145 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:36:56,031 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:36:57,238 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:36:57,483 DEBUG   SenderThread:63344 [sender.py:send():375] send: files
+2023-04-27 19:36:57,484 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file mnist 600 threshold-model.pt with policy live
+2023-04-27 19:36:58,032 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/mnist 600 threshold-model.pt
+2023-04-27 19:36:59,649 INFO    wandb-upload_0:63344 [upload_job.py:push():137] Uploaded file /tmp/tmp_12l9bk7wandb/ihttr3wv-mnist 600 threshold-model.pt
+2023-04-27 19:37:00,032 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:37:00,484 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:37:01,983 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:37:01,984 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:37:06,040 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:37:11,041 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:37:14,773 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:37:14,774 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:37:14,774 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:37:14,774 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:37:15,035 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:37:15,977 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:37:16,035 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:37:16,978 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:37:16,983 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:37:16,984 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:37:17,702 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:37:20,036 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:37:22,703 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:37:27,704 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:37:31,983 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:37:31,984 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:37:33,043 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:37:36,229 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:37:36,230 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:37:36,230 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:37:36,231 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:37:37,040 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:37:38,040 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:37:38,235 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:37:39,260 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:37:42,041 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:37:43,261 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:37:45,978 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:37:46,984 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:37:46,984 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:37:49,044 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:37:54,044 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:37:56,781 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:37:56,782 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:37:56,782 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:37:56,783 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:37:57,044 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:37:58,044 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:37:59,786 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:37:59,828 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:38:01,984 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:38:01,984 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:38:02,045 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:38:05,030 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:38:10,030 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:38:15,031 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:38:15,978 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:38:16,984 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:38:16,984 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:38:17,872 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:38:17,873 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:38:17,874 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:38:17,874 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:38:18,049 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:38:20,049 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:38:20,878 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:38:20,984 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:38:22,050 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:38:25,990 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:38:30,991 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:38:31,984 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:38:31,984 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:38:36,038 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:38:39,045 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:38:39,046 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:38:39,046 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:38:39,046 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:38:39,053 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:38:40,053 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:38:41,049 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:38:42,092 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:38:44,054 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:38:45,979 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:38:46,979 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:38:46,984 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:38:46,984 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:38:52,787 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:38:57,787 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:39:00,077 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:39:00,077 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:39:00,078 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:39:00,078 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:39:01,058 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:39:01,984 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:39:01,984 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:39:02,058 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:39:03,040 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:39:03,225 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:39:06,059 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:39:08,225 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:39:13,226 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:39:15,979 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:39:16,984 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:39:16,984 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:39:19,029 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:39:21,179 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:39:21,180 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:39:21,180 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:39:21,181 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:39:22,062 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:39:22,063 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:39:24,169 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:39:24,169 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:39:26,063 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:39:29,170 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:39:31,984 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:39:31,985 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:39:35,041 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:39:40,041 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:39:42,516 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:39:42,517 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:39:42,517 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:39:42,517 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:39:43,067 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:39:44,067 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:39:45,521 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:39:45,557 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:39:45,861 DEBUG   SenderThread:63344 [sender.py:send():375] send: files
+2023-04-27 19:39:45,861 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file mnist 600 threshold-model.pt with policy live
+2023-04-27 19:39:45,980 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:39:46,068 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/mnist 600 threshold-model.pt
+2023-04-27 19:39:46,984 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:39:46,985 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:39:48,004 INFO    wandb-upload_0:63344 [upload_job.py:push():137] Uploaded file /tmp/tmp_12l9bk7wandb/wj4o3acd-mnist 600 threshold-model.pt
+2023-04-27 19:39:48,068 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:39:51,042 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:39:56,043 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:40:01,044 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:40:01,984 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:40:01,985 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:40:04,029 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:40:04,030 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:40:04,030 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:40:04,031 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:40:04,072 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:40:06,072 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:40:07,035 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:40:07,171 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:40:08,073 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:40:12,172 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:40:15,980 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:40:16,984 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:40:16,985 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:40:18,031 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:40:23,031 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:40:25,559 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:40:25,560 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:40:25,561 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:40:25,562 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:40:26,076 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:40:28,077 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:40:28,563 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:40:28,954 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:40:29,077 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/mnist 600 threshold-model.pt
+2023-04-27 19:40:29,187 DEBUG   SenderThread:63344 [sender.py:send():375] send: files
+2023-04-27 19:40:29,187 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file mnist 600 threshold-model.pt with policy live
+2023-04-27 19:40:30,077 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:40:31,713 INFO    wandb-upload_0:63344 [upload_job.py:push():137] Uploaded file /tmp/tmp_12l9bk7wandb/dmgo6znw-mnist 600 threshold-model.pt
+2023-04-27 19:40:31,985 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:40:31,985 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:40:34,046 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:40:39,047 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:40:44,047 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:40:45,981 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:40:46,985 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:40:46,985 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:40:47,356 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:40:47,357 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:40:47,357 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:40:47,357 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:40:48,081 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:40:49,362 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:40:50,081 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:40:50,622 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:40:52,082 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:40:54,623 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:40:59,623 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:41:01,985 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:41:01,985 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:41:05,043 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:41:08,574 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:41:08,575 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:41:08,575 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:41:08,576 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:41:09,085 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:41:10,085 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:41:10,581 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:41:11,565 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:41:14,086 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:41:15,981 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:41:15,981 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:41:16,985 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:41:16,985 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:41:21,040 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:41:26,040 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:41:29,312 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:41:29,313 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:41:29,313 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:41:29,313 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:41:30,090 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:41:30,090 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:41:31,317 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:41:31,985 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:41:31,985 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:41:32,330 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:41:34,090 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:41:36,331 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:41:41,332 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:41:45,982 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:41:46,982 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:41:46,985 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:41:46,985 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:41:50,320 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:41:50,320 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:41:50,321 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:41:50,321 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:41:51,094 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:41:52,094 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:41:52,325 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:41:53,348 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:41:54,095 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:41:57,349 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:42:01,985 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:42:01,985 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:42:03,031 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:42:08,031 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:42:11,006 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:42:11,007 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:42:11,007 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:42:11,007 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:42:11,098 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:42:12,098 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:42:14,011 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:42:14,016 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:42:15,982 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:42:16,099 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:42:16,985 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:42:16,985 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:42:19,041 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:42:24,041 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:42:29,042 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:42:31,985 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:42:31,985 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:42:32,034 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:42:32,043 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:42:32,044 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:42:32,044 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:42:32,102 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:42:34,044 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:42:34,103 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:42:35,115 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:42:36,103 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:42:39,116 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:42:44,117 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:42:45,982 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:42:46,985 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:42:46,985 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:42:50,043 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:42:52,768 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:42:52,770 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:42:52,770 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:42:52,770 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:42:53,107 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:42:54,107 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:42:55,764 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:42:55,764 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:42:58,108 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:43:00,765 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:43:01,985 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:43:01,986 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:43:06,042 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:43:11,042 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:43:13,451 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:43:13,452 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:43:13,452 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:43:13,452 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:43:14,111 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:43:15,983 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:43:16,111 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:43:16,441 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:43:16,441 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:43:16,985 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:43:16,986 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:43:18,112 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:43:22,040 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:43:27,040 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:43:31,986 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:43:31,986 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:43:33,040 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:43:34,187 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:43:34,188 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:43:34,188 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:43:34,189 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:43:35,115 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:43:36,115 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:43:37,175 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:43:38,116 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:43:38,176 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:43:43,176 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:43:45,983 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:43:46,986 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:43:46,986 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:43:49,032 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:43:54,032 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:43:55,015 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:43:55,022 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:43:55,022 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:43:55,022 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:43:55,119 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:43:56,119 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:43:57,990 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:43:58,120 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/mnist 600 threshold-model.pt
+2023-04-27 19:43:58,271 DEBUG   SenderThread:63344 [sender.py:send():375] send: files
+2023-04-27 19:43:58,271 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file mnist 600 threshold-model.pt with policy live
+2023-04-27 19:43:59,271 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:44:00,120 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:44:00,410 INFO    wandb-upload_0:63344 [upload_job.py:push():137] Uploaded file /tmp/tmp_12l9bk7wandb/5ksu5lta-mnist 600 threshold-model.pt
+2023-04-27 19:44:01,986 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:44:01,986 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:44:05,043 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:44:10,043 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:44:15,044 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:44:15,984 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:44:16,053 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:44:16,055 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:44:16,055 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:44:16,055 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:44:16,124 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:44:16,986 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:44:16,986 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:44:18,124 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:44:19,497 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:44:20,125 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:44:20,498 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:44:25,498 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:44:30,499 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:44:31,986 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:44:31,986 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:44:36,064 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:44:37,161 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:44:37,162 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:44:37,162 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:44:37,162 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:44:38,128 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:44:38,128 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:44:40,430 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:44:41,431 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:44:42,129 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:44:45,984 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:44:46,985 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:44:46,986 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:44:46,986 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:44:52,048 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:44:57,049 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:44:58,170 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:44:58,171 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:44:58,171 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:44:58,172 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:44:59,132 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:45:00,133 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:45:01,164 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:45:01,986 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:45:01,987 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:45:02,133 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:45:03,045 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:45:08,045 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:45:13,046 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:45:15,985 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:45:16,986 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:45:16,986 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:45:18,982 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:45:18,983 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:45:18,984 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:45:18,984 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:45:18,984 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:45:19,137 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:45:20,137 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:45:21,995 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:45:23,996 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:45:24,138 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:45:28,996 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:45:31,986 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:45:31,987 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:45:34,043 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:45:39,044 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:45:39,878 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:45:39,879 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:45:39,879 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:45:39,880 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:45:40,141 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:45:42,141 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:45:42,967 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:45:44,142 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:45:44,968 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:45:45,985 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:45:46,986 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:45:46,987 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:45:50,034 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:45:55,035 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:46:00,035 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:46:00,717 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:46:00,719 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:46:00,719 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:46:00,719 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:46:01,145 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:46:01,987 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:46:01,987 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:46:02,145 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:46:03,818 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:46:05,818 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:46:06,146 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:46:10,819 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:46:15,819 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:46:15,986 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:46:16,987 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:46:16,987 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:46:21,034 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:46:21,535 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:46:21,536 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:46:21,536 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:46:21,537 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:46:22,150 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:46:22,150 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:46:24,548 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:46:24,769 DEBUG   SenderThread:63344 [sender.py:send():375] send: files
+2023-04-27 19:46:24,770 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file mnist 600 threshold-model.pt with policy live
+2023-04-27 19:46:25,150 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/mnist 600 threshold-model.pt
+2023-04-27 19:46:26,151 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:46:26,770 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:46:28,386 INFO    wandb-upload_0:63344 [upload_job.py:push():137] Uploaded file /tmp/tmp_12l9bk7wandb/tdoynl7p-mnist 600 threshold-model.pt
+2023-04-27 19:46:31,771 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:46:31,987 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:46:31,987 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:46:37,032 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:46:42,032 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:46:42,541 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:46:42,547 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:46:42,547 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:46:42,547 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:46:43,154 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:46:44,154 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:46:45,547 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:46:45,986 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:46:46,155 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:46:46,987 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:46:46,987 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:46:47,045 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:46:52,046 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:46:57,046 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:47:01,987 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:47:01,987 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:47:03,046 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:47:03,576 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:47:03,577 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:47:03,577 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:47:03,577 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:47:04,158 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:47:04,158 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:47:06,670 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:47:08,159 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:47:08,670 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:47:13,671 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:47:15,987 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:47:16,987 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:47:16,987 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:47:19,043 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:47:24,044 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:47:24,673 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:47:24,674 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:47:24,674 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:47:24,674 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:47:25,163 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:47:26,163 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:47:27,680 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:47:28,164 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:47:29,680 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:47:31,987 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:47:31,987 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:47:35,043 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:47:40,043 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:47:45,044 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:47:45,385 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:47:45,386 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:47:45,386 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:47:45,386 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:47:45,987 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:47:46,167 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:47:46,167 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:47:46,987 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:47:46,987 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:47:48,453 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:47:50,168 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:47:50,453 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:47:55,454 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:48:00,455 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:48:01,987 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:48:01,987 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:48:06,045 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:48:06,128 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:48:06,129 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:48:06,129 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:48:06,129 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:48:06,171 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:48:08,172 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:48:09,140 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:48:10,172 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:48:11,141 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:48:15,987 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:48:16,987 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:48:16,987 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:48:17,046 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:48:22,046 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:48:27,047 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:48:27,267 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:48:27,268 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:48:27,268 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:48:27,268 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:48:28,176 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:48:28,176 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:48:30,325 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:48:31,987 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:48:31,988 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:48:32,177 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:48:33,044 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:48:38,044 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:48:43,045 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:48:45,988 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:48:46,987 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:48:46,988 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:48:48,116 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:48:48,117 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:48:48,117 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:48:48,117 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:48:48,118 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:48:48,180 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:48:50,180 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:48:51,223 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:48:52,181 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:48:53,224 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:48:58,224 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:49:01,987 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:49:01,988 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:49:04,044 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:49:09,044 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:49:09,363 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:49:09,364 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:49:09,364 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:49:09,364 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:49:10,184 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:49:10,185 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:49:12,410 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:49:14,185 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:49:14,410 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:49:15,995 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:49:16,988 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:49:16,988 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:49:20,038 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:49:25,038 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:49:30,039 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:49:30,832 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:49:30,833 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:49:30,833 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:49:30,833 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:49:31,189 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:49:31,988 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:49:31,988 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:49:33,189 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:49:33,856 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:49:35,857 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:49:37,190 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:49:40,857 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:49:45,858 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:49:45,989 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:49:46,988 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:49:46,988 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:49:51,046 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:49:52,114 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:49:52,115 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:49:52,115 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:49:52,116 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:49:52,193 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:49:55,194 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:49:55,363 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:49:56,364 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:49:57,194 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:50:01,364 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:50:01,988 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:50:01,988 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:50:07,047 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:50:12,047 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:50:13,419 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:50:13,419 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:50:13,420 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:50:13,420 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:50:14,198 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:50:15,198 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:50:15,990 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:50:16,494 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:50:16,988 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:50:16,988 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:50:18,704 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:50:19,199 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:50:23,705 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:50:28,705 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:50:31,988 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-27 19:50:31,988 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: stop_status
+2023-04-27 19:50:34,050 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:50:34,449 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:50:34,450 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:50:34,451 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:50:34,452 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:50:35,202 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:50:37,203 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:50:37,582 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-27 19:50:39,203 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:50:39,583 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:50:44,583 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:50:45,990 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:50:46,338 DEBUG   SenderThread:63344 [sender.py:send():375] send: exit
+2023-04-27 19:50:46,339 INFO    SenderThread:63344 [sender.py:send_exit():598] handling exit code: 255
+2023-04-27 19:50:46,339 INFO    SenderThread:63344 [sender.py:send_exit():600] handling runtime: 1560
+2023-04-27 19:50:46,339 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:50:46,339 INFO    SenderThread:63344 [sender.py:send_exit():606] send defer
+2023-04-27 19:50:46,339 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 19:50:46,339 INFO    HandlerThread:63344 [handler.py:handle_request_defer():170] handle defer: 0
+2023-04-27 19:50:46,339 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: defer
+2023-04-27 19:50:46,339 INFO    SenderThread:63344 [sender.py:send_request_defer():622] handle sender defer: 0
+2023-04-27 19:50:46,339 INFO    SenderThread:63344 [sender.py:transition_state():626] send defer: 1
+2023-04-27 19:50:46,340 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 19:50:46,340 INFO    HandlerThread:63344 [handler.py:handle_request_defer():170] handle defer: 1
+2023-04-27 19:50:46,340 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: defer
+2023-04-27 19:50:46,340 INFO    SenderThread:63344 [sender.py:send_request_defer():622] handle sender defer: 1
+2023-04-27 19:50:46,340 INFO    SenderThread:63344 [sender.py:transition_state():626] send defer: 2
+2023-04-27 19:50:46,340 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 19:50:46,340 INFO    HandlerThread:63344 [handler.py:handle_request_defer():170] handle defer: 2
+2023-04-27 19:50:46,340 INFO    HandlerThread:63344 [system_monitor.py:finish():190] Stopping system monitor
+2023-04-27 19:50:46,340 DEBUG   SystemMonitor:63344 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-04-27 19:50:46,340 DEBUG   SystemMonitor:63344 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-04-27 19:50:46,341 INFO    HandlerThread:63344 [interfaces.py:finish():202] Joined cpu monitor
+2023-04-27 19:50:46,341 INFO    HandlerThread:63344 [interfaces.py:finish():202] Joined disk monitor
+2023-04-27 19:50:46,370 INFO    HandlerThread:63344 [interfaces.py:finish():202] Joined gpu monitor
+2023-04-27 19:50:46,370 INFO    HandlerThread:63344 [interfaces.py:finish():202] Joined memory monitor
+2023-04-27 19:50:46,371 INFO    HandlerThread:63344 [interfaces.py:finish():202] Joined network monitor
+2023-04-27 19:50:46,371 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: defer
+2023-04-27 19:50:46,371 INFO    SenderThread:63344 [sender.py:send_request_defer():622] handle sender defer: 2
+2023-04-27 19:50:46,371 INFO    SenderThread:63344 [sender.py:transition_state():626] send defer: 3
+2023-04-27 19:50:46,371 DEBUG   SenderThread:63344 [sender.py:send():375] send: stats
+2023-04-27 19:50:46,371 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 19:50:46,371 INFO    HandlerThread:63344 [handler.py:handle_request_defer():170] handle defer: 3
+2023-04-27 19:50:46,372 DEBUG   SenderThread:63344 [sender.py:send():375] send: history
+2023-04-27 19:50:46,372 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: summary_record
+2023-04-27 19:50:46,372 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:50:46,372 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: defer
+2023-04-27 19:50:46,372 INFO    SenderThread:63344 [sender.py:send_request_defer():622] handle sender defer: 3
+2023-04-27 19:50:46,372 INFO    SenderThread:63344 [sender.py:transition_state():626] send defer: 4
+2023-04-27 19:50:46,372 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 19:50:46,372 INFO    HandlerThread:63344 [handler.py:handle_request_defer():170] handle defer: 4
+2023-04-27 19:50:46,372 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: defer
+2023-04-27 19:50:46,372 INFO    SenderThread:63344 [sender.py:send_request_defer():622] handle sender defer: 4
+2023-04-27 19:50:46,372 INFO    SenderThread:63344 [sender.py:transition_state():626] send defer: 5
+2023-04-27 19:50:46,373 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 19:50:46,373 INFO    HandlerThread:63344 [handler.py:handle_request_defer():170] handle defer: 5
+2023-04-27 19:50:46,373 DEBUG   SenderThread:63344 [sender.py:send():375] send: summary
+2023-04-27 19:50:46,373 INFO    SenderThread:63344 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-27 19:50:46,373 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: defer
+2023-04-27 19:50:46,373 INFO    SenderThread:63344 [sender.py:send_request_defer():622] handle sender defer: 5
+2023-04-27 19:50:46,373 INFO    SenderThread:63344 [sender.py:transition_state():626] send defer: 6
+2023-04-27 19:50:46,373 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 19:50:46,373 INFO    HandlerThread:63344 [handler.py:handle_request_defer():170] handle defer: 6
+2023-04-27 19:50:46,373 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: defer
+2023-04-27 19:50:46,373 INFO    SenderThread:63344 [sender.py:send_request_defer():622] handle sender defer: 6
+2023-04-27 19:50:46,373 INFO    SenderThread:63344 [sender.py:transition_state():626] send defer: 7
+2023-04-27 19:50:46,373 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: status_report
+2023-04-27 19:50:46,373 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 19:50:46,373 INFO    HandlerThread:63344 [handler.py:handle_request_defer():170] handle defer: 7
+2023-04-27 19:50:46,374 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: defer
+2023-04-27 19:50:46,374 INFO    SenderThread:63344 [sender.py:send_request_defer():622] handle sender defer: 7
+2023-04-27 19:50:47,205 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:50:47,339 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: poll_exit
+2023-04-27 19:50:48,345 INFO    SenderThread:63344 [sender.py:transition_state():626] send defer: 8
+2023-04-27 19:50:48,345 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: poll_exit
+2023-04-27 19:50:48,345 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 19:50:48,345 INFO    HandlerThread:63344 [handler.py:handle_request_defer():170] handle defer: 8
+2023-04-27 19:50:48,345 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: defer
+2023-04-27 19:50:48,346 INFO    SenderThread:63344 [sender.py:send_request_defer():622] handle sender defer: 8
+2023-04-27 19:50:48,349 INFO    SenderThread:63344 [sender.py:transition_state():626] send defer: 9
+2023-04-27 19:50:48,350 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 19:50:48,350 DEBUG   SenderThread:63344 [sender.py:send():375] send: artifact
+2023-04-27 19:50:48,350 INFO    HandlerThread:63344 [handler.py:handle_request_defer():170] handle defer: 9
+2023-04-27 19:50:48,686 INFO    SenderThread:63344 [sender.py:send_artifact():1474] sent artifact job-https___github.com_Ads-cmu_ForwardForward.git_new_code_main.py - {'id': 'QXJ0aWZhY3Q6NDM1MTY4NDY2', 'digest': '90fdce0de8a02ab9a11f6449afe9121c', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-https___github.com_Ads-cmu_ForwardForward.git_new_code_main.py', 'alias': 'latest'}, {'artifactCollectionName': 'job-https___github.com_Ads-cmu_ForwardForward.git_new_code_main.py', 'alias': 'v14'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjY0ODkxMTI1', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NDM1MTY4NDY2', 'versionIndex': 14}}, 'version': 'v14'}
+2023-04-27 19:50:48,686 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: defer
+2023-04-27 19:50:48,686 INFO    SenderThread:63344 [sender.py:send_request_defer():622] handle sender defer: 9
+2023-04-27 19:50:48,686 INFO    SenderThread:63344 [dir_watcher.py:finish():365] shutting down directory watcher
+2023-04-27 19:50:49,205 INFO    Thread-12 :63344 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:50:49,206 INFO    SenderThread:63344 [dir_watcher.py:finish():395] scan: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files
+2023-04-27 19:50:49,206 INFO    SenderThread:63344 [dir_watcher.py:finish():409] scan save: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/requirements.txt requirements.txt
+2023-04-27 19:50:49,206 INFO    SenderThread:63344 [dir_watcher.py:finish():409] scan save: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-metadata.json wandb-metadata.json
+2023-04-27 19:50:49,206 INFO    SenderThread:63344 [dir_watcher.py:finish():409] scan save: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/mnist 600 threshold-model.pt mnist 600 threshold-model.pt
+2023-04-27 19:50:49,206 INFO    SenderThread:63344 [dir_watcher.py:finish():409] scan save: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/conda-environment.yaml conda-environment.yaml
+2023-04-27 19:50:49,206 INFO    SenderThread:63344 [dir_watcher.py:finish():409] scan save: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/config.yaml config.yaml
+2023-04-27 19:50:49,206 INFO    SenderThread:63344 [dir_watcher.py:finish():409] scan save: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log output.log
+2023-04-27 19:50:49,206 INFO    SenderThread:63344 [dir_watcher.py:finish():409] scan save: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json wandb-summary.json
+2023-04-27 19:50:49,206 INFO    SenderThread:63344 [sender.py:transition_state():626] send defer: 10
+2023-04-27 19:50:49,208 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 19:50:49,210 INFO    HandlerThread:63344 [handler.py:handle_request_defer():170] handle defer: 10
+2023-04-27 19:50:49,216 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: defer
+2023-04-27 19:50:49,216 INFO    SenderThread:63344 [sender.py:send_request_defer():622] handle sender defer: 10
+2023-04-27 19:50:49,216 INFO    SenderThread:63344 [file_pusher.py:finish():168] shutting down file pusher
+2023-04-27 19:50:49,487 INFO    wandb-upload_0:63344 [upload_job.py:push():137] Uploaded file /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/requirements.txt
+2023-04-27 19:50:49,614 INFO    wandb-upload_1:63344 [upload_job.py:push():137] Uploaded file /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/conda-environment.yaml
+2023-04-27 19:50:49,614 INFO    wandb-upload_4:63344 [upload_job.py:push():137] Uploaded file /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/wandb-summary.json
+2023-04-27 19:50:49,620 INFO    wandb-upload_3:63344 [upload_job.py:push():137] Uploaded file /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/output.log
+2023-04-27 19:50:49,636 INFO    wandb-upload_2:63344 [upload_job.py:push():137] Uploaded file /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/files/config.yaml
+2023-04-27 19:50:49,836 INFO    Thread-11 :63344 [sender.py:transition_state():626] send defer: 11
+2023-04-27 19:50:49,836 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 19:50:49,836 INFO    HandlerThread:63344 [handler.py:handle_request_defer():170] handle defer: 11
+2023-04-27 19:50:49,837 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: defer
+2023-04-27 19:50:49,837 INFO    SenderThread:63344 [sender.py:send_request_defer():622] handle sender defer: 11
+2023-04-27 19:50:49,837 INFO    SenderThread:63344 [file_pusher.py:join():173] waiting for file pusher
+2023-04-27 19:50:49,837 INFO    SenderThread:63344 [sender.py:transition_state():626] send defer: 12
+2023-04-27 19:50:49,837 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 19:50:49,837 INFO    HandlerThread:63344 [handler.py:handle_request_defer():170] handle defer: 12
+2023-04-27 19:50:49,837 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: defer
+2023-04-27 19:50:49,837 INFO    SenderThread:63344 [sender.py:send_request_defer():622] handle sender defer: 12
+2023-04-27 19:50:50,128 INFO    SenderThread:63344 [sender.py:transition_state():626] send defer: 13
+2023-04-27 19:50:50,128 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 19:50:50,128 INFO    HandlerThread:63344 [handler.py:handle_request_defer():170] handle defer: 13
+2023-04-27 19:50:50,128 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: defer
+2023-04-27 19:50:50,128 INFO    SenderThread:63344 [sender.py:send_request_defer():622] handle sender defer: 13
+2023-04-27 19:50:50,128 INFO    SenderThread:63344 [sender.py:transition_state():626] send defer: 14
+2023-04-27 19:50:50,129 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: defer
+2023-04-27 19:50:50,129 DEBUG   SenderThread:63344 [sender.py:send():375] send: final
+2023-04-27 19:50:50,129 INFO    HandlerThread:63344 [handler.py:handle_request_defer():170] handle defer: 14
+2023-04-27 19:50:50,129 DEBUG   SenderThread:63344 [sender.py:send():375] send: footer
+2023-04-27 19:50:50,129 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: defer
+2023-04-27 19:50:50,129 INFO    SenderThread:63344 [sender.py:send_request_defer():622] handle sender defer: 14
+2023-04-27 19:50:50,129 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: poll_exit
+2023-04-27 19:50:50,129 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: server_info
+2023-04-27 19:50:50,129 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: get_summary
+2023-04-27 19:50:50,130 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: poll_exit
+2023-04-27 19:50:50,130 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: sampled_history
+2023-04-27 19:50:50,130 DEBUG   SenderThread:63344 [sender.py:send_request():402] send_request: server_info
+2023-04-27 19:50:50,180 INFO    MainThread:63344 [wandb_run.py:_footer_history_summary_info():3476] rendering history
+2023-04-27 19:50:50,181 INFO    MainThread:63344 [wandb_run.py:_footer_history_summary_info():3508] rendering summary
+2023-04-27 19:50:50,181 INFO    MainThread:63344 [wandb_run.py:_footer_sync_info():3434] logging synced files
+2023-04-27 19:50:50,182 DEBUG   HandlerThread:63344 [handler.py:handle_request():144] handle_request: shutdown
+2023-04-27 19:50:50,182 INFO    HandlerThread:63344 [handler.py:finish():845] shutting down handler
+2023-04-27 19:50:51,130 INFO    WriterThread:63344 [datastore.py:close():298] close: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_192445-x2622758/run-x2622758.wandb
+2023-04-27 19:50:51,180 INFO    SenderThread:63344 [sender.py:finish():1550] shutting down sender
+2023-04-27 19:50:51,180 INFO    SenderThread:63344 [file_pusher.py:finish():168] shutting down file pusher
+2023-04-27 19:50:51,180 INFO    SenderThread:63344 [file_pusher.py:join():173] waiting for file pusher

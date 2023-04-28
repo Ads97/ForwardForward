@@ -1,0 +1,25 @@
+2023-04-27 17:27:06,652 INFO    MainThread:36745 [wandb_setup.py:_flush():76] Configure stats pid to 36745
+2023-04-27 17:27:06,653 INFO    MainThread:36745 [wandb_setup.py:_flush():76] Loading settings from /home/jonah/.config/wandb/settings
+2023-04-27 17:27:06,653 INFO    MainThread:36745 [wandb_setup.py:_flush():76] Loading settings from /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/settings
+2023-04-27 17:27:06,653 INFO    MainThread:36745 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-04-27 17:27:06,653 INFO    MainThread:36745 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-04-27 17:27:06,653 INFO    MainThread:36745 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'new_code/main.py', 'program': 'main.py'}
+2023-04-27 17:27:06,653 INFO    MainThread:36745 [wandb_init.py:_log_setup():507] Logging user logs to /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_172706-webqg3n8/logs/debug.log
+2023-04-27 17:27:06,653 INFO    MainThread:36745 [wandb_init.py:_log_setup():508] Logging internal logs to /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/wandb/run-20230427_172706-webqg3n8/logs/debug-internal.log
+2023-04-27 17:27:06,654 INFO    MainThread:36745 [wandb_init.py:init():547] calling init triggers
+2023-04-27 17:27:06,654 INFO    MainThread:36745 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {'seed': 42, 'device': 'cuda', 'input': {'training_path': 'datasets/reviews_train.csv', 'test_path': 'datasets/reviews_test.csv', 'path': 'datasets', 'batch_size': 256}, 'model': {'peer_normalization': 0.03, 'momentum': 0.9, 'hidden_dim': 2000, 'num_layers': 6, 'dataset': 'mnist'}, 'training': {'epochs': 150, 'learning_rate': 0.001, 'weight_decay': 0.0003, 'momentum': 0.9, 'downstream_learning_rate': 0.01, 'downstream_weight_decay': 0.003, 'val_idx': 1, 'final_test': True}}
+2023-04-27 17:27:06,654 INFO    MainThread:36745 [wandb_init.py:init():595] starting backend
+2023-04-27 17:27:06,654 INFO    MainThread:36745 [wandb_init.py:init():599] setting up manager
+2023-04-27 17:27:06,659 INFO    MainThread:36745 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-04-27 17:27:06,662 INFO    MainThread:36745 [wandb_init.py:init():605] backend started and connected
+2023-04-27 17:27:06,665 INFO    MainThread:36745 [wandb_init.py:init():695] updated telemetry
+2023-04-27 17:27:06,672 INFO    MainThread:36745 [wandb_init.py:init():732] communicating run to backend with 60.0 second timeout
+2023-04-27 17:27:06,866 INFO    MainThread:36745 [wandb_run.py:_on_init():2176] communicating current version
+2023-04-27 17:27:06,908 INFO    MainThread:36745 [wandb_run.py:_on_init():2185] got version response 
+2023-04-27 17:27:06,908 INFO    MainThread:36745 [wandb_init.py:init():782] starting run threads in backend
+2023-04-27 17:27:07,963 INFO    MainThread:36745 [wandb_run.py:_console_start():2157] atexit reg
+2023-04-27 17:27:07,963 INFO    MainThread:36745 [wandb_run.py:_redirect():2012] redirect: SettingsConsole.WRAP_RAW
+2023-04-27 17:27:07,964 INFO    MainThread:36745 [wandb_run.py:_redirect():2077] Wrapping output streams.
+2023-04-27 17:27:07,964 INFO    MainThread:36745 [wandb_run.py:_redirect():2102] Redirects installed.
+2023-04-27 17:27:07,964 INFO    MainThread:36745 [wandb_init.py:init():824] run started, returning control to user process

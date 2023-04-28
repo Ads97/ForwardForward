@@ -129,18 +129,18 @@ hydra:
   runtime:
     version: 1.3.2
     version_base: '1.3'
-    cwd: /home/jonah/Documents/school/idl/ForwardForward/new_code
+    cwd: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code
     config_sources:
     - path: hydra.conf
       schema: pkg
       provider: hydra
-    - path: /home/jonah/Documents/school/idl/ForwardForward/new_code
+    - path: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code
       schema: file
       provider: main
     - path: ''
       schema: structured
       provider: schema
-    output_dir: /home/jonah/Documents/school/idl/ForwardForward/new_code/logs
+    output_dir: /home/jonah/Documents/school/idl/threshold_forwardforward/new_code/logs
     choices:
       hydra/env: default
       hydra/callbacks: null

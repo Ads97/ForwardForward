@@ -1,0 +1,225 @@
+Layer thresholds:  [0.1, 0.3, 0.5, 0.7, 0.9, 1.1]
+FF_model(
+  (model): ModuleList(
+    (0): Linear(in_features=784, out_features=2000, bias=True)
+    (1): Linear(in_features=2000, out_features=2000, bias=True)
+    (2): Linear(in_features=2000, out_features=2000, bias=True)
+    (3): Linear(in_features=2000, out_features=2000, bias=True)
+    (4): Linear(in_features=2000, out_features=2000, bias=True)
+    (5): Linear(in_features=2000, out_features=2000, bias=True)
+  )
+  (ff_loss): BCEWithLogitsLoss()
+  (linear_classifier): Sequential(
+    (0): Linear(in_features=10000, out_features=10, bias=False)
+  )
+  (classification_loss): CrossEntropyLoss()
+)
+Epoch 0 	train 	 	Time: 0:00:18.171902 	classification_accuracy: 0.8579 	multi_pass_classification_accuracy: 0.7152 	
+val
+Epoch 0 	val 	 	Time: 0:00:03.012956 	classification_accuracy: 0.9359 	multi_pass_classification_accuracy: 0.8639 	
+saving model
+Epoch 1 	train 	 	Time: 0:00:20.902393 	classification_accuracy: 0.9391 	multi_pass_classification_accuracy: 0.9081 	
+val
+Epoch 1 	val 	 	Time: 0:00:03.056129 	classification_accuracy: 0.9517 	multi_pass_classification_accuracy: 0.9254 	
+saving model
+Epoch 2 	train 	 	Time: 0:00:21.194753 	classification_accuracy: 0.9516 	multi_pass_classification_accuracy: 0.9295 	
+val
+Epoch 2 	val 	 	Time: 0:00:03.064174 	classification_accuracy: 0.9582 	multi_pass_classification_accuracy: 0.9382 	
+saving model
+Epoch 3 	train 	 	Time: 0:00:21.139092 	classification_accuracy: 0.9583 	multi_pass_classification_accuracy: 0.9398 	
+val
+Epoch 3 	val 	 	Time: 0:00:03.025769 	classification_accuracy: 0.9630 	multi_pass_classification_accuracy: 0.9448 	
+saving model
+Epoch 4 	train 	 	Time: 0:00:21.177587 	classification_accuracy: 0.9653 	multi_pass_classification_accuracy: 0.9495 	
+val
+Epoch 4 	val 	 	Time: 0:00:02.979655 	classification_accuracy: 0.9628 	multi_pass_classification_accuracy: 0.9555 	
+Epoch 5 	train 	 	Time: 0:00:20.849908 	classification_accuracy: 0.9686 	multi_pass_classification_accuracy: 0.9538 	
+val
+Epoch 5 	val 	 	Time: 0:00:03.053339 	classification_accuracy: 0.9633 	multi_pass_classification_accuracy: 0.9557 	
+saving model
+Epoch 6 	train 	 	Time: 0:00:21.177564 	classification_accuracy: 0.9724 	multi_pass_classification_accuracy: 0.9601 	
+val
+Epoch 6 	val 	 	Time: 0:00:03.060758 	classification_accuracy: 0.9694 	multi_pass_classification_accuracy: 0.9609 	
+saving model
+Epoch 7 	train 	 	Time: 0:00:20.743207 	classification_accuracy: 0.9750 	multi_pass_classification_accuracy: 0.9630 	
+val
+Epoch 7 	val 	 	Time: 0:00:03.098255 	classification_accuracy: 0.9734 	multi_pass_classification_accuracy: 0.9612 	
+saving model
+Epoch 8 	train 	 	Time: 0:00:21.239529 	classification_accuracy: 0.9775 	multi_pass_classification_accuracy: 0.9657 	
+val
+Epoch 8 	val 	 	Time: 0:00:03.004231 	classification_accuracy: 0.9739 	multi_pass_classification_accuracy: 0.9603 	
+saving model
+Epoch 9 	train 	 	Time: 0:00:21.330353 	classification_accuracy: 0.9791 	multi_pass_classification_accuracy: 0.9675 	
+val
+Epoch 9 	val 	 	Time: 0:00:03.009064 	classification_accuracy: 0.9768 	multi_pass_classification_accuracy: 0.9654 	
+saving model
+Epoch 10 	train 	 	Time: 0:00:21.337779 	classification_accuracy: 0.9820 	multi_pass_classification_accuracy: 0.9690 	
+val
+Epoch 10 	val 	 	Time: 0:00:03.008661 	classification_accuracy: 0.9753 	multi_pass_classification_accuracy: 0.9645 	
+Epoch 11 	train 	 	Time: 0:00:20.122284 	classification_accuracy: 0.9826 	multi_pass_classification_accuracy: 0.9722 	
+val
+Epoch 11 	val 	 	Time: 0:00:03.060319 	classification_accuracy: 0.9758 	multi_pass_classification_accuracy: 0.9702 	
+Epoch 12 	train 	 	Time: 0:00:20.858940 	classification_accuracy: 0.9852 	multi_pass_classification_accuracy: 0.9751 	
+val
+Epoch 12 	val 	 	Time: 0:00:03.017129 	classification_accuracy: 0.9786 	multi_pass_classification_accuracy: 0.9676 	
+saving model
+Epoch 13 	train 	 	Time: 0:00:20.634323 	classification_accuracy: 0.9854 	multi_pass_classification_accuracy: 0.9758 	
+val
+Epoch 13 	val 	 	Time: 0:00:03.068995 	classification_accuracy: 0.9758 	multi_pass_classification_accuracy: 0.9705 	
+Epoch 14 	train 	 	Time: 0:00:20.311102 	classification_accuracy: 0.9863 	multi_pass_classification_accuracy: 0.9759 	
+val
+Epoch 14 	val 	 	Time: 0:00:02.967012 	classification_accuracy: 0.9796 	multi_pass_classification_accuracy: 0.9705 	
+saving model
+Epoch 15 	train 	 	Time: 0:00:20.958254 	classification_accuracy: 0.9881 	multi_pass_classification_accuracy: 0.9777 	
+val
+Epoch 15 	val 	 	Time: 0:00:03.033453 	classification_accuracy: 0.9791 	multi_pass_classification_accuracy: 0.9724 	
+Epoch 16 	train 	 	Time: 0:00:20.092809 	classification_accuracy: 0.9882 	multi_pass_classification_accuracy: 0.9799 	
+val
+Epoch 16 	val 	 	Time: 0:00:02.985159 	classification_accuracy: 0.9790 	multi_pass_classification_accuracy: 0.9605 	
+Epoch 17 	train 	 	Time: 0:00:20.767849 	classification_accuracy: 0.9888 	multi_pass_classification_accuracy: 0.9793 	
+val
+Epoch 17 	val 	 	Time: 0:00:03.006977 	classification_accuracy: 0.9784 	multi_pass_classification_accuracy: 0.9694 	
+Epoch 18 	train 	 	Time: 0:00:20.836669 	classification_accuracy: 0.9886 	multi_pass_classification_accuracy: 0.9779 	
+val
+Epoch 18 	val 	 	Time: 0:00:02.985619 	classification_accuracy: 0.9788 	multi_pass_classification_accuracy: 0.9702 	
+Epoch 19 	train 	 	Time: 0:00:20.708416 	classification_accuracy: 0.9900 	multi_pass_classification_accuracy: 0.9806 	
+val
+Epoch 19 	val 	 	Time: 0:00:02.923221 	classification_accuracy: 0.9800 	multi_pass_classification_accuracy: 0.9725 	
+saving model
+Epoch 20 	train 	 	Time: 0:00:21.074067 	classification_accuracy: 0.9907 	multi_pass_classification_accuracy: 0.9812 	
+val
+Epoch 20 	val 	 	Time: 0:00:02.850873 	classification_accuracy: 0.9808 	multi_pass_classification_accuracy: 0.9683 	
+saving model
+Epoch 21 	train 	 	Time: 0:00:20.477148 	classification_accuracy: 0.9915 	multi_pass_classification_accuracy: 0.9832 	
+val
+Epoch 21 	val 	 	Time: 0:00:03.042833 	classification_accuracy: 0.9807 	multi_pass_classification_accuracy: 0.9718 	
+Epoch 22 	train 	 	Time: 0:00:20.646775 	classification_accuracy: 0.9921 	multi_pass_classification_accuracy: 0.9827 	
+val
+Epoch 22 	val 	 	Time: 0:00:02.866685 	classification_accuracy: 0.9791 	multi_pass_classification_accuracy: 0.9755 	
+Epoch 23 	train 	 	Time: 0:00:20.408317 	classification_accuracy: 0.9916 	multi_pass_classification_accuracy: 0.9834 	
+val
+Epoch 23 	val 	 	Time: 0:00:02.864543 	classification_accuracy: 0.9809 	multi_pass_classification_accuracy: 0.9730 	
+saving model
+Epoch 24 	train 	 	Time: 0:00:21.463897 	classification_accuracy: 0.9926 	multi_pass_classification_accuracy: 0.9848 	
+val
+Epoch 24 	val 	 	Time: 0:00:02.953981 	classification_accuracy: 0.9816 	multi_pass_classification_accuracy: 0.9734 	
+saving model
+Epoch 25 	train 	 	Time: 0:00:20.811882 	classification_accuracy: 0.9931 	multi_pass_classification_accuracy: 0.9850 	
+val
+Epoch 25 	val 	 	Time: 0:00:03.003443 	classification_accuracy: 0.9799 	multi_pass_classification_accuracy: 0.9704 	
+Epoch 26 	train 	 	Time: 0:00:20.440917 	classification_accuracy: 0.9936 	multi_pass_classification_accuracy: 0.9867 	
+val
+Epoch 26 	val 	 	Time: 0:00:02.964727 	classification_accuracy: 0.9805 	multi_pass_classification_accuracy: 0.9755 	
+Epoch 27 	train 	 	Time: 0:00:20.340549 	classification_accuracy: 0.9941 	multi_pass_classification_accuracy: 0.9862 	
+val
+Epoch 27 	val 	 	Time: 0:00:02.959342 	classification_accuracy: 0.9805 	multi_pass_classification_accuracy: 0.9768 	
+Epoch 28 	train 	 	Time: 0:00:20.448604 	classification_accuracy: 0.9938 	multi_pass_classification_accuracy: 0.9867 	
+val
+Epoch 28 	val 	 	Time: 0:00:02.962047 	classification_accuracy: 0.9804 	multi_pass_classification_accuracy: 0.9774 	
+Epoch 29 	train 	 	Time: 0:00:20.763576 	classification_accuracy: 0.9941 	multi_pass_classification_accuracy: 0.9869 	
+val
+Epoch 29 	val 	 	Time: 0:00:02.908044 	classification_accuracy: 0.9804 	multi_pass_classification_accuracy: 0.9758 	
+Epoch 30 	train 	 	Time: 0:00:20.392464 	classification_accuracy: 0.9949 	multi_pass_classification_accuracy: 0.9871 	
+val
+Epoch 30 	val 	 	Time: 0:00:02.890713 	classification_accuracy: 0.9807 	multi_pass_classification_accuracy: 0.9777 	
+Epoch 31 	train 	 	Time: 0:00:20.370763 	classification_accuracy: 0.9951 	multi_pass_classification_accuracy: 0.9880 	
+val
+Epoch 31 	val 	 	Time: 0:00:02.908621 	classification_accuracy: 0.9804 	multi_pass_classification_accuracy: 0.9771 	
+Epoch 32 	train 	 	Time: 0:00:20.523611 	classification_accuracy: 0.9952 	multi_pass_classification_accuracy: 0.9880 	
+val
+Epoch 32 	val 	 	Time: 0:00:02.964944 	classification_accuracy: 0.9818 	multi_pass_classification_accuracy: 0.9755 	
+saving model
+Epoch 33 	train 	 	Time: 0:00:21.528291 	classification_accuracy: 0.9954 	multi_pass_classification_accuracy: 0.9873 	
+val
+Epoch 33 	val 	 	Time: 0:00:02.920513 	classification_accuracy: 0.9809 	multi_pass_classification_accuracy: 0.9765 	
+Epoch 34 	train 	 	Time: 0:00:20.467136 	classification_accuracy: 0.9960 	multi_pass_classification_accuracy: 0.9882 	
+val
+Epoch 34 	val 	 	Time: 0:00:02.935072 	classification_accuracy: 0.9797 	multi_pass_classification_accuracy: 0.9784 	
+Epoch 35 	train 	 	Time: 0:00:20.355118 	classification_accuracy: 0.9962 	multi_pass_classification_accuracy: 0.9890 	
+val
+Epoch 35 	val 	 	Time: 0:00:02.993372 	classification_accuracy: 0.9819 	multi_pass_classification_accuracy: 0.9779 	
+saving model
+Epoch 36 	train 	 	Time: 0:00:20.699780 	classification_accuracy: 0.9968 	multi_pass_classification_accuracy: 0.9893 	
+val
+Epoch 36 	val 	 	Time: 0:00:02.967275 	classification_accuracy: 0.9806 	multi_pass_classification_accuracy: 0.9768 	
+Epoch 37 	train 	 	Time: 0:00:20.583279 	classification_accuracy: 0.9964 	multi_pass_classification_accuracy: 0.9893 	
+val
+Epoch 37 	val 	 	Time: 0:00:02.981862 	classification_accuracy: 0.9821 	multi_pass_classification_accuracy: 0.9780 	
+saving model
+Epoch 38 	train 	 	Time: 0:00:20.645616 	classification_accuracy: 0.9961 	multi_pass_classification_accuracy: 0.9886 	
+val
+Epoch 38 	val 	 	Time: 0:00:02.995824 	classification_accuracy: 0.9827 	multi_pass_classification_accuracy: 0.9790 	
+saving model
+Epoch 39 	train 	 	Time: 0:00:21.105247 	classification_accuracy: 0.9966 	multi_pass_classification_accuracy: 0.9892 	
+val
+Epoch 39 	val 	 	Time: 0:00:02.921280 	classification_accuracy: 0.9826 	multi_pass_classification_accuracy: 0.9788 	
+Epoch 40 	train 	 	Time: 0:00:19.683735 	classification_accuracy: 0.9969 	multi_pass_classification_accuracy: 0.9901 	
+val
+Epoch 40 	val 	 	Time: 0:00:03.024181 	classification_accuracy: 0.9800 	multi_pass_classification_accuracy: 0.9747 	
+Epoch 41 	train 	 	Time: 0:00:19.877285 	classification_accuracy: 0.9968 	multi_pass_classification_accuracy: 0.9898 	
+val
+Epoch 41 	val 	 	Time: 0:00:02.898207 	classification_accuracy: 0.9819 	multi_pass_classification_accuracy: 0.9767 	
+Epoch 42 	train 	 	Time: 0:00:20.632465 	classification_accuracy: 0.9971 	multi_pass_classification_accuracy: 0.9900 	
+val
+Epoch 42 	val 	 	Time: 0:00:02.994229 	classification_accuracy: 0.9827 	multi_pass_classification_accuracy: 0.9775 	
+Epoch 43 	train 	 	Time: 0:00:20.664745 	classification_accuracy: 0.9973 	multi_pass_classification_accuracy: 0.9901 	
+val
+Epoch 43 	val 	 	Time: 0:00:03.076420 	classification_accuracy: 0.9834 	multi_pass_classification_accuracy: 0.9758 	
+saving model
+Epoch 44 	train 	 	Time: 0:00:21.059291 	classification_accuracy: 0.9975 	multi_pass_classification_accuracy: 0.9909 	
+val
+Epoch 44 	val 	 	Time: 0:00:02.962077 	classification_accuracy: 0.9828 	multi_pass_classification_accuracy: 0.9778 	
+Epoch 45 	train 	 	Time: 0:00:21.205243 	classification_accuracy: 0.9977 	multi_pass_classification_accuracy: 0.9904 	
+val
+Epoch 45 	val 	 	Time: 0:00:02.982443 	classification_accuracy: 0.9819 	multi_pass_classification_accuracy: 0.9779 	
+Epoch 46 	train 	 	Time: 0:00:20.531633 	classification_accuracy: 0.9977 	multi_pass_classification_accuracy: 0.9911 	
+val
+Epoch 46 	val 	 	Time: 0:00:03.050672 	classification_accuracy: 0.9826 	multi_pass_classification_accuracy: 0.9766 	
+Epoch 47 	train 	 	Time: 0:00:20.862319 	classification_accuracy: 0.9978 	multi_pass_classification_accuracy: 0.9912 	
+val
+Epoch 47 	val 	 	Time: 0:00:02.885770 	classification_accuracy: 0.9838 	multi_pass_classification_accuracy: 0.9777 	
+saving model
+Epoch 48 	train 	 	Time: 0:00:20.837667 	classification_accuracy: 0.9979 	multi_pass_classification_accuracy: 0.9914 	
+val
+Epoch 48 	val 	 	Time: 0:00:02.936520 	classification_accuracy: 0.9812 	multi_pass_classification_accuracy: 0.9789 	
+Epoch 49 	train 	 	Time: 0:00:20.232637 	classification_accuracy: 0.9982 	multi_pass_classification_accuracy: 0.9918 	
+val
+Epoch 49 	val 	 	Time: 0:00:03.002655 	classification_accuracy: 0.9827 	multi_pass_classification_accuracy: 0.9769 	
+Epoch 50 	train 	 	Time: 0:00:20.625219 	classification_accuracy: 0.9982 	multi_pass_classification_accuracy: 0.9921 	
+val
+Epoch 50 	val 	 	Time: 0:00:02.979755 	classification_accuracy: 0.9819 	multi_pass_classification_accuracy: 0.9760 	
+Epoch 51 	train 	 	Time: 0:00:20.866354 	classification_accuracy: 0.9984 	multi_pass_classification_accuracy: 0.9925 	
+val
+Epoch 51 	val 	 	Time: 0:00:02.967697 	classification_accuracy: 0.9823 	multi_pass_classification_accuracy: 0.9797 	
+Epoch 52 	train 	 	Time: 0:00:20.241948 	classification_accuracy: 0.9985 	multi_pass_classification_accuracy: 0.9930 	
+val
+Epoch 52 	val 	 	Time: 0:00:02.989416 	classification_accuracy: 0.9821 	multi_pass_classification_accuracy: 0.9793 	
+Epoch 53 	train 	 	Time: 0:00:20.635674 	classification_accuracy: 0.9984 	multi_pass_classification_accuracy: 0.9924 	
+val
+Epoch 53 	val 	 	Time: 0:00:02.995160 	classification_accuracy: 0.9829 	multi_pass_classification_accuracy: 0.9799 	
+Traceback (most recent call last):
+  File "main.py", line 106, in <module>
+    my_main()
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "main.py", line 97, in my_main
+    model = train(opt, model, optimizer)
+  File "main.py", line 29, in train
+    scalar_outputs = model(inputs, labels)
+  File "/home/jonah/anaconda3/envs/FF/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/jonah/Documents/school/idl/threshold_forwardforward/new_code/src/ff_model.py", line 112, in forward
+    z = torch.cat([inputs["pos_images"], inputs["neg_images"]], dim=0) # 2*bs, 1, 28, 28
+KeyboardInterrupt

@@ -9,12 +9,8 @@ model:
   peer_normalization: 0.03
   momentum: 0.9
   hidden_dim: 2000
-<<<<<<< HEAD
   num_layers: 6
   dataset: mnist
-=======
-  num_layers: 4
->>>>>>> senti
 training:
   epochs: 150
   learning_rate: 0.001

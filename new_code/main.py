@@ -6,10 +6,11 @@ import torch
 from omegaconf import DictConfig
 
 from src import utils
+from src.threshold_scheduler import Threshold_Scheduler
 import wandb
 from torch.nn import ReLU, Tanh, GELU, Sigmoid, SELU, ELU, CELU
 
-def train(opt, model, optimizer):
+def train(opt, model, optimizer, threshold_scheduler=None):
     start_time = time.time()
     train_loader = utils.get_data(opt, "train")
     num_steps_per_epoch = len(train_loader)
@@ -26,7 +27,7 @@ def train(opt, model, optimizer):
             # print("label shape:",labels['class_labels'].shape)
             optimizer.zero_grad()
 
-            scalar_outputs = model(inputs, labels)
+            scalar_outputs = model(inputs, labels, threshold_scheduler)
             scalar_outputs["Loss"].backward()
 
             optimizer.step()
@@ -37,7 +38,8 @@ def train(opt, model, optimizer):
 
         utils.print_results("train", time.time() - start_time, train_results, epoch)
         start_time = time.time()
-
+        if threshold_scheduler:
+            threshold_scheduler.step(epoch)
         # Validate.
         if epoch % opt.training.val_idx == 0 and opt.training.val_idx != -1:
             best_val_acc = validate_or_test(opt, model, "val", epoch=epoch, best_val_acc=best_val_acc)
@@ -86,7 +88,7 @@ def my_main(opt: DictConfig) -> None:
     run = wandb.init(
     project="project",
     entity  = "automellon",
-    name = "mnist 2000 threshhold", # Wandb creates random run names if you skip this field
+    name = "th scheduler .15 start 10 patience", # Wandb creates random run names if you skip this field
     reinit = False, # Allows reinitalizing runs when you re-run this cell
     # run_id = # Insert specific run id here if you want to resume a previous run
     # resume = "must" # You need this to resume previous runs, but comment out reinit = True when using this
@@ -94,7 +96,8 @@ def my_main(opt: DictConfig) -> None:
     )
     activations = [ReLU(), Tanh(), GELU(), Sigmoid(), SELU(), ELU(), CELU()]
     model, optimizer = utils.get_model_and_optimizer(opt)
-    model = train(opt, model, optimizer)
+    threshold_scheduler = Threshold_Scheduler(initial_multiplier=.15, rate=1.1, patience=10)
+    model = train(opt, model, optimizer, threshold_scheduler=threshold_scheduler)
     run.finish()
     # validate_or_test(opt, model, "val")
 

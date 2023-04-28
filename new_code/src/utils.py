@@ -59,8 +59,8 @@ def get_model_and_optimizer(opt):
 # 6000, 10 # classification_loss params
 
 def get_data(opt, partition):
-    # dataset = ff_mnist.FF_MNIST(opt, partition)
-    dataset = ff_mnist.FF_senti(opt, partition, num_classes=2)
+    dataset = ff_mnist.FF_MNIST(opt, partition)
+    #dataset = ff_mnist.FF_senti(opt, partition, num_classes=2)
     # Improve reproducibility in dataloader.
     g = torch.Generator()
     g.manual_seed(opt.seed)
