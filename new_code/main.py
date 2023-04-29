@@ -22,6 +22,8 @@ def train(opt, model, optimizer):
         for inputs, labels in train_loader:
             inputs, labels = utils.preprocess_inputs(opt, inputs, labels) # push to GPU
 
+            # print("input shape:",inputs['sample'].shape)
+            # print("label shape:",labels['class_labels'].shape)
             optimizer.zero_grad()
 
             scalar_outputs = model(inputs, labels)
@@ -84,7 +86,7 @@ def my_main(opt: DictConfig) -> None:
     run = wandb.init(
     project="project",
     entity  = "automellon",
-    name = "two-classifications", # Wandb creates random run names if you skip this field
+    name = "senti-ff", # Wandb creates random run names if you skip this field
     reinit = False, # Allows reinitalizing runs when you re-run this cell
     # run_id = # Insert specific run id here if you want to resume a previous run
     # resume = "must" # You need this to resume previous runs, but comment out reinit = True when using this
