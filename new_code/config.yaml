@@ -10,8 +10,8 @@ model:
   peer_normalization: 0.03
   momentum: 0.9  # Momentum to use for the running mean in peer normalization loss.
 
-  hidden_dim: 1000
-  num_layers: 3
+  hidden_dim: 2000
+  num_layers: 4
 
 
 training:
@@ -24,8 +24,8 @@ training:
   downstream_learning_rate: 1e-2
   downstream_weight_decay: 3e-3
 
-  val_idx: -1  # -1: validate only once training has finished; n: validate every n epochs.
-  final_test: False  # Set to true to evaluate performance on test-set.
+  val_idx: 1  # -1: validate only once training has finished; n: validate every n epochs.
+  final_test: True  # Set to true to evaluate performance on test-set.
 
 
 hydra:

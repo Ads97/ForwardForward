@@ -11,19 +11,19 @@ def get_loaders(batch_size):
     transform = Compose(
         [
             ToTensor(),
-            Normalize((0.1307,), (0.3081,)),
+            Normalize((0.4914, 0.4822, 0.4465), (0.247, 0.243, 0.261)),
             Lambda(lambda x: torch.flatten(x)),
         ]
     )
     train_loader = DataLoader(
-    MNIST("./data/", train=True, download=True, transform=transform),
+    CIFAR10("./data/", train=True, download=True, transform=transform),
     batch_size=batch_size,
     shuffle=True,
     num_workers=2,
     pin_memory=True)
 
     test_loader = DataLoader(
-    MNIST("./data/", train=False, download=True, transform=transform),
+    CIFAR10("./data/", train=False, download=True, transform=transform),
     batch_size=batch_size,
     shuffle=False,
     num_workers=2,

@@ -6,12 +6,14 @@ import torch
 from omegaconf import DictConfig
 
 from src import utils
+import wandb
 
 
 def train(opt, model, optimizer):
     start_time = time.time()
     train_loader = utils.get_data(opt, "train")
     num_steps_per_epoch = len(train_loader)
+    best_val_acc = 0.0
 
     for epoch in range(opt.training.epochs):
         train_results = defaultdict(float)
@@ -36,12 +38,13 @@ def train(opt, model, optimizer):
 
         # Validate.
         if epoch % opt.training.val_idx == 0 and opt.training.val_idx != -1:
-            validate_or_test(opt, model, "val", epoch=epoch)
+            best_val_acc = validate_or_test(opt, model, "val", epoch=epoch, best_val_acc=best_val_acc)
+            # utils.print_results("val", time.time() - start_time, train_results, epoch)
 
     return model
 
 
-def validate_or_test(opt, model, partition, epoch=None):
+def validate_or_test(opt, model, partition, epoch=None, best_val_acc=1.0):
     test_time = time.time()
     test_results = defaultdict(float)
 
@@ -57,23 +60,43 @@ def validate_or_test(opt, model, partition, epoch=None):
             scalar_outputs = model.forward_downstream_classification_model(
                 inputs, labels
             )
+            scalar_outputs = model.forward_downstream_multi_pass(
+                inputs, labels, scalar_outputs=scalar_outputs
+            )
             test_results = utils.log_results(
                 test_results, scalar_outputs, num_steps_per_epoch
             )
 
     utils.print_results(partition, time.time() - test_time, test_results, epoch=epoch)
+    # save model if classification accuracy is better than previous best
+    if test_results["classification_accuracy"] > best_val_acc:
+        print("saving model")
+        best_val_acc = test_results["classification_accuracy"]
+        utils.save_model(model)
+
     model.train()
+    return best_val_acc
 
 
 @hydra.main(config_path=".", config_name="config", version_base=None)
 def my_main(opt: DictConfig) -> None:
     opt = utils.parse_args(opt)
+    run = wandb.init(
+    project="project",
+    entity  = "automellon",
+    name = "two-classifications", # Wandb creates random run names if you skip this field
+    reinit = False, # Allows reinitalizing runs when you re-run this cell
+    # run_id = # Insert specific run id here if you want to resume a previous run
+    # resume = "must" # You need this to resume previous runs, but comment out reinit = True when using this
+    config = dict(opt) ### Wandb Config for your run
+    )
     model, optimizer = utils.get_model_and_optimizer(opt)
     model = train(opt, model, optimizer)
-    validate_or_test(opt, model, "val")
+    run.finish()
+    # validate_or_test(opt, model, "val")
 
-    if opt.training.final_test:
-        validate_or_test(opt, model, "test")
+    # if opt.training.final_test:
+    #     validate_or_test(opt, model, "test")
 
 
 if __name__ == "__main__":

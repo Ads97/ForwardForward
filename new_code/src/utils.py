@@ -8,7 +8,10 @@ import torchvision
 from hydra.utils import get_original_cwd
 from omegaconf import OmegaConf
 
+from torchvision.transforms import Compose, ToTensor, Normalize, Lambda
+
 from src import ff_mnist, ff_model
+import wandb
 
 
 def parse_args(opt):
@@ -79,33 +82,41 @@ def seed_worker(worker_id):
 
 
 def get_MNIST_partition(opt, partition):
-    if partition in ["train", "val", "train_val"]:
-        mnist = torchvision.datasets.MNIST(
+    transform = Compose(
+        [
+            ToTensor(),
+            Normalize((0.4914, 0.4822, 0.4465), (0.247, 0.243, 0.261)),
+            # Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
+            # Lambda(lambda x: torch.flatten(x)),
+        ]
+    )
+    if partition in ["train"]:
+        mnist = torchvision.datasets.CIFAR10(
             os.path.join(get_original_cwd(), opt.input.path),
             train=True,
             download=True,
-            transform=torchvision.transforms.ToTensor(),
+            transform=transform,
         )
-    elif partition in ["test"]:
-        mnist = torchvision.datasets.MNIST(
+    elif partition in ["val", "test"]:
+        mnist = torchvision.datasets.CIFAR10(
             os.path.join(get_original_cwd(), opt.input.path),
             train=False,
             download=True,
-            transform=torchvision.transforms.ToTensor(),
+            transform=transform,
         )
     else:
         raise NotImplementedError
 
-    if partition == "train":
-        mnist = torch.utils.data.Subset(mnist, range(50000))
-    elif partition == "val":
-        mnist = torchvision.datasets.MNIST(
-            os.path.join(get_original_cwd(), opt.input.path),
-            train=True,
-            download=True,
-            transform=torchvision.transforms.ToTensor(),
-        )
-        mnist = torch.utils.data.Subset(mnist, range(50000, 60000))
+    # if partition == "train":
+    #     mnist = torch.utils.data.Subset(mnist, range(40000))
+    # elif partition == "val":
+    #     mnist = torchvision.datasets.CIFAR10(
+    #         os.path.join(get_original_cwd(), opt.input.path),
+    #         train=True,
+    #         download=True,
+    #         transform=transform,
+    #     )
+    #     mnist = torch.utils.data.Subset(mnist, range(40000, 50000))
 
     return mnist
 
@@ -160,6 +171,17 @@ def print_results(partition, iteration_time, scalar_outputs, epoch=None):
         for key, value in scalar_outputs.items():
             print(f"{key}: {value:.4f} \t", end="")
     print()
+    partition_scalar_outputs = {}
+    if scalar_outputs is not None:
+        for key, value in scalar_outputs.items():
+            partition_scalar_outputs[f"{partition}_{key}"] = value
+    wandb.log(partition_scalar_outputs)
+
+# create save_model function
+def save_model(model):
+    torch.save(model.state_dict(), f"{wandb.run.name}-model.pt")
+    # log model to wandb
+    wandb.save(f"{wandb.run.name}-model.pt")
 
 
 def log_results(result_dict, scalar_outputs, num_steps):

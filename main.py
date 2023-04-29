@@ -8,7 +8,7 @@ config={
     'epochs':100,
     'lr':0.1,
     'batch_size':64,
-    'threshold':1.0,
+    'threshold':20.0,
 }
 train_loader, test_loader = get_loaders(config['batch_size'])
 visualise_positive()
@@ -24,7 +24,8 @@ run = wandb.init(
     # resume = "must" ### You need this to resume previous runs, but comment out reinit = True when using this
     config = config ### Wandb Config for your run
 )
-net = CNNFF([(1, 64, 2, 2),(64, 128, 2, 2),(128, 256, 2, 2),(256, 512, 2, 2)], config).to(DEVICE)
+# net = CNNFF([(1, 64, 2, 2),(64, 128, 2, 2),(128, 256, 2, 2),(256, 512, 2, 2)], config).to(DEVICE)
+net = Net([3*32*32, 2000, 2000, 2000, 2000], config).to(DEVICE)
 
 # batch_bar = tqdm(total=config['epochs'], dynamic_ncols=True, leave=False, position=0, desc='Train', ncols=3)
 for epoch in range(config['epochs']):
