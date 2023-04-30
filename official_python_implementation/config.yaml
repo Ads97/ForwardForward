@@ -6,7 +6,7 @@ input:
   test_path: datasets/reviews_test.csv
   path: datasets
   batch_size: 100
-  dataset: "mnist" # "mnist" or "cifar10" or "senti"
+  dataset: "cifar10" # "mnist" or "cifar10" or "senti"
 
 
 model:
