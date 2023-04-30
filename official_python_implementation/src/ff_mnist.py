@@ -36,7 +36,7 @@ class FF_senti(torch.utils.data.Dataset):
 
     def _get_pos_sample(self, sample, class_label):
         one_hot_label = torch.nn.functional.one_hot(
-            torch.tensor(class_label), num_classes=self.num_classes
+            class_label.clone().detach(), num_classes=self.num_classes
         )
         pos_sample = sample.clone()
         pos_sample = torch.concat((one_hot_label, pos_sample), dim=0)
@@ -47,7 +47,7 @@ class FF_senti(torch.utils.data.Dataset):
         # Create randomly sampled one-hot label.
         wrong_class_label = 1 - class_label
         one_hot_label = torch.nn.functional.one_hot(
-            torch.tensor(wrong_class_label), num_classes=self.num_classes
+            wrong_class_label.clone().detach(), num_classes=self.num_classes
         )
         neg_sample = sample.clone()
         neg_sample = torch.concat((one_hot_label, neg_sample), dim=0)
