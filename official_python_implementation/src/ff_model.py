@@ -16,8 +16,10 @@ class FF_model(torch.nn.Module):
         self.num_channels = [self.opt.model.hidden_dim] * self.opt.model.num_layers
         self.act_fn = ReLU_full_grad()
 
+        input_layer_size = utils.get_input_layer_size(opt)
+
         # Initialize the model.
-        self.model = nn.ModuleList([nn.Linear(302, self.num_channels[0])])
+        self.model = nn.ModuleList([nn.Linear(input_layer_size, self.num_channels[0])])
         for i in range(1, len(self.num_channels)):
             self.model.append(nn.Linear(self.num_channels[i - 1], self.num_channels[i]))
 

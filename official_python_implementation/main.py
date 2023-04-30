@@ -86,7 +86,7 @@ def my_main(opt: DictConfig) -> None:
     run = wandb.init(
     project="project",
     entity  = "automellon",
-    name = "senti-ff", # Wandb creates random run names if you skip this field
+    name = "<NAME>", # Wandb creates random run names if you skip this field
     reinit = False, # Allows reinitalizing runs when you re-run this cell
     # run_id = # Insert specific run id here if you want to resume a previous run
     # resume = "must" # You need this to resume previous runs, but comment out reinit = True when using this

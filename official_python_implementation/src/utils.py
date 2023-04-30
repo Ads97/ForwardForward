@@ -24,6 +24,15 @@ def parse_args(opt):
     print(OmegaConf.to_yaml(opt))
     return opt
 
+def get_input_layer_size(opt):
+    if opt.input.dataset == "mnist":
+        return 784
+    elif opt.input.dataset == "senti":
+        return 302
+    elif opt.input.dataset == "cifar10":
+        return 3072
+    else:
+        raise ValueError("Unknown dataset.")
 
 def get_model_and_optimizer(opt):
     model = ff_model.FF_model(opt)
@@ -60,7 +69,15 @@ def get_model_and_optimizer(opt):
 
 def get_data(opt, partition):
     # dataset = ff_mnist.FF_MNIST(opt, partition)
-    dataset = ff_mnist.FF_senti(opt, partition, num_classes=2)
+    if opt.input.dataset == "mnist":
+        dataset = ff_mnist.FF_MNIST(opt, partition, num_classes=10)
+    elif opt.input.dataset == "senti":
+        dataset = ff_mnist.FF_senti(opt, partition, num_classes=2)
+    elif opt.input.dataset == "cifar10":
+        dataset = ff_mnist.FF_CIFAR10(opt, partition, num_classes=10)
+    else:
+        raise ValueError("Unknown dataset.")
+
     # Improve reproducibility in dataloader.
     g = torch.Generator()
     g.manual_seed(opt.seed)
@@ -112,24 +129,22 @@ def get_senti_partition(opt, partition):
     else:
         return test_data, test_labels
 
-def get_MNIST_partition(opt, partition):
+def get_CIFAR10_partition(opt, partition):
     transform = Compose(
         [
             ToTensor(),
             Normalize((0.4914, 0.4822, 0.4465), (0.247, 0.243, 0.261)),
-            # Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
-            # Lambda(lambda x: torch.flatten(x)),
         ]
     )
     if partition in ["train"]:
-        mnist = torchvision.datasets.CIFAR10(
+        cifar = torchvision.datasets.CIFAR10(
             os.path.join(get_original_cwd(), opt.input.path),
             train=True,
             download=True,
             transform=transform,
         )
     elif partition in ["val", "test"]:
-        mnist = torchvision.datasets.CIFAR10(
+        cifar = torchvision.datasets.CIFAR10(
             os.path.join(get_original_cwd(), opt.input.path),
             train=False,
             download=True,
@@ -138,19 +153,32 @@ def get_MNIST_partition(opt, partition):
     else:
         raise NotImplementedError
 
-    # if partition == "train":
-    #     mnist = torch.utils.data.Subset(mnist, range(40000))
-    # elif partition == "val":
-    #     mnist = torchvision.datasets.CIFAR10(
-    #         os.path.join(get_original_cwd(), opt.input.path),
-    #         train=True,
-    #         download=True,
-    #         transform=transform,
-    #     )
-    #     mnist = torch.utils.data.Subset(mnist, range(40000, 50000))
+    return cifar
+
+def get_MNIST_partition(opt, partition):
+    transform = Compose(
+        [
+            ToTensor(),
+        ]
+    )
+    if partition in ["train"]:
+        mnist = torchvision.datasets.MNIST(
+            os.path.join(get_original_cwd(), opt.input.path),
+            train=True,
+            download=True,
+            transform=transform,
+        )
+    elif partition in ["val", "test"]:
+        mnist = torchvision.datasets.MNIST(
+            os.path.join(get_original_cwd(), opt.input.path),
+            train=False,
+            download=True,
+            transform=transform,
+        )
+    else:
+        raise NotImplementedError
 
     return mnist
-
 
 def dict_to_cuda(dict):
     for key, value in dict.items():

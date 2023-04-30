@@ -1,5 +1,6 @@
-__pycache__/*
-wandb/*
-datasets/*
+__pycache__/
+wandb/
+datasets/
+logs/
 *.pyc
 *.pt
