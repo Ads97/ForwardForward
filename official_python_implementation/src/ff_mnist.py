@@ -1,0 +1,208 @@
+import numpy as np
+import torch
+
+from src import utils
+
+
+class FF_senti(torch.utils.data.Dataset):
+    def __init__(self, opt, partition, num_classes=10):
+        self.opt = opt
+        self.senti = utils.get_senti_partition(opt, partition)
+        self.num_classes = num_classes
+        self.uniform_label = torch.ones(self.num_classes) / self.num_classes
+        print("senti initialized")
+
+    def __getitem__(self, index):
+        # print("get_item reached")
+        # sample, class_label = self._generate_sample(
+        #     index
+        # )
+        pos_sample, neg_sample, neutral_sample, all_sample, class_label = self._generate_sample(
+            index
+        )
+
+        inputs = {
+            "pos_images": pos_sample,
+            "neg_images": neg_sample,
+            "neutral_sample": neutral_sample,
+            "all_sample": all_sample
+        }
+
+        labels = {"class_labels": class_label}
+        return inputs, labels
+
+    def __len__(self):
+        return len(self.senti[1])
+
+    def _get_pos_sample(self, sample, class_label):
+        one_hot_label = torch.nn.functional.one_hot(
+            class_label.clone().detach(), num_classes=self.num_classes
+        )
+        pos_sample = sample.clone()
+        pos_sample = torch.concat((one_hot_label, pos_sample), dim=0)
+        # pos_sample[0, 0, : self.num_classes] = one_hot_label
+        return pos_sample
+
+    def _get_neg_sample(self, sample, class_label):
+        # Create randomly sampled one-hot label.
+        wrong_class_label = 1 - class_label
+        one_hot_label = torch.nn.functional.one_hot(
+            wrong_class_label.clone().detach(), num_classes=self.num_classes
+        )
+        neg_sample = sample.clone()
+        neg_sample = torch.concat((one_hot_label, neg_sample), dim=0)
+        return neg_sample
+
+    def _get_neutral_sample(self, z):
+        return torch.concat((self.uniform_label, z), dim=0)
+    
+    def _get_all_sample(self, sample):
+        all_samples = torch.zeros((self.num_classes, sample.shape[0]+self.num_classes))
+        for i in range(self.num_classes):
+            all_samples[i, self.num_classes:] = sample.clone()
+            one_hot_label = torch.nn.functional.one_hot(
+            torch.tensor(i), num_classes=self.num_classes)
+            all_samples[i, : self.num_classes] = one_hot_label.clone()
+        return all_samples
+
+    def _generate_sample(self, index):
+        # Get MNIST sample.
+        sample, class_label = self.senti[0][index], self.senti[1][index]
+        pos_sample = self._get_pos_sample(sample, class_label)
+        neg_sample = self._get_neg_sample(sample, class_label)
+        neutral_sample = self._get_neutral_sample(sample)
+        all_sample = self._get_all_sample(sample)
+        return pos_sample, neg_sample, neutral_sample, all_sample, class_label
+
+
+class FF_CIFAR10(torch.utils.data.Dataset):
+    def __init__(self, opt, partition, num_classes=10):
+        self.opt = opt
+        self.mnist = utils.get_CIFAR10_partition(opt, partition)
+        self.num_classes = num_classes
+        self.uniform_label = torch.ones(self.num_classes) / self.num_classes
+
+    def __getitem__(self, index):
+        pos_sample, neg_sample, neutral_sample, all_sample, class_label = self._generate_sample(
+            index
+        )
+
+        inputs = {
+            "pos_images": pos_sample,
+            "neg_images": neg_sample,
+            "neutral_sample": neutral_sample,
+            "all_sample": all_sample
+        }
+        labels = {"class_labels": class_label}
+        return inputs, labels
+
+    def __len__(self):
+        return len(self.mnist)
+
+    def _get_pos_sample(self, sample, class_label):
+        one_hot_label = torch.nn.functional.one_hot(
+            torch.tensor(class_label), num_classes=self.num_classes
+        )
+        pos_sample = sample.clone()
+        pos_sample[0, 0, : self.num_classes] = one_hot_label
+        return pos_sample
+
+    def _get_neg_sample(self, sample, class_label):
+        # Create randomly sampled one-hot label.
+        classes = list(range(self.num_classes))
+        classes.remove(class_label)  # Remove true label from possible choices.
+        wrong_class_label = np.random.choice(classes)
+        one_hot_label = torch.nn.functional.one_hot(
+            torch.tensor(wrong_class_label), num_classes=self.num_classes
+        )
+        neg_sample = sample.clone()
+        neg_sample[0, 0, : self.num_classes] = one_hot_label
+        return neg_sample
+
+    def _get_neutral_sample(self, z):
+        z[0, 0, : self.num_classes] = self.uniform_label
+        return z
+    
+    def _get_all_sample(self, sample):
+        all_samples = torch.zeros((self.num_classes, sample.shape[0], sample.shape[1], sample.shape[2]))
+        for i in range(self.num_classes):
+            all_samples[i, :, :, :] = sample.clone()
+            one_hot_label = torch.nn.functional.one_hot(
+            torch.tensor(i), num_classes=self.num_classes)
+            all_samples[i, 0, 0, : self.num_classes] = one_hot_label.clone()
+        return all_samples
+
+    def _generate_sample(self, index):
+        # Get MNIST sample.
+        sample, class_label = self.mnist[index]
+        pos_sample = self._get_pos_sample(sample, class_label)
+        neg_sample = self._get_neg_sample(sample, class_label)
+        neutral_sample = self._get_neutral_sample(sample)
+        all_sample = self._get_all_sample(sample)
+        return pos_sample, neg_sample, neutral_sample, all_sample, class_label
+
+class FF_MNIST(torch.utils.data.Dataset):
+    def __init__(self, opt, partition, num_classes=10):
+        self.opt = opt
+        self.mnist = utils.get_MNIST_partition(opt, partition)
+        self.num_classes = num_classes
+        self.uniform_label = torch.ones(self.num_classes) / self.num_classes
+
+    def __getitem__(self, index):
+        pos_sample, neg_sample, neutral_sample, all_sample, class_label = self._generate_sample(
+            index
+        )
+
+        inputs = {
+            "pos_images": pos_sample,
+            "neg_images": neg_sample,
+            "neutral_sample": neutral_sample,
+            "all_sample": all_sample
+        }
+        labels = {"class_labels": class_label}
+        return inputs, labels
+
+    def __len__(self):
+        return len(self.mnist)
+
+    def _get_pos_sample(self, sample, class_label):
+        one_hot_label = torch.nn.functional.one_hot(
+            torch.tensor(class_label), num_classes=self.num_classes
+        )
+        pos_sample = sample.clone()
+        pos_sample[0, 0, : self.num_classes] = one_hot_label
+        return pos_sample
+
+    def _get_neg_sample(self, sample, class_label):
+        # Create randomly sampled one-hot label.
+        classes = list(range(self.num_classes))
+        classes.remove(class_label)  # Remove true label from possible choices.
+        wrong_class_label = np.random.choice(classes)
+        one_hot_label = torch.nn.functional.one_hot(
+            torch.tensor(wrong_class_label), num_classes=self.num_classes
+        )
+        neg_sample = sample.clone()
+        neg_sample[0, 0, : self.num_classes] = one_hot_label
+        return neg_sample
+
+    def _get_neutral_sample(self, z):
+        z[0, 0, : self.num_classes] = self.uniform_label
+        return z
+    
+    def _get_all_sample(self, sample):
+        all_samples = torch.zeros((self.num_classes, sample.shape[0], sample.shape[1], sample.shape[2]))
+        for i in range(self.num_classes):
+            all_samples[i, :, :, :] = sample.clone()
+            one_hot_label = torch.nn.functional.one_hot(
+            torch.tensor(i), num_classes=self.num_classes)
+            all_samples[i, 0, 0, : self.num_classes] = one_hot_label.clone()
+        return all_samples
+
+    def _generate_sample(self, index):
+        # Get MNIST sample.
+        sample, class_label = self.mnist[index]
+        pos_sample = self._get_pos_sample(sample, class_label)
+        neg_sample = self._get_neg_sample(sample, class_label)
+        neutral_sample = self._get_neutral_sample(sample)
+        all_sample = self._get_all_sample(sample)
+        return pos_sample, neg_sample, neutral_sample, all_sample, class_label

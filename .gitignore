@@ -1,10 +1,6 @@
-__pycache__/*
-wandb/*
-data/*
-datasets/*
-new_code/datasets/*
-new_code/logs/*
-new_code/src/__pycache__/*
+__pycache__/
+wandb/
+datasets/
+logs/
 *.pyc
 *.pt
-src/wandb/*
