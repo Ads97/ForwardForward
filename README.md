@@ -1,5 +1,7 @@
 # Reimplementation of the Forward-Forward Algorithm
 
+Our Paper: [https://arxiv.org/abs/2307.04205](https://arxiv.org/abs/2307.04205)
+
 This is a reimplementation of Geoffrey Hinton's Forward-Forward Algorithm in Python/Pytorch. Majority of the code in the folder ```official_python_implementation``` is taken from [here](https://github.com/loeweX/Forward-Forward).
 
 &rarr; [Original Paper](https://arxiv.org/abs/2212.13345)
