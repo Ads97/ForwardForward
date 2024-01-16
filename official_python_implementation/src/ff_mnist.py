@@ -1,5 +1,7 @@
 import numpy as np
 import torch
+import cv2 as cv
+import random
 
 from src import utils
 
@@ -147,6 +149,8 @@ class FF_MNIST(torch.utils.data.Dataset):
         self.mnist = utils.get_MNIST_partition(opt, partition)
         self.num_classes = num_classes
         self.uniform_label = torch.ones(self.num_classes) / self.num_classes
+        self.unsupervised = opt.training.unsupervised
+        self.mask, self.inverse_mask = FF_MNIST.create_mask()
 
     def __getitem__(self, index):
         pos_sample, neg_sample, neutral_sample, all_sample, class_label = self._generate_sample(
@@ -166,23 +170,35 @@ class FF_MNIST(torch.utils.data.Dataset):
         return len(self.mnist)
 
     def _get_pos_sample(self, sample, class_label):
-        one_hot_label = torch.nn.functional.one_hot(
-            torch.tensor(class_label), num_classes=self.num_classes
-        )
         pos_sample = sample.clone()
-        pos_sample[0, 0, : self.num_classes] = one_hot_label
+        
+        if not self.unsupervised:
+            one_hot_label = torch.nn.functional.one_hot(
+                torch.tensor(class_label), num_classes=self.num_classes
+            )
+            pos_sample[0, 0, : self.num_classes] = one_hot_label
+        
         return pos_sample
 
     def _get_neg_sample(self, sample, class_label):
-        # Create randomly sampled one-hot label.
-        classes = list(range(self.num_classes))
-        classes.remove(class_label)  # Remove true label from possible choices.
-        wrong_class_label = np.random.choice(classes)
-        one_hot_label = torch.nn.functional.one_hot(
-            torch.tensor(wrong_class_label), num_classes=self.num_classes
-        )
         neg_sample = sample.clone()
-        neg_sample[0, 0, : self.num_classes] = one_hot_label
+        if not self.unsupervised:
+            # Create randomly sampled one-hot label.
+            classes = list(range(self.num_classes))
+            classes.remove(class_label)  # Remove true label from possible choices.
+            wrong_class_label = np.random.choice(classes)
+            one_hot_label = torch.nn.functional.one_hot(
+                torch.tensor(wrong_class_label), num_classes=self.num_classes
+            )
+            neg_sample[0, 0, : self.num_classes] = one_hot_label
+        else:
+            while True:
+                data, label = self.mnist[random.randint(0, len(self.mnist) - 1)]
+
+                # Check if the label is not 'x'
+                if label != class_label:
+                    neg_sample = neg_sample * self.mask + data * self.inverse_mask
+                    break
         return neg_sample
 
     def _get_neutral_sample(self, z):
@@ -206,3 +222,19 @@ class FF_MNIST(torch.utils.data.Dataset):
         neutral_sample = self._get_neutral_sample(sample)
         all_sample = self._get_all_sample(sample)
         return pos_sample, neg_sample, neutral_sample, all_sample, class_label
+    
+    def create_mask():
+        # Generate a random 28x28 array with binary values (0 or 1)
+        random_bits = np.random.randint(2, size=(28, 28), dtype=np.uint8)
+
+        # Convert the binary values to a proper image format (0 or 255)
+        random_image = random_bits * 255
+
+        kernel = np.array([[0.0625, 0.125 , 0.0625],
+                            [0.125 , 0.25  , 0.125 ],
+                            [0.0625, 0.125 , 0.0625]])
+        
+        for _ in range(0,10):
+            random_image = cv.filter2D(random_image, -1, kernel)
+        
+        return (random_image >= 127.5).astype(np.uint8), (random_image <= 127.5).astype(np.uint8)

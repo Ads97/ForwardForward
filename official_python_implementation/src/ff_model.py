@@ -13,6 +13,7 @@ class FF_model(torch.nn.Module):
         super(FF_model, self).__init__()
 
         self.opt = opt
+        self.unsupervised = opt.training.unsupervised
         self.num_channels = [self.opt.model.hidden_dim] * self.opt.model.num_layers
         self.act_fn = ReLU_full_grad()
 
@@ -39,7 +40,7 @@ class FF_model(torch.nn.Module):
             self.num_channels[-i] for i in range(self.opt.model.num_layers - 1)
         ) # 2000+2000+2000 = 6000
         self.linear_classifier = nn.Sequential(
-            nn.Linear(channels_for_classification_loss, 10, bias=False)
+            nn.Linear(channels_for_classification_loss, 10, bias=True)
         ) # 6000, 10
         self.classification_loss = nn.CrossEntropyLoss()
 
@@ -137,9 +138,10 @@ class FF_model(torch.nn.Module):
             inputs, labels, scalar_outputs=scalar_outputs
         )
 
-        scalar_outputs = self.forward_downstream_multi_pass(
-            inputs, labels, scalar_outputs=scalar_outputs
-        )
+        if not self.unsupervised:
+            scalar_outputs = self.forward_downstream_multi_pass(
+                inputs, labels, scalar_outputs=scalar_outputs
+            )
 
         return scalar_outputs
     
@@ -214,7 +216,10 @@ class FF_model(torch.nn.Module):
                 "Loss": torch.zeros(1, device=self.opt.device),
             }
 
-        z = inputs["neutral_sample"]
+        if self.unsupervised:
+            z = inputs["pos_images"]
+        else:
+            z = inputs["neutral_sample"]
         z = z.reshape(z.shape[0], -1)
         z = self._layer_norm(z) 
 

@@ -6,7 +6,7 @@ input:
   test_path: datasets/reviews_test.csv
   path: datasets
   batch_size: 100
-  dataset: "senti" # "mnist" or "cifar10" or "senti"
+  dataset: "mnist" # "mnist" or "cifar10" or "senti"
 
 
 model:
@@ -30,6 +30,8 @@ training:
   val_idx: 1  # -1: validate only once training has finished; n: validate every n epochs.
   final_test: True  # Set to true to evaluate performance on test-set.
 
+  unsupervised: True # True => Unsupervised FF. False => Supervised FF
+  negative_data: mask # mask gan 
 
 hydra:
   run:

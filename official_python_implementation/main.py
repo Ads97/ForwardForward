@@ -61,9 +61,12 @@ def validate_or_test(opt, model, partition, epoch=None, best_val_acc=1.0):
             scalar_outputs = model.forward_downstream_classification_model(
                 inputs, labels
             )
-            scalar_outputs = model.forward_downstream_multi_pass(
-                inputs, labels, scalar_outputs=scalar_outputs
-            )
+
+            if not opt.training.unsupervised:
+                scalar_outputs = model.forward_downstream_multi_pass(
+                    inputs, labels, scalar_outputs=scalar_outputs
+                )
+
             test_results = utils.log_results(
                 test_results, scalar_outputs, num_steps_per_epoch
             )
@@ -85,7 +88,7 @@ def my_main(opt: DictConfig) -> None:
     run = wandb.init(
     project="project",
     entity  = "automellon",
-    name = "<NAME>", # Wandb creates random run names if you skip this field
+    name = "unsupervised_bias_true", # Wandb creates random run names if you skip this field
     reinit = False, # Allows reinitalizing runs when you re-run this cell
     # run_id = # Insert specific run id here if you want to resume a previous run
     # resume = "must" # You need this to resume previous runs, but comment out reinit = True when using this
